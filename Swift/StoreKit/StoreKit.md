@@ -12,7 +12,7 @@
 # 인앱 결제
 앱을 대신하여 인앱 결제에 연결하고 결제를 처리한다.
 
-![process.png](./Swift/Assets/process.png)
+![process.png](./storekit-process.png)
 
 출처: https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase
 
@@ -40,7 +40,7 @@
 SKProductsRequest(productIdentifier: [String])
 ```
 
-![product-identifier.png](product-identifier.png)
+![product-identifier.png](./storekit-product-identifier.png)
 
 현재 진행 중인 결제를 시작하거나 취소할 수 있다.
 ```swift
