@@ -47,7 +47,7 @@ Busy Waiting을 해결하기 위한 방식으로 공유 자원이 모두 사용 
 
 1. **이진 세마포어** : S의 값을 1로 초기화하여 범위를 0과 1로 제한한다. 동시에 접근할 수 있는 자원이 갯수가 한 개일 경우 사용된다.
     
-    ![binary-semaphore](binary-semaphore.png)
+    ![binary-semaphore](https://user-images.githubusercontent.com/61190690/166910108-aed3d133-05cd-41a6-b681-7b637484342e.png)
     
 2. **카운팅 세마포어** : S의 값을 동시에 접근할 수 있는 자원의 갯수로 초기화하며 범위에 제약이 없다. 유한한 갯수를 가진 자원에 대한 접근 제어용으로 사용된다.
 

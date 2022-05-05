@@ -8,7 +8,7 @@
 
 ### 구조
 
-![process-structure](process-structure.png)
+![process-structure](https://user-images.githubusercontent.com/61190690/166910077-6c4fa316-1b58-411c-916c-de0623bb67d1.png)
 
 - 가변 영역 : 입력 값에 의한 함수의 호출 횟수나 동적으로 생성되는 변수들의 크기는 가변적이며, 이는 런타임 시 결정된다.
     - 스택 : 함수의 매개 변수, 복귀 주소, 로컬 변수와 같은 임시 데이터 저장
@@ -27,7 +27,7 @@
 
 ### 구조
 
-![thread-structure](thread-structure.png)
+![thread-structure](https://user-images.githubusercontent.com/61190690/166910089-12acaa36-823a-4111-9521-2f971f161dec.png)
 
 - 공유 영역 : 쓰레드는 자신이 속한 프로세스의 `code`, `data`, `heap` 영역을 공유한다.
 
@@ -49,7 +49,8 @@
 
 ## 구조
 
-![multi-thread](multi-thread.png)
+![multi-thread](https://user-images.githubusercontent.com/61190690/166910096-90e1b16c-43ff-4de7-a8f7-2466292c0b27.png)
+
 
 - **장점**
     - 각 쓰레드는 자신이 속한 프로세스의 `code`, `data`, `heap` 영역을 공유하므로 메모리 공간과 시스템 자원의 소모가 줄어든다.
