@@ -16,6 +16,7 @@ Today I Learned
 
 &nbsp;
 ## OS
+- [Scheduler](OS/scheduler.md)
 
 ### Process
 - [Process, Thread](OS/process-thread.md)
