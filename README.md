@@ -6,7 +6,10 @@ Today I Learned
 ---
 ##  Swift
 - [Call by value, reference](Swift/call-by-value.md)
-- [StoreKit](StoreKit/StoreKit.md)
+- [StoreKit](Swift/StoreKit/storekit.md)
 
 ### Concurrency
-- [Basic concept](Swift/Concurrency/Concurrency.md)
+- [Basic concept](Swift/Concurrency/concurrency.md)
+
+### Property
+- [CGSize, CGRect](Swift/Property/cgsize-cgrect)
