@@ -13,6 +13,7 @@ Today I Learned
 
 ### Property
 - [CGSize, CGRect](Swift/Property/cgsize-cgrect.md)
+- [contentOffset, contentInset](Swift/Property/content-offset%2C%20content-inset.md)
 
 &nbsp;
 ## OS
