@@ -209,8 +209,6 @@ async {
 		let resource = try await loadWebResource(_ path: "https://..")
 }
 ```
-![출처: [https://zeddios.tistory.com/1230](https://zeddios.tistory.com/1230)](concurrency.png)
-출처: [https://zeddios.tistory.com/1230](https://zeddios.tistory.com/1230)
 
 &nbsp;
 ## `Task`

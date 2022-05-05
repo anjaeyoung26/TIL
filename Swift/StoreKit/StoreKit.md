@@ -12,7 +12,7 @@
 # 인앱 결제
 앱을 대신하여 인앱 결제에 연결하고 결제를 처리한다.
 
-![process.png](process.png)
+![process.png](./Swift/Assets/process.png)
 
 출처: https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase
 
