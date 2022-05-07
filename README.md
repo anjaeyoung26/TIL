@@ -6,13 +6,13 @@ Today I Learned
 ---
 ##  Swift
 - [Call by value, reference](Swift/call-by-value.md)
-- [Computed Properties](Swift/computed-properties.md)
+- [연산 프로퍼티](Swift/computed-properties.md)
 - [@discardableResult](Swift/discardable-result.md)
 - [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
 - [StoreKit](Swift/StoreKit/storekit.md)
 
 ### Concurrency
-- [Basic Concept](Swift/Concurrency/concurrency.md)
+- [async, await](Swift/Concurrency/concurrency.md)
 
 ### Property
 - [CGSize, CGRect](Swift/Property/cgsize-cgrect.md)
@@ -43,13 +43,13 @@ Today I Learned
 - [.gitignore](./Git/gitignore.md)
 ---
 ## OS
-- [Memory Management Strategy](OS/memory-management-strategy.md)
-- [Scheduler](OS/scheduler.md)
+- [메모리 관리 전략](OS/memory-management-strategy.md)
+- [스케줄러](OS/scheduler.md)
 
 ### Process
-- [Process, Thread](OS/process-thread.md)
-- [Process Synchronization](OS/process-synchronization.md)
+- [프로세스, 스레드](OS/process-thread.md)
+- [프로세스 동기화](OS/process-synchronization.md)
 ---
 ## Algorithm
-- [Time Complexity](Algorithm/time-complexity.md)
+- [시간 복잡도](Algorithm/time-complexity.md)
 ---
