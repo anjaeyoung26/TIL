@@ -54,9 +54,9 @@
 
 - **장점**
     - 각 쓰레드는 자신이 속한 프로세스의 `code`, `data`, `heap` 영역을 공유하므로 메모리 공간과 시스템 자원의 소모가 줄어든다.
-        - Context Switching의 비용이 줄어든다 : 부모 프로세스가 자식 프로세스를 생성하면 모든 영역이 독립적으로 생성되므로 프로세스간 통신을 하기 위해서는 IPC(Inter Process Communication)가 필요하다. 하지만 멀티 쓰레딩에서는 쓰레드를 추가하면 부모 프로세스의 `code`, `data`, `heap` 영역을 공유하기 때문에 쓰레드 간 Context Switching이 간단하며 쓰레드의 Context Switch는 프로세스와 달리 캐시 메모리를 비우지 않아도 되기 때문에 자원의 소모가 적다.
+        - **Context Switching의 비용이 줄어든다** : 부모 프로세스가 자식 프로세스를 생성하면 모든 영역이 독립적으로 생성되므로 프로세스간 통신을 하기 위해서는 IPC(Inter Process Communication)가 필요하다. 하지만 멀티 쓰레딩에서는 쓰레드를 추가하면 부모 프로세스의 `code`, `data`, `heap` 영역을 공유하기 때문에 쓰레드 간 Context Switching이 간단하며 쓰레드의 Context Switch는 프로세스와 달리 캐시 메모리를 비우지 않아도 되기 때문에 자원의 소모가 적다.
 
-        - Context Switching : CPU가 실행 중인 프로세스나 쓰레드를 교체할 때, 실행 중인 프로세스나 쓰레드에 대한 정보(Context)를 PCB에 저장하고 교체할 프로세스에 대한 정보를 메모리에 올리는 작업
+        - **Context Switching** : CPU가 실행 중인 프로세스나 쓰레드를 교체할 때, 실행 중인 프로세스나 쓰레드에 대한 정보(Context)를 PCB에 저장하고 교체할 프로세스에 대한 정보를 메모리에 올리는 작업
             
     - 사용자 입장에서 프로그램이 Interactive 하게 느껴진다.
         - 하나의 쓰레드가 입/출력으로 인해 Block 되어도 다른 쓰레드는 계속 작업을 수행한다.

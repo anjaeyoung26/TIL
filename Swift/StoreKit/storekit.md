@@ -14,7 +14,9 @@
 
 ![storekit-process](https://user-images.githubusercontent.com/61190690/166909905-f6b74f5c-6693-4659-ad4c-01696552859c.png)
 
-출처: https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase
+<p style="color:gray">
+	출처: https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase
+</p>
 
 - 앱 스토어 커넥트에서 추가한 제품을 판매할 수 있고, 샌드박스 테스터의 유저 계정을 생성하여 구매 테스트를 진행할 수 있다.
 - 추가 수익을 위해 새로운 유료 앱을 개발하는 대신 기존 앱에 IAP 구매를 통한 유료 컨텐츠를 추가하는 것이 바람직하다.

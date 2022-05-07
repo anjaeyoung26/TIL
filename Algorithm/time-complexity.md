@@ -32,7 +32,7 @@ $3n^2+10n+20$
 &nbsp;
 ### 종류 및 비교
 
-![big-o-graph](https://user-images.githubusercontent.com/61190690/166917744-27f91719-3462-4ade-beeb-800a6f16deab.png)
+<img src="https://user-images.githubusercontent.com/61190690/166917744-27f91719-3462-4ade-beeb-800a6f16deab.png" width="600" height="400">
 
 $O(1) < O(log[n]) < O(n) < O(n * log[n]) < O(n^2) < O(2^n) < O(n!)$
 
@@ -41,7 +41,7 @@ $O(1) < O(log[n]) < O(n) < O(n * log[n]) < O(n^2) < O(2^n) < O(n!)$
 &nbsp;
 ### $O(1)$
 
-![big-o-1](https://user-images.githubusercontent.com/61190690/166918062-cad11a68-16f6-4785-9c03-0c12c35b1556.png)
+<img src="https://user-images.githubusercontent.com/61190690/166918062-cad11a68-16f6-4785-9c03-0c12c35b1556.png" width="600" height="400">
 
 **상수 복잡도**라고 하며, 입력 값에 상관없이 일정한 시간이 소요된다.
 
@@ -52,14 +52,14 @@ print("Hello World!")
 &nbsp;
 ### $O(logn)$
 
-![big-o-logn](https://user-images.githubusercontent.com/61190690/166918076-a05c88c8-9710-4137-af8c-ca655d8de01d.png)
+<img src="https://user-images.githubusercontent.com/61190690/166918076-a05c88c8-9710-4137-af8c-ca655d8de01d.png" width="600" height="400">
 
 **로그 복잡도**라고 하며, 연산을 할 수록 횟수가 절반으로 줄어드는 구문이다. 대표적인 예로 이진 탐색 트리가 있다.
 
 &nbsp;
 ### $O(n)$
 
-![big-o-n](https://user-images.githubusercontent.com/61190690/166918088-33cb84c9-a0ce-4da0-bb8b-fe630e12f589.png)
+<img src="https://user-images.githubusercontent.com/61190690/166918088-33cb84c9-a0ce-4da0-bb8b-fe630e12f589.png" width="600" height="400">
 
 
 **선형 복잡도**라고 하며, 입력 값과 실행 횟수가 비례하는 구문이다.
@@ -75,7 +75,7 @@ void func(int n){
 &nbsp;
 ### $O(n^2)$
 
-![big-o-n^2](https://user-images.githubusercontent.com/61190690/166918099-56e97d51-4370-4a2a-b416-673c3d2d40d4.png)
+<img src="https://user-images.githubusercontent.com/61190690/166918099-56e97d51-4370-4a2a-b416-673c3d2d40d4.png" width="600" height="400">
 
 **2차 복잡도**라고 하며, 입력 값이 증가함에 따라 소요되는 시간이 n의 제곱수의 비율로 늘어난다.
 
@@ -92,9 +92,9 @@ function O_quadratic_algorithm(n) {
 &nbsp;
 ### $O(2^n)$
 
-![big-o-2^n-1](https://user-images.githubusercontent.com/61190690/166918119-bb90f12f-3948-4166-a377-421e720331dd.png)
+<img src="https://user-images.githubusercontent.com/61190690/166918119-bb90f12f-3948-4166-a377-421e720331dd.png" width="600" height="400">
 
-![big-o-2^n-fibonacci](https://user-images.githubusercontent.com/61190690/166918129-7651071a-fffb-450b-b0d1-adb868f9ab41.png)
+<img src="https://user-images.githubusercontent.com/61190690/166918129-7651071a-fffb-450b-b0d1-adb868f9ab41.png" width="600" height="200">
 
 **기하급수적 복잡도**라고 하며, 대표적인 예는 재귀로 구현한 피보나치 함수가 있다.
 
