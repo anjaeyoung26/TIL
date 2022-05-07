@@ -21,8 +21,7 @@ Today I Learned
 - [clipsToBounds, masksToBounds](Swift/Property/clips-to-bounds%2C%20masks-to-bounds.md)
 - [frame, bounds](Swift/Property/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/Property/frame-size-height%2C%20frame-height.md)
-
-&nbsp;
+---
 ## Git
 - [기본적인 사용법](./Git/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8_%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 - [커밋 메시지 변경](./Git/%EC%BB%A4%EB%B0%8B%20_%EB%A9%94%EC%8B%9C%EC%A7%80_%EB%B3%80%EA%B2%BD.md)
@@ -42,8 +41,7 @@ Today I Learned
 
 ### 기타
 - [.gitignore](./Git/gitignore.md)
-
-&nbsp;
+---
 ## OS
 - [Memory Management Strategy](OS/memory-management-strategy.md)
 - [Scheduler](OS/scheduler.md)
@@ -51,7 +49,7 @@ Today I Learned
 ### Process
 - [Process, Thread](OS/process-thread.md)
 - [Process Synchronization](OS/process-synchronization.md)
-
-&nbsp;
+---
 ## Algorithm
 - [Time Complexity](Algorithm/time-complexity.md)
+---
