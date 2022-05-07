@@ -6,6 +6,7 @@ Today I Learned
 ---
 ##  Swift
 - [Call by value, reference](Swift/call-by-value.md)
+- [Computed Properties](Swift/computed-properties.md)
 - [StoreKit](Swift/StoreKit/storekit.md)
 
 ### Concurrency
