@@ -14,6 +14,7 @@ Today I Learned
 ### Property
 - [CGSize, CGRect](Swift/Property/cgsize-cgrect.md)
 - [contentOffset, contentInset](Swift/Property/content-offset%2C%20content-inset.md)
+- [contentHugging, compressionResistance](Swift/Property/contentHugging%2C%20compressionResistance.md)
 - [clipsToBounds, masksToBounds](Swift/Property/clips-to-bounds%2C%20masks-to-bounds.md)
 - [frame, bounds](Swift/Property/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/Property/frame-size-height%2C%20frame-height.md)
