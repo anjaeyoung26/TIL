@@ -7,6 +7,7 @@ Today I Learned
 ##  Swift
 - [Call by value, reference](Swift/call-by-value.md)
 - [Computed Properties](Swift/computed-properties.md)
+- [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
 - [StoreKit](Swift/StoreKit/storekit.md)
 
 ### Concurrency
