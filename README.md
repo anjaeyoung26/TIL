@@ -42,14 +42,22 @@ Today I Learned
 ### 기타
 - [.gitignore](./Git/gitignore.md)
 ---
-## OS
+## 운영체제
 - [메모리 관리 전략](OS/memory-management-strategy.md)
 - [스케줄러](OS/scheduler.md)
 
-### Process
+### 프로세스
 - [프로세스, 스레드](OS/process-thread.md)
 - [프로세스 동기화](OS/process-synchronization.md)
 ---
-## Algorithm
+## 알고리즘
 - [시간 복잡도](Algorithm/time-complexity.md)
 ---
+## 자료구조
+- [Array](./Data%20Structure/array.md)
+- [Linked List](./Data%20Structure/linked-list.md)
+- [Stack](./Data%20Structure/stack.md)
+- [Queue](./Data%20Structure/queue.md)
+- [Tree](./Data%20Structure/tree.md)
+- [Heap](./Data%20Structure/heap.md)
+- [Hash Table](./Data%20Structure/hash-table.md)
