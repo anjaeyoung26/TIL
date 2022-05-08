@@ -42,8 +42,6 @@
 SKProductsRequest(productIdentifier: [String])
 ```
 
-![storekit-product-identifier](https://user-images.githubusercontent.com/61190690/166909919-1a75233a-410d-4298-a8c5-6abd3ecd8315.png)
-
 현재 진행 중인 결제를 시작하거나 취소할 수 있다.
 ```swift
 productsRequest.cancel()
@@ -59,6 +57,8 @@ func productsRequest(_ request: SKProductsRequest, didReceive response: SKProduc
 	let products: [SKProduct] = response.products
 }
 ```
+
+결제 실패에 대한 에러를 확인할 수 있다.
 
 ```swift
 func request(_ request: SKRequest, didFailWithError error: Error) { ... }
@@ -111,6 +111,8 @@ func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SK
 		case .failed     // 구매 실패
 		case .restored   // 구매 복원?
 		case .deferred, .purchasing: // 구매 중
+		}
+	}
 }
 ```
 

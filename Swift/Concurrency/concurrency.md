@@ -200,33 +200,34 @@ async {
 &nbsp;
 ## `Task`
 
-```swift
-func fetchToDos() {
-	self.todos = await fetchToDos(idx: idx)
-}
-```
-
-위 `fetchTodos()` 함수와 같이 Swift Concurrency 환경이 아닌 동기 함수에서 `async` 함수를 호출하면 `‘async’ call in a function that does not support concurrency` 에러가 발생한다. 이를 위해 `fetchToDos() async` 로 바꾸면 되지만 `fetchToDos()`를 호출하는 또 다른 동기 함수가 있다면 귀찮아진다. 이때 `Task`를 사용한다.
-
-```swift
-func fetchToDos() {
-	Task {
-		self.todos = await fetchToDos(idx: idx)
-	}
-}
-```
-
-`Task`의 특징은 아래와 같다.
-- 비동기 작업의 단위로 모든 `async` 함수는 `Task`의 한 부분으로 실행된다.
+비동기적으로 실행될 수 있는 작업의 단위로 특징은 아래와 같다.
+- 모든 비동기 코드는 `Task`의 한 부분으로 실행된다.
 - 자식 `Task`를 트리 형태로 가지고 있어 작업의 취소, 에러의 전파가 용이하다.
-- `Task` 인스턴스를 이용해 작업을 취소할 수 있다.
+- `suspended`, `running`, `completed` 세 가지 상태를 갖는다.
+- 인스턴스를 이용해 작업을 취소할 수 있다.
     
     ```swift
     let handler = Task { ... }
     handler.cancel()
     ```
-    
-- `Task`는 `suspended`, `running`, `completed` 세 가지 상태를 갖는다.
+
+그렇다면 `Task`를 언제 사용하는지 알아보자.
+
+```swift
+func fetchToDos() {
+	self.todos = await service.fetchToDos()
+}
+```
+
+위 `fetchTodos()` 함수와 같이 Swift Concurrency 환경이 아닌 동기 함수에서 `async` 함수를 호출하면 "‘async’ call in a function that does not support concurrency" 에러가 발생한다. 이를 위해 `fetchToDos() async` 로 바꾸면 되지만 `fetchToDos()`를 호출하는 또 다른 동기 함수가 있다면 귀찮아진다. 이때 `Task`를 사용한다.
+
+```swift
+func fetchToDos() {
+	Task {
+		self.todos = await service.fetchToDos()
+	}
+}
+```
 
 &nbsp;
 ## AsyncStream
