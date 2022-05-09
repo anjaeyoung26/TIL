@@ -61,6 +61,7 @@ Today I Learned
 
 ### 정렬
 - [선택 정렬](Algorithm/Sort/selection-sort.md)
+- [삽입 정렬](Algorithm/Sort/insertion-sort.md)
 ---
 ## 자료구조
 - [Array](./Data%20Structure/array.md)
