@@ -58,6 +58,9 @@ Today I Learned
 ---
 ## 알고리즘
 - [시간 복잡도](Algorithm/time-complexity.md)
+
+### 정렬
+- [선택 정렬](Algorithm/Sort/selection-sort.md)
 ---
 ## 자료구조
 - [Array](./Data%20Structure/array.md)
