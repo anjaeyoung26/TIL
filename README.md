@@ -6,14 +6,14 @@ Today I Learned
 ---
 ##  Swift
 - [Call by value, reference](Swift/call-by-value.md)
-- [CGSize, CGRect](Swift/Property/cgsize-cgrect.md)
-- [contentOffset, contentInset](Swift/Property/content-offset%2C%20content-inset.md)
-- [contentHugging, compressionResistance](Swift/Property/contentHugging%2C%20compressionResistance.md)
-- [clipsToBounds, masksToBounds](Swift/Property/clips-to-bounds%2C%20masks-to-bounds.md)
+- [CGSize, CGRect](Swift/cgsize-cgrect.md)
+- [contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
+- [contentHugging, compressionResistance](Swift/contentHugging%2C%20compressionResistance.md)
+- [clipsToBounds, masksToBounds](Swift/clips-to-bounds%2C%20masks-to-bounds.md)
 - [@discardableResult](Swift/discardable-result.md)
 - [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
-- [frame, bounds](Swift/Property/frame%2C%20bounds.md)
-- [frame.size, frame.size.height](Swift/Property/frame-size-height%2C%20frame-height.md)
+- [frame, bounds](Swift/frame%2C%20bounds.md)
+- [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
 - [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [연산 프로퍼티](Swift/computed-properties.md)
