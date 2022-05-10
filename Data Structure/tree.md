@@ -52,6 +52,15 @@
 
 Preorder, 루트 노드 → 왼쪽 서브트리 → 오른쪽 서브트리 순으로 순회하는 방식으로 깊이 우선 순회(Depth-First Traversal) 라고도 한다.
 
+```swift
+func preorder(node: Node?) {
+	guard let node = node else { return }
+	print(node.data)
+	preorder(node: node.left)
+	preorder(node: node.right)
+}
+```
+
 > 1 → 2 → 4 → 5 → 3
 
 &nbsp;
@@ -59,12 +68,30 @@ Preorder, 루트 노드 → 왼쪽 서브트리 → 오른쪽 서브트리 순�
 
 inorder, 왼쪽 서브트리 → 루트 노드 → 오른쪽 서브트리 순으로 순회하는 방식으로 대칭 순회(Symmetric Traversal) 라고다 한다.
 
+```swift
+func inorder(node: Node?) {
+	guard let node = node else { return }
+	preorder(node: node.left)
+	print(node.data)
+	preorder(node: node.right)
+}
+```
+
 > 4 → 2 → 5 → 1 → 3
 
 &nbsp;
 ## 후위순회
 
 postorder, 왼쪽 서브트리 → 오른쪽 서브트리 → 루트 노드 순으로 순회하는 방식이다.
+
+```swift
+func postorder(node: Node?) {
+	guard let node = node else { return }
+	preorder(node: node.left)
+	preorder(node: node.right)
+	print(node.data)
+}
+```
 
 > 4 → 5 → 2 → 3 → 1
 
