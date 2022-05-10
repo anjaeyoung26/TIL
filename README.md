@@ -10,6 +10,7 @@ Today I Learned
 - [contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
 - [contentHugging, compressionResistance](Swift/contentHugging%2C%20compressionResistance.md)
 - [clipsToBounds, masksToBounds](Swift/clips-to-bounds%2C%20masks-to-bounds.md)
+- [defer](Swift/defer.md)
 - [@discardableResult](Swift/discardable-result.md)
 - [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
 - [frame, bounds](Swift/frame%2C%20bounds.md)
