@@ -54,6 +54,7 @@ Today I Learned
 - [git branch](./Git/git-branch.md)
 - [git stash](./Git/git-stash.md)
 - [git merge](./Git/git-merge.md)
+- [git restore](./Git/git-restore.md)
 
 
 ### 기타
