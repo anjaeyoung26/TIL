@@ -56,6 +56,7 @@ Today I Learned
 - [git merge](./Git/git-merge.md)
 - [git restore](./Git/git-restore.md)
 - [git switch](./Git/git-switch.md)
+- [git checkout](./Git/git-checkout.md)
 
 
 ### 기타
