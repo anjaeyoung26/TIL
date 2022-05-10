@@ -6,24 +6,35 @@ Today I Learned
 ---
 ##  Swift
 - [Call by value, reference](Swift/call-by-value.md)
-- [연산 프로퍼티](Swift/computed-properties.md)
-- [@discardableResult](Swift/discardable-result.md)
-- [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
-- [StoreKit](Swift/StoreKit/storekit.md)
-
-### Concurrency
-- [async, await](Swift/Concurrency/concurrency.md)
-
-### 프로퍼티
 - [CGSize, CGRect](Swift/Property/cgsize-cgrect.md)
 - [contentOffset, contentInset](Swift/Property/content-offset%2C%20content-inset.md)
 - [contentHugging, compressionResistance](Swift/Property/contentHugging%2C%20compressionResistance.md)
 - [clipsToBounds, masksToBounds](Swift/Property/clips-to-bounds%2C%20masks-to-bounds.md)
+- [@discardableResult](Swift/discardable-result.md)
+- [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
 - [frame, bounds](Swift/Property/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/Property/frame-size-height%2C%20frame-height.md)
+- [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+- [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+- [연산 프로퍼티](Swift/computed-properties.md)
 
-### 코드 컨벤션
+### 1st-party
+- [StoreKit](Swift/StoreKit/storekit.md)
+
+### 3rd-party
+
+- Alamofire
+
+    - [Alamofire Advanced Usage - 네트워크 계층 리팩토링](https://fromdave.medium.com/alamofire-%ED%99%9C%EC%9A%A9%EA%B8%B0-8bf5274fbaf) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+
+- Kignfisher
+
+    - [Kingfisher(1) - 캐싱](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+
 - [SwiftLint](Swift/Code%20Convention/swiftlint.md)
+
+### Concurrency
+- [async, await](Swift/Concurrency/concurrency.md)
 
 ### 테스트
 - [Mock Networking](Swift/Test/mock-networking.md)
