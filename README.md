@@ -20,7 +20,7 @@ Today I Learned
 - [연산 프로퍼티](Swift/computed-properties.md)
 
 ### 1st-party
-- [StoreKit](Swift/StoreKit/storekit.md)
+- [StoreKit](Swift/1st-party/StoreKit/storekit.md)
 
 ### 3rd-party
 
@@ -32,7 +32,7 @@ Today I Learned
 
     - [Kingfisher(1) - 캐싱](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 
-- [SwiftLint](Swift/Code%20Convention/swiftlint.md)
+- [SwiftLint](Swift/3rd-party/swiftlint.md)
 
 ### Concurrency
 - [async, await](Swift/Concurrency/concurrency.md)
