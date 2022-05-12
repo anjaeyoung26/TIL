@@ -68,10 +68,9 @@ Today I Learned
 ## 운영체제
 - [메모리 관리 전략](OS/memory-management-strategy.md)
 - [스케줄러](OS/scheduler.md)
-
-### 프로세스
 - [프로세스, 스레드](OS/process-thread.md)
 - [프로세스 동기화](OS/process-synchronization.md)
+- [Deadlock](OS/deadlock.md)
 ---
 ## 알고리즘
 - [시간 복잡도](Algorithm/time-complexity.md)
