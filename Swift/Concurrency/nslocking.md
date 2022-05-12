@@ -29,9 +29,9 @@ open class NSLock : NSObject, NSLocking {
 
 가장 기본적인 Lock 개체이다. [공식 문서](https://developer.apple.com/documentation/foundation/nslock)에 따르면 `NSLock`을 사용할 때 두 가지를 주의해야 한다.
 
-1. lock을 거는 스레드와 unlock하는 스레드가 동일해야 한다. 만약 다른 스레드에서 unlock한다면 정의되지 않은 동작이 발생할 수 있다. 다른 스레드가 접근하지 못하도록 lock을 거는 것인데, 다른 스레드가 unlock을 한다면 접근할 수 있는 여지가 생긴다.
+1. lock을 거는 스레드와 unlock하는 스레드가 동일해야 한다. 만약 다른 스레드에서 unlock 한다면 정의되지 않은 동작이 발생할 수 있다. 다른 스레드가 접근하지 못하도록 lock을 거는 것인데, 다른 스레드가 unlock을 한다면 접근할 수 있는 여지가 생긴다.
 
-2. 재귀적인 lock을 구현하면 안된다. 동일한 스레드에서 lock을 두 번 건다면 교착상태가 발생해 스레드가 영구적으로 잠길 수 있다. 재귀 함수 등에서 lock을 여러번 걸어야 할 때는 `NSRecursiveLock` 클래스를 사용한다.
+2. 재귀적인 lock을 구현하면 안된다. 동일한 스레드에서 lock을 두 번 건다면 교착상태가 발생해 스레드가 영구적으로 잠길 수 있다. 재귀 함수 등에서 여러번 lock을 걸어야 할 때는 `NSRecursiveLock` 클래스를 사용한다.
 
 &nbsp;
 
@@ -118,11 +118,11 @@ print("Final - \(number)")
 
 &nbsp;
 
-추가적으로 첫 번째 스레드가 unlock 할 때 까지 두 번째 스레드는 block되는 점을 완화하기 위해 `NSLock`은 두 가지 메소드를 제공한다.
+### 부가적인 메소드
 
-1. `lock(before:)`
+첫 번째 스레드가 unlock 할 때 까지 두 번째 스레드는 block되는 점을 완화하기 위해 `NSLock`은 두 가지 메소드를 제공한다.
 
-    파라미터로 받은 시점까지 lock을 획득하도록 시도한다. lock을 얻는 즉시 true를 반환하고, 특정 시점까지 lock을 획득하지 못하면 false를 반환한다. `lock()`과 달리 특정 시점 이후에는 스레드가 block 되지 않음을 보장할 수 있다.
+1. `lock(before:)` : 파라미터로 받은 시점까지 lock을 획득하도록 시도한다. lock을 얻는 즉시 true를 반환하고, 특정 시점까지 lock을 획득하지 못하면 false를 반환한다. `lock()`과 달리 특정 시점 이후에는 스레드가 block 되지 않음을 보장할 수 있다.
 
     ```swift
     func lock(before limit: Date) -> Bool {
@@ -130,9 +130,7 @@ print("Final - \(number)")
     }
     ```
 
-2. `try()`
-
-    현재 lock을 획득할 수 있는지 확인한다. 단발성으로 실행되기 때문에 스레드는 block되지 않는다.
+2. `try()` : 현재 lock을 획득할 수 있는지 확인한다. 단발성으로 실행되기 때문에 스레드는 block되지 않는다.
 
     ```swift
     func try() -> Bool {
@@ -255,6 +253,8 @@ Thread.detachNewThread {
 > 2 start   
 > 2 end
 
+결과적으로 첫 번째 스레드의 작업이 완료된 후 두 번째 스레드가 작업을 시작한다. 2 과정에서 `condition`의 값을 2로 설정하지 않았다면 두 번쩨 스레드는 작업을 시작할 수 없어 교착상태가 발생하니 주의해야 한다. 주석을 표시한 곳에서 `condition`이 어떻게 사용되는지 살펴보자.
+
 - 1 : `condition`이 1이라는 조건을 충족하면 첫 번째 스레드가 lock을 획득한다.
 
 - 2 : 첫 번째 스레드가 unlock 하면서 `condition`의 값을 2로 설정한다.
@@ -262,8 +262,6 @@ Thread.detachNewThread {
 - 3 : `condition`이 2라는 조건을 충족하면 두 번째 스레드가 lock을 획득한다.
 
 - 4 : 두 번째 스레드가 unlock 하면서 `condition`의 값을 1로 설정한다.
-
-결과적으로 첫 번째 스레드의 작업이 완료된 후 두 번째 스레드가 작업을 시작한다. 2 과정에서 `condition`의 값을 2로 설정하지 않았다면 두 번쩨 스레드는 작업을 시작할 수 없어 교착상태가 발생하니 주의해야 한다.
 
 
 

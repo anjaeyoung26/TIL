@@ -37,6 +37,7 @@ Today I Learned
 
 ### Concurrency
 - [async, await](Swift/Concurrency/concurrency.md)
+- [DispatchSemaphore](Swift/Concurrency/dispatch-semaphore.md)
 - [NSLocking](Swift/Concurrency/nslocking.md)
 
 ### 테스트
