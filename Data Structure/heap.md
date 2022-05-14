@@ -145,3 +145,36 @@ public mutating func insert(_ value: T) {
 	shiftDown(from: index)
 }
 ```
+
+&nbsp;
+### 배열을 힙으로 구성
+
+배열을 아래와 같이 힙으로 구성할 수 있다.
+
+```swift
+private mutating func buildHeap(fromArray array: [T]) {
+	for value in array {
+		insert(value)
+	}
+}
+```
+
+간단하게 배열의 각 요소마다 `insert(value:)`를 호출하면 되지만 효율적이지 않다. 배열의 n개 요소가 힙의 삽입 연산을 거치기 때문에 $O(nlogn)$의 시간 복잡도를 갖는다. 
+
+이는 모든 힙에 대해 배열의 n/2부터 n-1까지의 요소가 [트리의 단말 노드](../Data%20Structure/tree.md/#용어)라는 특성을 이용한다. 아래의 그림에서 단말 노드인 1과 6을 `shiftDown`할 필요가 없다. 왜냐하면 부모 노드인 8의 `shiftDown` 연산을 수행했기 때문이다. 
+
+<img src="https://user-images.githubusercontent.com/61190690/168403248-f14d1ccf-49d4-41c5-84c0-69b54140526b.png" width="300">
+
+
+이 특성을 이용해 `buildHeap`을 개선해보자.
+
+```swift
+private mutating func buildHeap(fromArray array: [T]) {
+	elements = array
+	for index in stride(from: nodes.count/2-1, through: 0, by: -1) {
+		shiftDown(index: index)
+	}
+}
+```
+
+배열의 각 요소마다 `insert(value:)`를 호출하지 않고 0부터 n/2-1까지의 요소인 비단말 노드만 `shiftDown` 연산을 수행한다. 시간 복잡도는 $O(nlogn)$에서 $O(n)$으로 개선됐다.
