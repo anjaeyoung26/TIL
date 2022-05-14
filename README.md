@@ -81,6 +81,7 @@ Today I Learned
 - [삽입 정렬](Algorithm/Sort/insertion-sort.md)
 - [버블 정렬](Algorithm/Sort/bubble-sort.md)
 - [힙 정렬](Algorithm/Sort/heap-sort.md)
+- [병합 정렬](Algorithm/Sort/merge-sort.md)
 ---
 ## 자료구조
 - [Array](./Data%20Structure/array.md)
