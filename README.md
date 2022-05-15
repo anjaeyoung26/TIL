@@ -91,3 +91,4 @@ Today I Learned
 - [Tree](./Data%20Structure/tree.md)
 - [Heap](./Data%20Structure/heap.md)
 - [Hash Table](./Data%20Structure/hash-table.md)
+- [Graph](./Data%20Structure/graph.md)
