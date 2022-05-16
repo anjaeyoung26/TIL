@@ -10,15 +10,10 @@
 기본적으로 적용되는 규칙과 사용자에 의해 적용되는 규칙이 있다. 이러한 규칙들을 세부적으로 적용하기 위해서는 `.swiftlint.yml` 파일을 프로젝트에 추가하여 명시해야 한다. `.swiftlint.yml` 파일을 생성하지 않으면 SwiftLint에서 지정한 기본적인 규칙이 적용된다.
 
 `.swiftlint.yml`에 적용 여부를 설정하는 파라미터는 다섯 가지가 있다.
-
 1. **disabled_rules** : 기본 활성화된 룰 중에 제외할 룰을 지정한다.
-
 2. **opt_in_rules** : 기본적으로 적용되는 규칙이 아닌 룰을 활성화한다.
-
 3. **whitelist_rules** : 지정한 룰만 활성화 되도록 지정한다. `disabled_rules`, `opt_in_rules` 와는 같이 사용할 수 없다.
-
 4. **included** : lint 과정에서 포함할 파일 경로를 지정한다.
-
 5. **excluded** : lint 과정에서 제외할 파일 경로를 지정한다. `included`보다 우선순위가 높다.
 
   ```
@@ -50,15 +45,15 @@
 
 ```
 custom_rules:
-	my_rules:
-		included: ".*.swift"
-		ame: "name"
-		regex: "([n, N])"
-		match_kinds:
-			- comment
-			- identifier
-		message: "message"
-		serverity: error		
+ my_rules:
+ included: ".*.swift"
+ ame: "name"
+ regex: "([n, N])"
+ match_kinds:
+	- comment
+	- identifier
+ message: "message"
+ serverity: error		
 ```
 
 &nbsp;

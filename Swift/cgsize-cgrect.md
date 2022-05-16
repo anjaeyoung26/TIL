@@ -1,8 +1,4 @@
-# CGSize vs CGRect
-
-[https://zeddios.tistory.com/201](https://zeddios.tistory.com/201)
-
-## **CGSize**
+## CGSize
 
 ![cgsize](https://user-images.githubusercontent.com/61190690/166910001-fbb25ef0-b933-40f9-8ed0-29f1f94cae20.png)
 

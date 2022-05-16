@@ -1,5 +1,3 @@
-# contentHugging, compressionResistance
-
 ## instrinsicContentSize
 우선 `intrinsicContentSize`에 대해 알아야한다. 이는 컨텐츠의 본질적인 사이즈로 몇몇 뷰는 자신의 컨텐츠에 따라 고유의 크기를 가진다. 예를들어 `UILabel`과 `UIButton`은 텍스트의 크기와 약간의 마진을 `instrinsicContentSize`로 갖는다. 하지만 모든 뷰가 `instrinsicContentSize`를 갖는 것이 아니며, `instrinsicContentSize`로 높이, 너비를 정의할 수 있는지 여부가 다르다. 그런데 `contentHugging`, `compressionResistance`와 무슨 관계가 있을까?
 

@@ -1,5 +1,3 @@
-# flatMap, compactMap
-
 ## flatMap
 
 컬렉션을 단일 수준 컬렉션으로 변환한다.
