@@ -4,13 +4,13 @@
 
 ## 장점
 
-- 추가적인 메모리를 필요로 하지 않으면서 항상 $O(logN)$의 시간 복잡도를 갖는다.
+- 추가적인 메모리를 필요로 하지 않으면서 항상 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(logN)">의 시간 복잡도를 갖는다.
 - 가장 큰 값이나 가장 작은 값을 구할 때 유용하다.
 
 &nbsp;
 ## 단점
 
-- 데이터의 상태에 따라 $O(logN)$의 시간 복잡도를 갖는 정렬(퀵 정렬, 병합 정렬) 중 가장 느리다.
+- 데이터의 상태에 따라 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(logN)">의 시간 복잡도를 갖는 정렬(퀵 정렬, 병합 정렬) 중 가장 느리다.
 - [Heap](../../Data%20Structure/heap.md)의 특성 상 반정렬 상태를 유지하므로 불안정하다.
 
 &nbsp;

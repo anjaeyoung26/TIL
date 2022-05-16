@@ -10,7 +10,7 @@
 
 3. 이진 탐색 트리와 다르게 중복된 값을 허용한다.
 
-4. 힙에서 모든 연산은 트리의 최대 높이($h = log_2N$)만큼의 시간 복잡도를 갖는다. $O(log_2N)$
+4. 힙에서 모든 연산은 트리의 최대 높이(<img src="https://render.githubusercontent.com/render/math?math=\color{gray}h = log_2N">)만큼의 시간 복잡도를 갖는다. <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(log_2N)">
 
 &nbsp;
 ## 종류
@@ -159,9 +159,9 @@ private mutating func buildHeap(fromArray array: [T]) {
 }
 ```
 
-간단하게 배열의 각 요소마다 `insert(value:)`를 호출하면 되지만 효율적이지 않다. 배열의 n개 요소가 힙의 삽입 연산을 거치기 때문에 $O(nlogn)$의 시간 복잡도를 갖는다. 
+간단하게 배열의 각 요소마다 `insert(value:)`를 호출하면 되지만 효율적이지 않다. 배열의 n개 요소가 힙의 삽입 연산을 거치기 때문에 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(nlogn)">의 시간 복잡도를 갖는다. 
 
-이는 모든 힙에 대해 배열의 n/2부터 n-1까지의 요소가 [트리의 단말 노드](../Data%20Structure/tree.md/#용어)라는 특성을 이용한다. 아래의 그림에서 단말 노드인 1과 6을 `shiftDown`할 필요가 없다. 왜냐하면 부모 노드인 8의 `shiftDown` 연산을 수행했기 때문이다. 
+이는 모든 힙에 대해 배열의 n/2 부터 n-1 까지의 요소가 [트리의 단말 노드](../Data%20Structure/tree.md/#용어)라는 특성을 이용한다. 아래의 그림에서 단말 노드인 1과 6을 `shiftDown`할 필요가 없다. 왜냐하면 부모 노드인 8의 `shiftDown` 연산을 수행했기 때문이다. 
 
 <img src="https://user-images.githubusercontent.com/61190690/168403248-f14d1ccf-49d4-41c5-84c0-69b54140526b.png" width="300">
 
@@ -177,4 +177,4 @@ private mutating func buildHeap(fromArray array: [T]) {
 }
 ```
 
-배열의 각 요소마다 `insert(value:)`를 호출하지 않고 0부터 n/2-1까지의 요소인 비단말 노드만 `shiftDown` 연산을 수행한다. 시간 복잡도는 $O(nlogn)$에서 $O(n)$으로 개선됐다.
+배열의 각 요소마다 `insert(value:)`를 호출하지 않고 0 부터 n/2-1 까지의 요소인 비단말 노드만 `shiftDown` 연산을 수행한다. 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(nlogn)">에서 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">으로 개선됐다.

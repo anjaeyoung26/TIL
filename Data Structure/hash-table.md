@@ -11,10 +11,10 @@
 
 |  | Average | Worst |
 | --- | :---: | :---: |
-| Space | $O(n)$ | $O(n)$ |
-| Search | $O(1)$ | $O(n)$ |
-| Insert | $O(1)$ | $O(1)$ |
-| Delete | $O(1)$ | $O(n)$ |
+| Space | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> |
+| Search | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> |
+| Insert | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> |
+| Delete | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> |
 
 Worst : 충돌이 발생한 경우, Chaining된 배열이나 연결 리스트를 검색해야 한다.
 
@@ -23,7 +23,7 @@ Worst : 충돌이 발생한 경우, Chaining된 배열이나 연결 리스트를
 
 ![hashing](https://user-images.githubusercontent.com/61190690/167288331-8ba972a9-e3cc-4a69-93c9-19f17e5bbd0b.png)
 
-대부분의 자료구조 에서는 탐색 키를 저장된 키 값과 반복적으로 비교하면서 원하는 요소에 접근한다. 이는 정렬이 되어 있다면 $O(log_2n)$, 정렬이 되어 있지 않다면 $O(n)$의 시간 복잡도를 갖는다. 반면 해싱은 탐색 키에 산술적인 연산을 적용해 요소가 저장되어 있는 테이블의 주소로 변환되어 $**O(1)$ 시간 안에 빠르게 접근할 수 있다.**
+대부분의 자료구조 에서는 탐색 키를 저장된 키 값과 반복적으로 비교하면서 원하는 요소에 접근한다. 이는 정렬이 되어 있다면 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(log_2n)">, 정렬이 되어 있지 않다면 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">의 시간 복잡도를 갖는다. 반면 해싱은 탐색 키에 산술적인 연산을 적용해 요소가 저장되어 있는 테이블의 주소로 변환되어 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> 시간 안에 빠르게 접근할 수 있다.
 
 &nbsp;
 ## Hashing Function

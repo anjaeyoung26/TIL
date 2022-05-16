@@ -78,8 +78,8 @@ public struct Queue<T> {
 }
 ```
 
-1. `enqueue`의 시간 복잡도는 일반적으로 $O(1)$이다. 하지만 Swift의 배열은 처음에 일정한 크기로 선언됐다가 원소들이 추가되면서 공간이 더 필요하다고 판단되면 배열의 길이를 늘린다. 배열의 길이를 늘린다는 것은 새로운 배열을 선언하고 기존의 배열 원소들을 복사하는 과정으로 시간 복잡도는 $O(n)$이다. 즉 `enqueue`의 시간 복잡도는 $O(1)$이지만 때때로 $O(n)$이다.
-2. `dequeue`의 시간 복잡도는 $O(n)$이다. `removeFirst()`는 첫 번째 원소를 삭제하면서 나머지 원소들을 한 칸 앞으로 옮긴다.
+1. `enqueue`의 시간 복잡도는 일반적으로 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)">이다. 하지만 Swift의 배열은 처음에 일정한 크기로 선언됐다가 원소들이 추가되면서 공간이 더 필요하다고 판단되면 배열의 길이를 늘린다. 배열의 길이를 늘린다는 것은 새로운 배열을 선언하고 기존의 배열 원소들을 복사하는 과정으로 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">이다. 즉 `enqueue`의 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)">이지만 때때로 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">이다.
+2. `dequeue`의 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">이다. `removeFirst()`는 첫 번째 원소를 삭제하면서 나머지 원소들을 한 칸 앞으로 옮긴다.
 
 &nbsp;
 
@@ -112,7 +112,7 @@ head 1 : [null, 2, 3, 4, 5]
 head 2 : [null, null, 3, 4, 5]
 ```
 
-하지만 위 방식도 결국 $O(n)$의 시간 복잡도를 갖는다. 더 효율적인 자료구조 원형 큐를 사용해보자.
+하지만 위 방식도 결국 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">의 시간 복잡도를 갖는다. 더 효율적인 자료구조 원형 큐를 사용해보자.
 
 &nbsp;
 ## Circular Queue

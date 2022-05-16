@@ -112,12 +112,12 @@ func postorder(node: Node?) {
 
 | 레벨 | 노드 수 |
 | :---: | :---: |
-| 0 | $2^0$ |
-| 1 | $2^1$ |
-| 2 | $2^2$ |
+| 0 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}2^0"> |
+| 1 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}2^1"> |
+| 2 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}2^2"> |
 | ... | ... |
-| $k$ | $2^k$ |
-| total | $2^{k+1}-1$ |
+| <img src="https://render.githubusercontent.com/render/math?math=\color{gray}k"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}2^k"> |
+| total | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}2^{k+1}-1"> |
 
 &nbsp;
 ## Complete Binary Tree
@@ -132,7 +132,7 @@ func postorder(node: Node?) {
 
 ### 관계식
 
-- 트리의 최소 높이 = $log_2(N+1)$
+- 트리의 최소 높이 = <img src="https://render.githubusercontent.com/render/math?math=\color{gray}log_2(N%2B1)">
 - 루트 노드의 인덱스가 0인 경우
     
     ```swift
@@ -171,7 +171,7 @@ func postorder(node: Node?) {
 ### 특징
 
 1. 중위순회를 통해 모든 키를 정렬된 순서로 가져올 수 있다.
-2. 검색∙삽입∙삭제에 대한 시간 복잡도는 균형 상태일 경우 $O(logN)$, 불균형 상태일 경우 최대 $O(N)$이다.
+2. 검색∙삽입∙삭제에 대한 시간 복잡도는 균형 상태일 경우 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(logN)">, 불균형 상태일 경우 최대 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(N)">이다.
 
 	<img src="https://user-images.githubusercontent.com/61190690/167287714-b7502c33-bc35-4142-99ae-21d7602ec39d.png" width="500">
 
@@ -180,8 +180,8 @@ func postorder(node: Node?) {
 &nbsp;
 ### 구현
 
-- $h$ : 트리의 높이, $log_2N$으로 나타낼 수 있다.
-- $n$ : 노드의 갯수
+- <img src="https://render.githubusercontent.com/render/math?math=\color{gray}h"> : 트리의 높이, <img src="https://render.githubusercontent.com/render/math?math=\color{gray}log_2N">으로 나타낼 수 있다.
+- <img src="https://render.githubusercontent.com/render/math?math=\color{gray}n"> : 노드의 갯수
 
 	```swift
 	public class BinarySearchTree<T: Comparable> {
@@ -325,7 +325,7 @@ public func search(value: T) -> BinarySearchTree? {
 
 **최솟값**
 
-- 시간 복잡도 : 한 쪽 방향으로 순회하므로 트리의 높이만큼, $O(h)$ 혹은 $O(logN)$으로 나타낼 수 있다.
+- 시간 복잡도 : 한 쪽 방향으로 순회하므로 트리의 높이만큼, <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(h)"> 혹은 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(logN)">으로 나타낼 수 있다.
 
 	```swift
 	public func minimum() -> BinarySearchTree {
@@ -342,7 +342,7 @@ public func search(value: T) -> BinarySearchTree? {
 
 **최댓값**
 
-- 시간 복잡도 : 한 쪽 방향으로 순회하므로 트리의 높이만큼, $O(h)$ 혹은 $O(logN)$으로 나타낼 수 있다.
+- 시간 복잡도 : 한 쪽 방향으로 순회하므로 트리의 높이만큼, <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(h)"> 혹은 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(logN)">으로 나타낼 수 있다.
 
 	```swift
 	public func maximum() -> BinarySearchTree {
@@ -359,7 +359,7 @@ public func search(value: T) -> BinarySearchTree? {
 
 **트리의 높이**
 
-- 시간 복잡도 : $O(n)$, 모든 노드 순회
+- 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">, 모든 노드 순회
 
 	```swift
 	public func height() -> Int {
@@ -375,7 +375,7 @@ public func search(value: T) -> BinarySearchTree? {
 
 **깊이**
 
-- 시간 복잡도 : $O(n)$, 모든 노드 순회
+- 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">, 모든 노드 순회
 
 	```swift
 	public func depth() -> Int {
@@ -395,7 +395,7 @@ public func search(value: T) -> BinarySearchTree? {
 **현재 트리가 이진 탐색 트리인지 판단**
 
 - 왼쪽 분기에 현재 노드의 값보다 작은 값만 포함되어 있고, 오른쪽 분기에는 더 큰 값만 포함되어 있는지 확인
-- 시간 복잡도 : $O(n)$, 모든 노드 순회
+- 시간 복잡도 : <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">, 모든 노드 순회
 
 	```swift
 	public func isBST(minValue: T, maxValue: T) -> Bool {

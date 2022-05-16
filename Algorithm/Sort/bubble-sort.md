@@ -13,7 +13,7 @@
 
 - 특정 원소가 최종 정렬 위치에 있어도 교환되는 일이 발생한다.
 - 첫 번째 원소가 가장 클 때 오름차순으로 정렬하면 배열의 모든 요소와 교환이 필요하다.
-- 최선, 최악의 경우 모두 시간 복잡도가 $O(n^2)$이다.
+- 최선, 최악의 경우 모두 시간 복잡도가 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n^2)">이다.
 
 &nbsp;
 ## 구현

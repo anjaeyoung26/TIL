@@ -40,7 +40,7 @@
 
 <img src="https://user-images.githubusercontent.com/61190690/168468160-4c1a9713-29ac-478c-b42b-1cfe1f63df71.PNG" width="200">
 
-간선을 통해서 양방향으로 연결되어 있는 정점으로 갈 수 있다. 정점 A와 정점 B를 연결하는 간선은 $(A, B)$와 같이 정점의 쌍으로 표현한다.
+간선을 통해서 양방향으로 연결되어 있는 정점으로 갈 수 있다. 정점 A와 정점 B를 연결하는 간선은 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}(A, B)">와 같이 정점의 쌍으로 표현한다.
 
 - 연결 그래프 : 무방향 그래프에 있는 모든 정점 쌍에 대해서 경로가 존재하는 그래프이며, 대표적인 예로 [Tree](./tree.md)가 있다.
 
@@ -52,7 +52,7 @@
 
 <img src="https://user-images.githubusercontent.com/61190690/168468165-8619b37f-e5b8-48d0-9123-9e707ed39ac4.PNG" width="200">
 
-간선에 방향성이 존재하여 한 방향으로만 갈 수 있다. 정점 A에서 정점 B로 갈 수 있는 간선은 $<A, B>$로 표시한다.
+간선에 방향성이 존재하여 한 방향으로만 갈 수 있다. 정점 A에서 정점 B로 갈 수 있는 간선은 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}<A, B>">로 표시한다.
 
 ### 완전 그래프
 
@@ -89,13 +89,13 @@
 
 2. 필요한 만큼의 공간만 사용한다.
 
-3. 그래프에 존재하는 모든 간선의 수를 $O(V+E)$ 시간 안에 알 수 있다.
+3. 그래프에 존재하는 모든 간선의 수를 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V%2BE)"> 시간 안에 알 수 있다.
 
 **단점**
 
-1. 두 정점이 연결되어 있는지 확인할 때 시간 복잡도는 $O(V)$이다. 인접 행렬에 비해 더 많은 시간이 소요된다.
+1. 두 정점이 연결되어 있는지 확인할 때 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V)">이다. 인접 행렬에 비해 더 많은 시간이 소요된다.
 
-	> 정확한 시간 복잡도는 $O(degree(V))$이다. degree(V)는 정점의 차수를 의미한다.
+	> 정확한 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(degree(V))">이다. degree(V)는 정점의 차수를 의미한다.
 
 2. 인접 행렬에 비해 구현이 복잡하다.
 
@@ -109,19 +109,19 @@
 
 **장점**
 
-1. 두 정점을 연결하는 간선의 존재 여부를 $O(1)$ 시간 안에 알 수 있다.
+1. 두 정점을 연결하는 간선의 존재 여부를 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> 시간 안에 알 수 있다.
 
-	> $matrix[i][j]$
+	> <img src="https://render.githubusercontent.com/render/math?math=\color{gray}matrix[i][j]">
 
-2. 정점의 차수를 $O(V)$ 시간 안에 알 수 있다. 인접 배열의 $i$번째 행 또는 열을 모두 더한다.
+2. 정점의 차수를 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V)"> 시간 안에 알 수 있다. 인접 배열의 $i$번째 행 또는 열을 모두 더한다.
 
 **단점**
 
-1. 그래프에 존재하는 모든 간선의 수는 인접 행렬의 전체를 조사해야 하므로 $O(V^2)$ 시간 안에 알 수 있다.
+1. 그래프에 존재하는 모든 간선의 수는 인접 행렬의 전체를 조사해야 하므로 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V^2)"> 시간 안에 알 수 있다.
 
-2. 간선의 수와 관계없이 항상 $V^2$개의 공간이 필요하므로 공간이 낭비될 수 있다.
+2. 간선의 수와 관계없이 항상 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}V^2">개의 공간이 필요하므로 공간이 낭비될 수 있다.
 
-3. 정점을 추가하려면 더 큰 행렬을 선언하고 모든 값을 복사해야 하므로 시간 복잡도는 $O(V^2)$이다.
+3. 정점을 추가하려면 더 큰 행렬을 선언하고 모든 값을 복사해야 하므로 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V^2)">이다.
 
 &nbsp;
 ### 인접 리스트 vs 인접 행렬
@@ -130,10 +130,10 @@
 
 | 연산 | 인접 리스트 | 인접 행렬 |
 | --- | --- | --- |
-| 저장 공간 | $O(V+E)$ | $O(V^2)$ |
-| 정점 추가 | $O(1)$ | $O(V^2)$ |
-| 간선 추가 | $O(1)$ | $O(1)$ |
-| 인접 확인 | $O(V)$ | $O(1)$ |
+| 저장 공간 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V%2BE)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V^2)"> |
+| 정점 추가 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V^2)"> |
+| 간선 추가 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> |
+| 인접 확인 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> |
 
 > V : 정점의 개수, E : 간선의 개수
 
@@ -221,7 +221,7 @@ open override func createVertex(_ data: T) -> Vertex<T> {
 &nbsp;
 ### 방향성이 있는 간선 추가
 
-$<A, B>$와 같이 한 방향으로 갈 수 있는 간선을 추가한다.
+<img src="https://render.githubusercontent.com/render/math?math=\color{gray}<A, B>">와 같이 한 방향으로 갈 수 있는 간선을 추가한다.
 
 ```swift
 open func addDirectedEdge(_ from: Vertex<T>, to: Vertex<T>, withWeight weight: Double?) {
@@ -238,7 +238,7 @@ open func addDirectedEdge(_ from: Vertex<T>, to: Vertex<T>, withWeight weight: D
 &nbsp;
 ### 방향성이 없는 간선 추가
 
-$(A, B)$와 같이 양 방향으로 갈 수 있는 간선을 추가한다.
+<img src="https://render.githubusercontent.com/render/math?math=\color{gray}(A, B)">와 같이 양 방향으로 갈 수 있는 간선을 추가한다.
 
 ```swift
 open func addUndirectedEdge(_ vertices: (Vertex<T>, Vertex<T>), withWeight weight: Double?) {
@@ -282,7 +282,7 @@ open var edges: [Edge<T>] {
 &nbsp;
 ### 두 정점의 인접 확인
 
-두 정점이 인접해 있는지 확인하기 위해 인접 리스트의 모든 정점을 순회해야 한다. 정점의 수를 $V$라고 할 때 최악의 경우 모든 정점을 확인해야 하므로 시간 복잡도는 $O(V)$이다.
+두 정점이 인접해 있는지 확인하기 위해 인접 리스트의 모든 정점을 순회해야 한다. 정점의 수를 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}V">라고 할 때 최악의 경우 모든 정점을 확인해야 하므로 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(V)">이다.
 
 ```swift
 open func hasEdges(from: Vertex<T>, to: Vertex<T>) -> Bool {

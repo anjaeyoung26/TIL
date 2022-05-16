@@ -23,10 +23,10 @@
 
 |  | 배열 | 연결 리스트 |
 | --- | :---: | :---: |
-| 맨 앞에 삽입, 삭제 | O(1) | O(1) |
-| 맨 뒤에 삽입 | O(1) | O(1) |
-| 맨 뒤에 삭제 | O(1) | 단일, 원형 : O(n) </br>이중 : O(1) |   
-| 중간에 삽입, 삭제 | O(n) | O(n) |
+| 맨 앞에 삽입, 삭제 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> |
+| 맨 뒤에 삽입 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> |
+| 맨 뒤에 삭제 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> | 단일, 원형 : <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> </br>이중 : <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> |   
+| 중간에 삽입, 삭제 | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> | <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)"> |
 
 &nbsp;
 ### 장단점
@@ -127,7 +127,7 @@ void add(struct Node *target, int data)
 }
 ```
 
-위 처럼 삽입하려는 위치의 이전 노드(`target`)에 대한 정보를 알고 있다면 시간 복잡도는 $O(1)$이다. 하지만 이전 노드에 대한 정보를 모른다면 탐색이 필요하므로 시간 복잡도는 $O(n)$이다.
+위 처럼 삽입하려는 위치의 이전 노드(`target`)에 대한 정보를 알고 있다면 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)">이다. 하지만 이전 노드에 대한 정보를 모른다면 탐색이 필요하므로 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">이다.
 
 * 이전 노드에 대한 정보를 알 수 있는 경우는 머리 혹은 꼬리 노드와 관련된 연산이다. 즉 연결 리스트의 맨 앞 혹은 맨 뒤에 삽입하는 연산이다.
 
@@ -147,7 +147,7 @@ void remove(struct Node *target)
 }
 ```
 
-삽입과 마찬가지로 삭제하려는 위치의 이전 노드(`target`)에 대한 정보를 알고 있다면 시간 복잡도는 $O(1)$, 모른다면 $O(n)$이다. 또한 꼬리 노드를 삭제하는 연산의 경우 기존의 꼬리 노드를 가리키던 노드(A)의 다음(next)을 NULL로 변경하는 등 A를 변경해야 하므로 시간 복잡도는 $O(n)$이다.
+삽입과 마찬가지로 삭제하려는 위치의 이전 노드(`target`)에 대한 정보를 알고 있다면 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)">, 모른다면 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">이다. 또한 꼬리 노드를 삭제하는 연산의 경우 기존의 꼬리 노드를 가리키던 노드(A)의 다음(`next`)을 `NULL`로 변경하는 등 A를 변경해야 하므로 시간 복잡도는 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">이다.
 
 &nbsp;
 ## Doubly
@@ -157,7 +157,7 @@ void remove(struct Node *target)
 &nbsp;
 ### 노드의 구성
 
-각 노드는 이전 노드와 다음 노드에 대한 포인터를 가지고 있다. 단방향 연결 리스트와 마찬가지로 마지막 노드의 다음(`next`)는 NULL 값을 갖는다.
+각 노드는 이전 노드와 다음 노드에 대한 포인터를 가지고 있다. 단방향 연결 리스트와 마찬가지로 마지막 노드의 다음(`next`)는 `NULL` 값을 갖는다.
 
 ```c
 struct Node {
@@ -170,7 +170,7 @@ struct Node {
 
 ### 장점
 
-$n$개의 노드를 갖는 단방향 연결 리스트에서 $n-1$번째 노드에 접근하기 위해서는 $n-2$번의 포인터 추적이 필요하다. 왜냐하면 단방향 연결 리스트는 머리 노드부터 순차적으로 접근해야 하기 때문이다. 하지만 양방향 연결 리스트는 꼬리 노드부터 반대로도 접근할 수 있다. $n/2$보다 작은 순서의 노드는 머리 노드부터, $n/2$보다 크거가 같은 순서의 노드는 꼬리 노드부터 탐색하도록 구현하여 단방향 연결 리스트에 비해 탐색 시간을 절반으로 줄일 수 있다.
+n개의 노드를 갖는 단방향 연결 리스트에서 n-1 번째 노드에 접근하기 위해서는 n-2 번의 포인터 추적이 필요하다. 왜냐하면 단방향 연결 리스트는 머리 노드부터 순차적으로 접근해야 하기 때문이다. 하지만 양방향 연결 리스트는 꼬리 노드부터 반대로도 접근할 수 있다. n/2 보다 작은 순서의 노드는 머리 노드부터, n/2 보다 크거가 같은 순서의 노드는 꼬리 노드부터 탐색하도록 구현하여 단방향 연결 리스트에 비해 탐색 시간을 절반으로 줄일 수 있다.
 
 ### 단점
 
