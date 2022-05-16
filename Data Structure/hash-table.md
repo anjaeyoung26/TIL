@@ -21,14 +21,12 @@ Worst : 충돌이 발생한 경우, Chaining된 배열이나 연결 리스트를
 &nbsp;
 ## Hashing
 
-![hashing](https://user-images.githubusercontent.com/61190690/167288331-8ba972a9-e3cc-4a69-93c9-19f17e5bbd0b.png)
+![hashing](https://user-images.githubusercontent.com/61190690/168529919-213b0ec9-5399-41a3-b531-455d2f978b64.png)
 
 대부분의 자료구조 에서는 탐색 키를 저장된 키 값과 반복적으로 비교하면서 원하는 요소에 접근한다. 이는 정렬이 되어 있다면 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(log_2n)">, 정렬이 되어 있지 않다면 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(n)">의 시간 복잡도를 갖는다. 반면 해싱은 탐색 키에 산술적인 연산을 적용해 요소가 저장되어 있는 테이블의 주소로 변환되어 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(1)"> 시간 안에 빠르게 접근할 수 있다.
 
 &nbsp;
 ## Hashing Function
-
-<img src="https://user-images.githubusercontent.com/61190690/167288354-ecc41ebd-50e7-41b9-bcdb-351d1f5cc76a.png" width="500">
 
 해싱 함수는 키 값을 테이블의 주소로 변환하는 함수이다. 해시 알고리즘은 다양한 종류가 있으며, 아래는 문자열을 해싱 하는 `djb2` 알고리즘이다.
 
@@ -47,7 +45,7 @@ djb2Hash("bca") // outputs 193487083
 &nbsp;
 ## Keeping Arrays Small
 
-<img src="https://user-images.githubusercontent.com/61190690/167288396-7eee355d-b700-415d-8c33-f879935a965a.png" width="500">
+<img src="https://user-images.githubusercontent.com/61190690/168530947-f0e7ea6d-097c-4055-bd92-191a2f732473.png">
 
 하지만 ‘-8378883973431208045’와 같이 큰 값의 정수를 배열의 인덱스로 사용하기에 부담이 된다. 일반적으로 해시가 음수라면 양수로 만든 후 배열의 크기만큼 나눈 나머지를 인덱스로 사용한다. 아래는 `FIRSTNAME`의 인덱스를 계산한다.
 
@@ -83,7 +81,7 @@ djb2Hash("lastName") % 2 // outputs 1
 &nbsp;
 ### Separate Chaining
 
-<img src="https://user-images.githubusercontent.com/61190690/167288501-9cabfee9-5716-4437-a7ac-864169a03a30.png" width="600">
+<img src="https://user-images.githubusercontent.com/61190690/168542000-0c9e458d-c11c-444a-968b-199552549f9d.png" width="600">
 
 1. 각각의 버킷을 연결 리스트로 만들어 동일한 인덱스로 매핑된 값을 리스트로 연결한다. 이는 연결 리스트의 특징을 이어받아 삽입∙삭제는 간단하지만 작은 데이터를 저장하기에 오버헤드가 발생한다.
 

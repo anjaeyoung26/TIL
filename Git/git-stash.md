@@ -1,7 +1,5 @@
 # git stash
 
-<img src="https://user-images.githubusercontent.com/61190690/167257220-c9a9f4fd-a51f-4ef6-b961-3718b296b91e.png">
-
 현재 브랜치에서 커밋하지 않은 변경사항이 있을 때 다른 브랜치로 전환하면 아래와 같은 오류가 발생한다. 다른 브랜치로 전환하기 전에 변경 사항을 커밋하거나 Stash 하라는 오류이다.
 
 ```

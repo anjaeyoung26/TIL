@@ -3,7 +3,7 @@
 `UIViewController` 클래스가 갖고 있는 `UIViewController` 타입의 옵셔널 프로퍼티이다. 이름에 present가 붙어있듯이 `present(_:animated:completion:)` 함수와 관련있다.
 
 &nbsp;
-# presentingViewController
+## presentingViewController
 
 ```swift
 open class UIViewController {
@@ -15,7 +15,7 @@ open class UIViewController {
 
 
 &nbsp;
-# presentedViewController
+## presentedViewController
 
 ```swift
 open class UIViewController {
