@@ -42,6 +42,7 @@ Today I Learned
 - [Mock Networking](Swift/Test/mock-networking.md)
 ---
 ## Git
+- [기본 개념](./Git/git.md)
 - [기본적인 사용법](./Git/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8_%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 - [커밋 메시지 변경](./Git/%EC%BB%A4%EB%B0%8B%20_%EB%A9%94%EC%8B%9C%EC%A7%80_%EB%B3%80%EA%B2%BD.md)
 - [커밋 순서 변경](./Git/%EC%BB%A4%EB%B0%8B_%EC%88%9C%EC%84%9C_%EB%B3%80%EA%B2%BD.md)
