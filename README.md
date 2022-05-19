@@ -30,7 +30,8 @@ Today I Learned
 
 - Kignfisher
 
-    - [Kingfisher(1) - 캐싱](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+    - [Kingfisher - Caching](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+    - [Kingfisher - Prefetch](Swift/3rd-party/kingfisher-prefetch.md)
 
 - [SwiftLint](Swift/3rd-party/swiftlint.md)
 
