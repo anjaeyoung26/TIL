@@ -18,6 +18,7 @@ Today I Learned
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [연산 프로퍼티](Swift/computed-properties.md)
 - [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
+- [@escaping](Swift/escaping-closure.md)
 
 ### 1st-party
 - [StoreKit](Swift/1st-party/StoreKit/storekit.md)
