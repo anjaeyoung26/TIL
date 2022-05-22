@@ -7,7 +7,7 @@
 &nbsp;
 ## 장점
 
-- 입력 데이터가 무엇이든 간에 정렬되는 시간은 동일하여 안정적인 정렬 방법이다.
+- 입력 데이터가 무엇이든 간에 정렬되는 시간은 <img src="https://render.githubusercontent.com/render/math?math=\color{gray}O(nlogn)">으로 동일하여 안정적인 정렬 방법이다.
 - 크기가 큰 레코드를 [연결 리스트](../../Data%20Structure/linked-list.md)를 사용하여 정렬할 경우 정렬 알고리즘 중 가장 효율적이다.
 
 &nbsp;
