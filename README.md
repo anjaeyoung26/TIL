@@ -85,6 +85,7 @@ Today I Learned
 - [버블 정렬](Algorithm/Sort/bubble-sort.md)
 - [힙 정렬](Algorithm/Sort/heap-sort.md)
 - [병합 정렬](Algorithm/Sort/merge-sort.md)
+- [퀵 정렬](Algorithm/Sort/quick-sort.md)
 ---
 ## 자료구조
 - [Array](./Data%20Structure/array.md)
