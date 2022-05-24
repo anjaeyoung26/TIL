@@ -65,7 +65,7 @@ Today I Learned
 - [git restore](./Git/git-restore.md)
 - [git switch](./Git/git-switch.md)
 - [git checkout](./Git/git-checkout.md)
-
+- [git remote](./Git/git-remote.md)
 
 ### 기타
 - [.gitignore](./Git/gitignore.md)
