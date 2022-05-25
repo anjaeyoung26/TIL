@@ -20,6 +20,7 @@ Today I Learned
 - [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
 - [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
+- [Type method](Swift/type-method.md)
 
 ### 1st-party
 - [StoreKit](Swift/1st-party/StoreKit/storekit.md)
