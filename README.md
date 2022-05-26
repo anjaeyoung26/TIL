@@ -1,8 +1,10 @@
 # TIL
+
 Today I Learned
 
 ---
 ##  Swift
+- [App's Life-Cycle](Swift/app-life-cycle.md)
 - [Call by value, reference](Swift/call-by-value.md)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
 - [contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
