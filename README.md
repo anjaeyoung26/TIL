@@ -4,6 +4,9 @@ Today I Learned
 
 ---
 ##  Swift
+- [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
+- [연산 프로퍼티](Swift/computed-properties.md)
+- [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [ARC](Swift/arc.md)
 - [App's Life-Cycle](Swift/app-life-cycle.md)
 - [Call by value, reference](Swift/call-by-value.md)
@@ -18,12 +21,10 @@ Today I Learned
 - [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
 - [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
-- [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
-- [연산 프로퍼티](Swift/computed-properties.md)
-- [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
 - [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
 - [Type method](Swift/type-method.md)
+- [weak, unowned](Swift/weak-unowned-reference.md)
 
 ### 1st-party
 - [StoreKit](Swift/1st-party/StoreKit/storekit.md)

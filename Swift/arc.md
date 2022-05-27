@@ -123,7 +123,7 @@ unit4A = nil
 <img src="https://user-images.githubusercontent.com/61190690/170715729-6585b5d6-cc67-4eee-9060-462b8e0f80e4.png">
 </p>
 
-그렇다면 강한 순환 참조는 어떻게 해결해야 할까?
+그렇다면 강한 순환 참조는 어떻게 해결해야 할까? 강한 순환 참조를 해결하는데 두 가지 방법이 있다. [weak, unowned](./weak-unowned-reference.md)에서 알아보자.
 
 
 
