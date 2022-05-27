@@ -4,6 +4,7 @@ Today I Learned
 
 ---
 ##  Swift
+- [ARC](Swift/arc.md)
 - [App's Life-Cycle](Swift/app-life-cycle.md)
 - [Call by value, reference](Swift/call-by-value.md)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
