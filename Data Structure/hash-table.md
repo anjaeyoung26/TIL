@@ -106,18 +106,18 @@ djb2Hash("lastName") % 2 // outputs 1
 
 ```swift
 public struct HashTable<Key: Hashable, Value> {
-	typealias Element = (key: Key, value: Value)
-	typealias Bucket = [Element]
-	private var buckets = [Bucket] // Chaining에 연결 리스트 대신 배열을 사용한다.
+  typealias Element = (key: Key, value: Value)
+  typealias Bucket = [Element]
+  private var buckets = [Bucket] // Chaining에 연결 리스트 대신 배열을 사용한다.
 
-	public private(set) var count = 0
-	public var isEmpty: Bool { return count == 0 }
+  public private(set) var count = 0
+  public var isEmpty: Bool { return count == 0 }
 
-	// 고정된 크기로 초기화
-	public init(capacity: Int) {
-		assert(capacity > 0)
-		buckets = Array<Bucket>(repeatingElement([], count: capacity))
-	}
+  // 고정된 크기로 초기화
+  public init(capacity: Int) {
+	assert(capacity > 0)
+	buckets = Array<Bucket>(repeatingElement([], count: capacity))
+  }
 }
 ```
 
@@ -126,16 +126,16 @@ public struct HashTable<Key: Hashable, Value> {
 
 ```swift
 public subscript(key: Key) -> Value? {
-	get {
-		return value(forKey: key)
+  get {
+    return value(forKey: key)
+  }
+  set {
+	if let value = newValue {
+	  updateValue(value, forKey: key)
+	} else {
+	  removeValue(forKey: key)
 	}
-	set {
-		if let value = newValue {
-			updateValue(value, forKey: key)
-		} else {
-			removeValue(forKey: key)
-		}
-	}
+  }
 }
 ```
 
@@ -159,7 +159,7 @@ let oldValue = hashTable["old"]
 
 ```swift
 private func index(forKey key: Key) -> Int {
-	return abs(key.hashValue % buckets.count)
+  return abs(key.hashValue % buckets.count)
 }
 ```
 
@@ -168,16 +168,16 @@ private func index(forKey key: Key) -> Int {
 
 ```swift
 public func value(forKey: Key) -> Value?
-	let index = self.index(forKey: key)
+  let index = self.index(forKey: key)
 
-	// 버킷에 있는 Chaining 배열에서 탐색
-	for element in buckets[index] {
-		if element.key == key {
-			return element.value
-		}
+  // 버킷에 있는 Chaining 배열에서 탐색
+  for element in buckets[index] {
+	if element.key == key {
+	  return element.value
 	}
+  }
 
-	return nil
+  return nil
 }
 ```
 
@@ -187,19 +187,19 @@ public func value(forKey: Key) -> Value?
 ```swift
 @discardableResult 
 public mutating func updateValue(_ value: Value, forKey: Key) -> Value? {
-	let index = self.index(forKey: key)
+  let index = self.index(forKey: key)
 
-	for (i, element) in buckets[index].enumerated() {
-		if element.key == key {
-			let oldValue = element.value
-			buckets[index][i].value = value
-			return oldValue
-		}
+  for (i, element) in buckets[index].enumerated() {
+	if element.key == key {
+	  let oldValue = element.value
+	  buckets[index][i].value = value
+	  return oldValue
 	}
+  }
 
-	buckets[index].append((key: Key, value: value))
-	count += 1
-	return nil
+  buckets[index].append((key: Key, value: value))
+  count += 1
+  return nil
 }
 	
 ```
@@ -212,23 +212,23 @@ public mutating func updateValue(_ value: Value, forKey: Key) -> Value? {
 ```swift
 @discardableResult
 public mutating func removeValue(_ value: Value, forKey: Key) -> Value? {
-	let index = self.index(forKey: key)
+  let index = self.index(forKey: key)
 	
-	for (i, element) in buckets[index].enumerated() {
-		if element.key == key {
-			let removeValue = element.value
-			buckets[index][i] = nil
-			count -= 1
-			return removeValue
-		}
+  for (i, element) in buckets[index].enumerated() {
+	if element.key == key {
+	  let removeValue = element.value
+	  buckets[index][i] = nil
+	  count -= 1
+	  return removeValue
 	}
+  }
 
-	return nil
+  return nil
 }
 
 public mutating func removeAll() {
-	buckets = Array<Bucket>(repeatingElements([], count: buckets.count))
-	count = 0
+  buckets = Array<Bucket>(repeatingElements([], count: buckets.count))
+  count = 0
 }
 			
 ```
@@ -240,18 +240,18 @@ public mutating func removeAll() {
 
 ```swift
 extension HashTable: CustomStringConvertible {
-    public var description: String {
-        let pairs = buckets.flatMap { b in b.map { e in "\(e.key) = \(e.value)" } }
-        return pairs.joined(separator: ", ")
-    }
+  public var description: String {
+	let pairs = buckets.flatMap { b in b.map { e in "\(e.key) = \(e.value)" } }
+	return pairs.joined(separator: ", ")
+  }
     
-    public var debugDescription: String {
-        var str = ""
-        for (i, bucket) in buckets.enumerated() {
-            let pairs = bucket.map { e in "\(e.key) = \(e.value)" }
-            str += "bucket \(i): " + pairs.joined(separator: ", ") + "\n"
-        }
-        return str
-    }
+  public var debugDescription: String {
+	var str = ""
+	for (i, bucket) in buckets.enumerated() {
+	  let pairs = bucket.map { e in "\(e.key) = \(e.value)" }
+	  str += "bucket \(i): " + pairs.joined(separator: ", ") + "\n"
+	}
+	return str
+  }
 }
 ```
