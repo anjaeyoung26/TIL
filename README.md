@@ -26,6 +26,7 @@ Today I Learned
 - [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
 - [Type method](Swift/type-method.md)
+- [UIViewController Life-Cycle](Swift/uiviewcontroller-life-cycle.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
 
 ### 1st-party
