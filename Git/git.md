@@ -41,4 +41,4 @@ Working Directory에 존재하는 파일 중 Git으로 버전 관리를 하는 �
 
 Working Directory에 존재하는 `Modified` 상태의 파일을 Staging Area로 옮기면 `Staged` 상태가 된다. 그리고 원격 저장소에 올린 파일은 다시 `UnModified` 상태가 된다. Git을 처음 사용하면 `Staged` 상태에 의문을 가질 것이다. 왜 Working Directory에서 수정한 파일을 바로 원격 저장소로 올리지 않고 Staging Area를 거쳐가는지에 대한 의문이다. 아래의 포스팅에서 Staging Area의 필요성을 살펴보자.
 
-> Staging Area가 필요한 이유 : https://blog.npcode.com/2012/10/23/git%EC%9D%98-staging-area%EB%8A%94-%EC%96%B4%EB%96%A4-%EC%A0%90%EC%9D%B4-%EC%9C%A0%EC%9A%A9%ED%95%9C%EA%B0%80/
+> [Staging Area가 필요한 이유](https://blog.npcode.com/2012/10/23/git%EC%9D%98-staging-area%EB%8A%94-%EC%96%B4%EB%96%A4-%EC%A0%90%EC%9D%B4-%EC%9C%A0%EC%9A%A9%ED%95%9C%EA%B0%80/)
