@@ -1,9 +1,4 @@
-# TIL
-
-Today I Learned
-
----
-##  Swift
+#  Swift
 - [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
 - [연산 프로퍼티](Swift/computed-properties.md)
 - [전송 제어문](Swift/control-transfer-statements.md)
@@ -21,18 +16,22 @@ Today I Learned
 - [frame, bounds](Swift/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
 - [Interface Builder, NIB, XIB](Swift/interface-builder-nib-xib.md)
+- [Mock Networking](Swift/Test/mock-networking.md)
 - [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
 - [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
+- [StoreKit](Swift/1st-party/StoreKit/storekit.md)
 - [Type method](Swift/type-method.md)
 - [UIViewController Life-Cycle](Swift/uiviewcontroller-life-cycle.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
 
-### 1st-party
-- [StoreKit](Swift/1st-party/StoreKit/storekit.md)
+## Concurrency
+- [async, await](Swift/Concurrency/concurrency.md)
+- [DispatchSemaphore](Swift/Concurrency/dispatch-semaphore.md)
+- [NSLocking](Swift/Concurrency/nslocking.md)
 
-### 3rd-party
+## 3rd-party
 
 - Alamofire
 
@@ -44,16 +43,8 @@ Today I Learned
     - [Kingfisher - Prefetch](Swift/3rd-party/kingfisher-prefetch.md)
 
 - [SwiftLint](Swift/3rd-party/swiftlint.md)
-
-### Concurrency
-- [async, await](Swift/Concurrency/concurrency.md)
-- [DispatchSemaphore](Swift/Concurrency/dispatch-semaphore.md)
-- [NSLocking](Swift/Concurrency/nslocking.md)
-
-### 테스트
-- [Mock Networking](Swift/Test/mock-networking.md)
 ---
-## Git
+# Git
 - [기본 개념](./Git/git.md)
 - [기본적인 사용법](./Git/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8_%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 - [커밋 메시지 변경](./Git/%EC%BB%A4%EB%B0%8B%20_%EB%A9%94%EC%8B%9C%EC%A7%80_%EB%B3%80%EA%B2%BD.md)
@@ -63,8 +54,9 @@ Today I Learned
 - [작업 브랜치 최신화](./Git/%EC%9E%91%EC%97%85_%EB%B8%8C%EB%9E%9C%EC%B9%98_%EC%B5%9C%EC%8B%A0%ED%99%94.md)
 - [Remote 기준으로 로컬 덮어쓰기](./Git/Remote_%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C_%EB%8D%AE%EC%96%B4%EC%93%B0%EA%B8%B0.md)
 - [Remote에서 지워진 브랜치를 로컬에 반영](./Git/Remote%EC%97%90%EC%84%9C_%EC%A7%80%EC%9B%8C%EC%A7%84_%EB%B8%8C%EB%9E%9C%EC%B9%98_%EB%B0%98%EC%98%81.md)
+- [.gitignore](./Git/gitignore.md)
 
-### 명령어
+## 명령어
 - [git diff](./Git/git-diff.md)
 - [git rm](./Git/git-rm.md)
 - [git branch](./Git/git-branch.md)
@@ -74,10 +66,10 @@ Today I Learned
 - [git switch](./Git/git-switch.md)
 - [git checkout](./Git/git-checkout.md)
 - [git remote](./Git/git-remote.md)
-
-### 기타
-- [.gitignore](./Git/gitignore.md)
+- [git commit](./Git/git-commit.md)
 ---
+# CS
+
 ## 운영체제
 - [교착상태](OS/deadlock.md)
 - [메모리 관리 전략](OS/memory-management-strategy.md)
@@ -85,18 +77,8 @@ Today I Learned
 - [인터럽트](OS/interrupt.md)
 - [프로세스, 스레드](OS/process-thread.md)
 - [프로세스 동기화](OS/process-synchronization.md)
----
-## 알고리즘
-- [시간 복잡도](Algorithm/time-complexity.md)
+- [시스템 콜](OS/system-call.md)
 
-### 정렬
-- [선택 정렬](Algorithm/Sort/selection-sort.md)
-- [삽입 정렬](Algorithm/Sort/insertion-sort.md)
-- [버블 정렬](Algorithm/Sort/bubble-sort.md)
-- [힙 정렬](Algorithm/Sort/heap-sort.md)
-- [병합 정렬](Algorithm/Sort/merge-sort.md)
-- [퀵 정렬](Algorithm/Sort/quick-sort.md)
----
 ## 자료구조
 - [Array](./Data%20Structure/array.md)
 - [Linked List](./Data%20Structure/linked-list.md)
@@ -106,3 +88,17 @@ Today I Learned
 - [Heap](./Data%20Structure/heap.md)
 - [Hash Table](./Data%20Structure/hash-table.md)
 - [Graph](./Data%20Structure/graph.md)
+
+## 네트워크
+- [OSI 7계층](./Network/osi-7-layer.md)
+---
+# 알고리즘
+- [시간 복잡도](Algorithm/time-complexity.md)
+
+## 정렬
+- [선택 정렬](Algorithm/Sort/selection-sort.md)
+- [삽입 정렬](Algorithm/Sort/insertion-sort.md)
+- [버블 정렬](Algorithm/Sort/bubble-sort.md)
+- [힙 정렬](Algorithm/Sort/heap-sort.md)
+- [병합 정렬](Algorithm/Sort/merge-sort.md)
+- [퀵 정렬](Algorithm/Sort/quick-sort.md)
