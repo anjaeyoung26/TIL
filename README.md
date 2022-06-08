@@ -104,3 +104,6 @@
 - [힙 정렬](Algorithm/Sort/heap-sort.md)
 - [병합 정렬](Algorithm/Sort/merge-sort.md)
 - [퀵 정렬](Algorithm/Sort/quick-sort.md)
+---
+# ETC
+- [디자인 패턴과 아키텍처 패턴](./ETC/design-architecture-pattern.md)
