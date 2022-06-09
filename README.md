@@ -21,7 +21,6 @@
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
 - [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
-- [StoreKit](Swift/1st-party/StoreKit/storekit.md)
 - [Type method](Swift/type-method.md)
 - [UIViewController Life-Cycle](Swift/uiviewcontroller-life-cycle.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
@@ -30,6 +29,14 @@
 - [async, await](Swift/Concurrency/concurrency.md)
 - [DispatchSemaphore](Swift/Concurrency/dispatch-semaphore.md)
 - [NSLocking](Swift/Concurrency/nslocking.md)
+
+## 1st-party
+
+- [StoreKit](./Swift/1st-party/StoreKit/storekit.md)
+
+- Swift Package Manager
+
+    - [Swift Package Manager란?](./Swift/1st-party/SPM/spm.md)
 
 ## 3rd-party
 
