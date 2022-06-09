@@ -37,6 +37,10 @@
 
     - [Alamofire Advanced Usage - 네트워크 계층 리팩토링](https://fromdave.medium.com/alamofire-%ED%99%9C%EC%9A%A9%EA%B8%B0-8bf5274fbaf) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 
+- CocoaPods
+
+    - [CocoaPods Binary](./Swift/3rd-party/cocoapods-binary.md)
+
 - Kignfisher
 
     - [Kingfisher - Caching](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
