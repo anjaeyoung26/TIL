@@ -1,4 +1,6 @@
+<p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/167772456-e3c5d25a-420f-4a82-a005-db806ebc07cc.png" width="700" height="500">
+</p>
 
 `UIViewController` 클래스가 갖고 있는 `UIViewController` 타입의 옵셔널 프로퍼티이다. 이름에 present가 붙어있듯이 `present(_:animated:completion:)` 함수와 관련있다.
 

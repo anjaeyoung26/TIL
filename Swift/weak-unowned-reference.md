@@ -43,19 +43,19 @@ unit4A.tenat = john
 이때 각 인스턴스를 참조하고 있는 그림은 아래와 같다. 주목할 점은 `Apartment`의 `tenant` 변수가 `Person` 인스턴스를 약한 참조(weak)로 참조하고 있다는 것이다. 그러므로 `Person` 인스턴스는 `john` 변수만 참조하고 있기 때문에 참조 횟수는 1이다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170764047-ceec1071-5a91-427b-880e-a871e4cbd142.png">
+<img src="https://user-images.githubusercontent.com/61190690/170764047-ceec1071-5a91-427b-880e-a871e4cbd142.png" width="500">
 </p>
 
 `john` 변수에 nil이 할당되면 `Person` 인스턴스의 참조 횟수가 0이 되어 ARC가 `Person` 인스턴스가 더 이상 사용되지 않는다고 판단하고 메모리에서 해제한다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170764518-d2fc6692-6edd-4024-a82d-0a412e65e2b9.png">
+<img src="https://user-images.githubusercontent.com/61190690/170764518-d2fc6692-6edd-4024-a82d-0a412e65e2b9.png" width="500">
 </p>
 
 마찬가지로 `unit4A` 변수에 nil을 할당하면 `Apartment` 인스턴스는 ARC에 의해 메모리에서 해제된다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170764725-a96575ca-19a1-423f-a0d8-db65b309bc03.png">
+<img src="https://user-images.githubusercontent.com/61190690/170764725-a96575ca-19a1-423f-a0d8-db65b309bc03.png" width="500">
 </p>
 
 &nbsp;
@@ -94,13 +94,13 @@ john!.card = CreditCard(number: "1234-5678-9101-1121", customer: john!) // 2
 이 시점에서 인스턴스의 참조 상태를 그림으로 표현하면 다음과 같다. 1에서 `john`이 `Customer` 인스턴스를 참조하고 있고, 2에서 `CreditCard` 인스턴스를 참조하고 있지만 미소유 참조를 하고 있기 때문에 `Customer` 인스턴스에 대한 참조 횟수는 1이다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170767590-f375096f-25bb-4c57-b133-5e46e214f6e9.png">
+<img src="https://user-images.githubusercontent.com/61190690/170767590-f375096f-25bb-4c57-b133-5e46e214f6e9.png" width="500">
 </p>
 
 `john` 변수에 nil이 할당되면 아래의 그림과 같다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170767814-b503a303-b134-46a1-8492-6a9987152caa.png">
+<img src="https://user-images.githubusercontent.com/61190690/170767814-b503a303-b134-46a1-8492-6a9987152caa.png" width="500">
 </p>
 
 더 이상 `Customer` 인스턴스를 강하게 참조하고 있는 인스턴스가 없으므로 `Customer` 인스턴스는 메모리에서 해제된다. 이어서 `CreditCard` 인스턴스를 강하게 참조하고 있는 개체도 사라지므로 `CreditCard` 인스턴스도 메모리에서 해제된다.

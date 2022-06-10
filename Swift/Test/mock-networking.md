@@ -6,6 +6,8 @@
 
 이때 우리가 원하는 응답을 하도록 가짜 세션을 구현하는 방법이 있다. 우선 네트워킹 통신을 할 때 `URLSession`을 사용한다고 가정하고, `URLSession`의 인스턴스 메소드인 `dataTask(with:completionHandler)`가 우리가 원하는 응답을 하도록 구성하기 위해 새로운 프로토콜을 정의한다.
 
+&nbsp;
+
 ### URLSessionProtocol
 
 ```swift

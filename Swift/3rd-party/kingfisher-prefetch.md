@@ -1,9 +1,8 @@
 # Kingfisher Prefetch
 
-이미지가 캐싱되어 있지 않아서 다운로드를 받아야할 때 약간의 딜레이가 생길 수 있다. Kingfisher의 Prefetch 기능은 [2.1.0](https://github.com/onevcat/Kingfisher/releases/tag/2.1.0) 버전에서 추가됐으며, 이미지를 미리 저장하고 화면에 표시해야할 때 캐시로부터 가져와서 앱의 성능을 향상시켜 준다.
+이미지가 캐싱되어 있지 않아서 다운로드를 받아야할 때 약간의 딜레이가 생길 수 있다. Kingfisher의 Prefetch 기능은 [2.1.0](https://github.com/onevcat/Kingfisher/releases/tag/2.1.0) 버전에서 추가됐으며, 이미지를 미리 저장하고 화면에 표시해야할 때 캐시로부터 가져와서 앱의 성능을 향상시켜 준다. 우선 Kingfisher의 Prefetch 기능을 제공하는 `ImagePrefetcher` 클래스에 대해 살펴보자.
 
-우선 Kingfisher의 Prefetch 기능을 제공하는 `ImagePrefetcher` 클래스에 대해 살펴보자.
-
+&nbsp;
 ## ImagePrefetcher
 
 `ImagePrefetcher`는 이미지 리소스 목록을 가지고 있을 때 화면에 표시하기 전에 다운로드를 할 수 있게 해주는 클래스이다. 어떻게 동작하는지 살펴보자.

@@ -4,10 +4,10 @@
     - [앱의 다섯 가지 상태](#앱의-다섯-가지-상태)
 - [Scene-Based Life-Cycle](#scene-based-life-cycle)
     - [Multiple Windows](#multiple-windows)
-    - [UIScene](#uiscene)
-    - [UIWindowScene](#uiwindowscene)
-    - [UISceneSession](#uiscenesession)
-    - [UISceneDelegate](#uiscenedelegate)
+    - [`UIScene`](#uiscene)
+    - [`UIWindowScene`](#uiwindowscene)
+    - [`UISceneSession`](#uiscenesession)
+    - [`UISceneDelegate`](#uiscenedelegate)
     - [Scene의 다섯 가지 상태](#scene의-다섯-가지-상태)
     - [Session Life-Cycle](#session-life-cycle)
 - [Call Stack 비교](#call-stack-비교)
@@ -16,11 +16,7 @@
 
 앱의 실행부터 종료까지의 주기를 뜻하며, 시스템 알림에 응답하고 기타 중요한 시스템과 관련된 이벤트를 처리하는 단계이다. 또한 `UIKit`과 관련된 `UIViewController`, `UITableViewCell` 등 여러가지 객체만의 생명주기가 존재한다. 
 
-**그렇다면 앱의 생명주기는 왜 중요할까?**
-
- iOS와 같은 모바일 환경에서는 하나의 CPU가 제한된 메모리와 시간을 여러 앱에 할당하게 된다. 이때 가장 우선순위가 높은 앱은 사용자에게 보여지는 앱이다. 따라서 나머지 앱은 가능한 적은 리소스를 사용해야 한다. 이를 위해 앱의 상태 변화를 아는 것이 중요하다.
-
-`UIKit` 프레임워크는 앱의 상태가 변경되면 적절한 Delegate 객체의 메소드를 호출한다.
+**그렇다면 앱의 생명주기는 왜 중요할까?** iOS와 같은 모바일 환경에서는 하나의 CPU가 제한된 메모리와 시간을 여러 앱에 할당하게 된다. 이때 가장 우선순위가 높은 앱은 사용자에게 보여지는 앱이다. 따라서 나머지 앱은 가능한 적은 리소스를 사용해야 한다. 이를 위해 앱의 상태 변화를 아는 것이 중요하다. `UIKit` 프레임워크는 앱의 상태가 변경되면 적절한 Delegate 객체의 메소드를 호출한다.
 
 - iOS 13 이상 : `UISceneDelegate` 객체를 통해 Scene-Based life-cycle 이벤트에 응답한다.
 - iOS 12 이하 : `UIApplicationDelegate` 객체를 통해 App-Based life-cycle 이벤트에 응답한다.
@@ -81,19 +77,17 @@ iOS 12 이하 혹은 Scene-Based life-cycle을 채택하지 않는 iOS 13 이상
 
 ### Multiple Windows
 
-`UISceneDelegate`는 iOS 13부터 iPad에서 Multiple Windows를 지원하게 되면서 추가되었다.
+`UISceneDelegate`는 iOS 13부터 iPad에서 Multiple Windows를 지원하게 되면서 추가되었다. 아래의 그림은 WWDC에서 소개한 Multiple Windows를 사용하는 모습을 나타낸다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/170434815-8d04c491-7dc7-4520-baa3-d0a2125604e9.png" width="500">
 </p>
 
-위 그림에서 iPad의 메모장 앱을 사용 중이다. 언뜻보면 두 개의 메모장 앱이 실행되고 있는 것으로 보인다. 이는 iPad에서 Multiple Windows를 통해 메모장 앱에서 두 개의 Scene을 표시한 모습이다. 각 Scene에는 `UISceneDelegate`가 1:1로 매핑되며, `UISceneDelegate`에서 각 Scene의 UI life-cycle 이벤트를 응답한다. Multiple Windows 구조를 살펴보면 아래와 같다.
+위 그림에서 iPad의 메모장 앱을 사용 중이다. 언뜻보면 두 개의 메모장 앱이 실행되고 있는 것으로 보인다. 이는 iPad에서 Multiple Windows를 통해 메모장 앱에서 두 개의 Scene을 표시한 모습이다. 각 Scene에는 `UISceneDelegate`가 1:1로 매핑되며, `UISceneDelegate`에서 각 Scene의 UI life-cycle 이벤트를 응답한다. 아래의 그림에서 나타내는 Multiple Windows의 구조에서 `UIScreen`과 `UIWindow` 사이에 낯선 객체가 보인다. Scene 개념과 함께 새롭게 추가된 객체들에 대해서 알아보자.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/170426136-457f53fa-b844-4091-a9a3-ab6be40170cb.png" width="600">
 </p>
-
-`UIScreen`과 `UIWindow` 사이에 낯선 객체가 보인다. Scene 개념과 함께 새롭게 추가된 객체들에 대해서 알아보자.
 
 &nbsp;
 ### UIScene
@@ -102,9 +96,7 @@ iOS 12 이하 혹은 Scene-Based life-cycle을 채택하지 않는 iOS 13 이상
 @MainActor class UIScene : UIResponder
 ```
 
-`UIScene`은 하나의 앱 UI instance를 의미한다. iPad 그림에서는 두 개의 `UIScene`이 있다라고 말할 수 있다. 각각의 `UIScene`은 같은 메모리와 앱의 프로세스 공간을 공유하면서 서로 동시에 실행된다. 이러한 성질때문에 여러 개의 `UIScene`과 `UISceneDelegate`을 동시에 사용하여 Multiple Windows를 제공한다.
-
-모든 Scene 객체는 `UISceneDelegate` 프로토콜을 채택하는 `delegate` 프로퍼티가 있다. Scene의 상태가 변화하면 연결된 `delegate`에게 알리고 등록된 옵저버들에게 적절한 `NSNotification`을 게시한다. 만약 Scene이 백그라운드에 진입하면 두 개의 방식으로 우리에게 알린다.
+`UIScene`은 하나의 앱 UI instance를 의미한다. iPad 그림에서는 두 개의 `UIScene`이 있다라고 말할 수 있다. 각각의 `UIScene`은 같은 메모리와 앱의 프로세스 공간을 공유하면서 서로 동시에 실행된다. 이러한 성질때문에 여러 개의 `UIScene`과 `UISceneDelegate`을 동시에 사용하여 Multiple Windows를 제공한다. 모든 Scene 객체는 `UISceneDelegate` 프로토콜을 채택하는 `delegate` 프로퍼티가 있다. Scene의 상태가 변화하면 연결된 `delegate`에게 알리고 등록된 옵저버들에게 적절한 `NSNotification`을 게시한다. 만약 Scene이 백그라운드에 진입하면 두 개의 방식으로 우리에게 알린다.
 
 ```swift
 didEngerBackgroundNotification
@@ -118,9 +110,7 @@ sceneDidEnterBackground(_:)
 @MainActor class UIWindowScene : UIScene
 ```
 
-`UIScene`을 상속받은 클래스로 앱에서 하나 이상의 윈도우를 관리한다. 또한 `UISceneDelegate` 프로토콜을 채택하는 `UIWindowSceneDelegate`와 적절한 `NSNotification`을 통해 Scene의 상태 변화를 알린다.
-
-위 Multiple Windows의 구조를 보다시피 `UIKit`은 `UIScene` 대신 `UIWindowScene` 객체를 생성한다. 하지만 `UIWindowScene`은 `UIScene`을 상속받은 클래스로 결국에는 `UIScene` 클래스의 메소드와 프로퍼티를 사용해서 Scene의 정보에 접근한다.
+`UIScene`을 상속받은 클래스로 앱에서 하나 이상의 윈도우를 관리한다. 또한 `UISceneDelegate` 프로토콜을 채택하는 `UIWindowSceneDelegate`와 적절한 `NSNotification`을 통해 Scene의 상태 변화를 알린다. 위 Multiple Windows의 구조를 보다시피 `UIKit`은 `UIScene` 대신 `UIWindowScene` 객체를 생성한다. 하지만 `UIWindowScene`은 `UIScene`을 상속받은 클래스로 결국에는 `UIScene` 클래스의 메소드와 프로퍼티를 사용해서 Scene의 정보에 접근한다.
 
 &nbsp;
 ### UISceneSession
@@ -168,77 +158,75 @@ sceneDidEnterBackground(_:)
 
 앞서 `UIApplication` 역할의 일부가 각 `UISceneDelegate`에 분리된 대신에 추가된 점이 있다. 이는 새로운 `UISceneSession` 생성되거나 삭제될 때, 이를 시스템이 `UIApplicationDelegate`에게 알리는 Session life-cycle이다.
 
-새로운 `UISceneSession`이 생성될 때:
+- 새로운 `UISceneSession`이 생성될 때:
 
-```swift
-func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration
-```
+    ```swift
+    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration
+    ```
 
-기존의 `UISceneSession`이 삭제될 때:
+- 기존의 `UISceneSession`이 삭제될 때:
 
-```swift
-func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>)
-```
+    ```swift
+    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>)
+    ```
 
 &nbsp;
 ## Call Stack 비교
 
-앱의 상태가 변하는 네 가지 시나리오에서 App-Based와 Scene-Based에서 호출되는 메소드를 알아보자. 
+앱의 상태가 변하는 네 가지 시나리오에서 App-Based와 Scene-Based에서 호출되는 메소드를 알아보자. Scene-Based의 콜 스택을 살펴보면 앱이 실행되거나 종료되는 Process life-cycle은 여전히 `AppDelegate`가 수행하는 것을 알 수 있다.
 
 > Scene-Based 에서는 연결된 Scene 마다 생명주기와 관련된 메소드가 호출된다. 예를들어 두 개의 Scene을 사용하고 있는 앱이 백그라운드로 전환한다면 `sceneDidEnterBackground(_:)`가 두 번 호출된다.
 
-**앱 실행:**
+- **앱 실행:**
 
-```swift
-// App-Based
-application(_:willFinishLaunchingWithOptions:)
-application(_:didFinishLaunchingWithOptions:)
-applicationDidBecomeActive(_:)
+    ```swift
+    // App-Based
+    application(_:willFinishLaunchingWithOptions:)
+    application(_:didFinishLaunchingWithOptions:)
+    applicationDidBecomeActive(_:)
 
-// Scene-Based
-application(_:willFinishLaunchingWithOptions:)
-application(_:didFinishLaunchingWithOptions:)
-scene(_:willConnectTo:options:)
-sceneWillEnterForeground(_:)
-sceneDidBecomeActive(_:)
-```
+    // Scene-Based
+    application(_:willFinishLaunchingWithOptions:)
+    application(_:didFinishLaunchingWithOptions:)
+    scene(_:willConnectTo:options:)
+    sceneWillEnterForeground(_:)
+    sceneDidBecomeActive(_:)
+    ```
 
-**앱 종료:**
+- **앱 종료:**
 
-```swift
-// App-Based
-applicationWillResignActive(_:)
-applicationDidEngerBackground(_:)
-applicationWillTerminate(_:)
+    ```swift
+    // App-Based
+    applicationWillResignActive(_:)
+    applicationDidEngerBackground(_:)
+    applicationWillTerminate(_:)
 
-// Scene-Based
-sceneWillResignActive(_:)
-sceneDidDisconnect(_:)
-applicationWillTerminate(_:)
-```
+    // Scene-Based
+    sceneWillResignActive(_:)
+    sceneDidDisconnect(_:)
+    applicationWillTerminate(_:)
+    ```
 
-**백그라운드 이동:**
+- **백그라운드 이동:**
 
-```swift
-// App-Based
-applicationWillResignActive(_:)
-applicationDidEnterBackground(_:)
+    ```swift
+    // App-Based
+    applicationWillResignActive(_:)
+    applicationDidEnterBackground(_:)
 
-// Scene-Based
-sceneWillResignActive(_:)
-sceneDidEnterBackground(_:)
-```
+    // Scene-Based
+    sceneWillResignActive(_:)
+    sceneDidEnterBackground(_:)
+    ```
 
-**백그라운드에서 앱으로:**
+- **백그라운드에서 앱으로:**
 
-```swift
-// App-Based
-applicationWillEnterForeground(_:)
-applicationDidBecomeActive(_:)
+    ```swift
+    // App-Based
+    applicationWillEnterForeground(_:)
+    applicationDidBecomeActive(_:)
 
-// Scene-Based
-sceneWillEnterForeground(_:)
-sceneDidBecomeActive(_:)
-```
-
-Scene-Based을 보면 앱이 실행되거나 종료되는 Process life-cycle은 여전히 `AppDelegate`가 수행한다.
+    // Scene-Based
+    sceneWillEnterForeground(_:)
+    sceneDidBecomeActive(_:)
+    ```

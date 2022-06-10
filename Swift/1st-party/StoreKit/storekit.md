@@ -12,7 +12,9 @@
 # 인앱 결제
 앱을 대신하여 인앱 결제에 연결하고 결제를 처리한다.
 
-![storekit-process](https://user-images.githubusercontent.com/61190690/166909905-f6b74f5c-6693-4659-ad4c-01696552859c.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/166909905-f6b74f5c-6693-4659-ad4c-01696552859c.png">
+</p>
 
 <p style="color:gray">
 	출처: https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase

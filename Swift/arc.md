@@ -94,7 +94,7 @@ unit4A = Apartment(unit: "4A")
 이때 `Person`과 `Apartment` 인스턴스에 대한 강한 참조가 생긴다. 지금까지 각 인스턴스의 상태를 그림으로 보면 다음과 같다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170704311-e50e3023-5200-4501-b7b0-1e4212b41b79.png">
+<img src="https://user-images.githubusercontent.com/61190690/170704311-e50e3023-5200-4501-b7b0-1e4212b41b79.png" width="500">
 </p>
 
 아직까지 `john`의 `apartment` 변수와 `unit4A`의 `tenant` 변수에는 값이 할당되지 않아 nil 값을 가지고 있다. 이제 `john`의 `apartment`에 `unit4A`를 할당하고, `unit4A`의 `tenant`에 `john`을 할당한다.
@@ -107,7 +107,7 @@ unit4A.tenant = john
 `Apartment`와 `Person` 인스턴스는 각각 `apartment`, `tenant`가 참조하고 있으므로 참조 횟수는 2가 된다. 이를 그림으로 나타내면 아래와 같다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170714372-7c5da747-658f-438b-a196-0b8935cd4c39.png">
+<img src="https://user-images.githubusercontent.com/61190690/170714372-7c5da747-658f-438b-a196-0b8935cd4c39.png" width="500">
 </p>
 
 이때 `john`과 `unit4A`에 nil을 할당하면 어떻게 될까?
@@ -120,7 +120,7 @@ unit4A = nil
 우리는 `Apartment`와 `Person` 인스턴스는 이제 사용되지 않아 ARC가 메모리에서 해제하기를 기대하지만 그렇지 않다. 왜냐하면 `Apartment`와 `Person` 인스턴스가 서로를 참조하고 있어 여전히 참조 횟수가 1이기 때문이다. 결국 두 인스턴스는 메모리에서 해제되지 않아 메모리 누수가 발생한다. 이렇게 강한 순환 참조가 발생한 상황을 그림으로 나타내면 아래와 같다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170715729-6585b5d6-cc67-4eee-9060-462b8e0f80e4.png">
+<img src="https://user-images.githubusercontent.com/61190690/170715729-6585b5d6-cc67-4eee-9060-462b8e0f80e4.png" width="500">
 </p>
 
 그렇다면 강한 순환 참조는 어떻게 해결해야 할까? 강한 순환 참조를 해결하는데 두 가지 방법이 있다. [weak, unowned](./weak-unowned-reference.md)에서 알아보자.
