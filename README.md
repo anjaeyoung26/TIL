@@ -20,6 +20,7 @@
 - [frame, bounds](Swift/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
 - [Interface Builder, NIB, XIB](Swift/interface-builder-nib-xib.md)
+- [Method Dispatch](Swift/method-dispatch.md)
 - [Mock Networking](Swift/Test/mock-networking.md)
 - [NSLocking](Swift/Concurrency/nslocking.md)
 - [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
