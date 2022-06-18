@@ -1,12 +1,13 @@
 ##  Swift
 - [접근 제어](Swift/access-control.md)
 - [나머지 연산](Swift/remainder.md)
+- [뷰 컨트롤러의 생명주기](Swift/uiviewcontroller-life-cycle.md)
 - [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
+- [앱의 생명주기](Swift/app-life-cycle.md)
 - [연산 프로퍼티](Swift/computed-properties.md)
 - [전송 제어문](Swift/control-transfer-statements.md)
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [ARC](Swift/arc.md)
-- [App's Life-Cycle](Swift/app-life-cycle.md)
 - [async, await](Swift/Concurrency/concurrency.md)
 - [Call by value, reference](Swift/call-by-value.md)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
@@ -19,7 +20,7 @@
 - [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
 - [frame, bounds](Swift/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
-- [Interface Builder, NIB, XIB](Swift/interface-builder-nib-xib.md)
+- [Interface Builder, .nib, .xib](Swift/interface-builder-nib-xib.md)
 - [Method Dispatch](Swift/method-dispatch.md)
 - [Mock Networking](Swift/Test/mock-networking.md)
 - [NSLocking](Swift/Concurrency/nslocking.md)
@@ -29,7 +30,6 @@
 - [rethrows](Swift/rethrows.md)
 - [Type method](Swift/type-method.md)
 - [UIModalPresentationStyle](Swift/uimodalpresentationstyle.md)
-- [UIViewController Life-Cycle](Swift/uiviewcontroller-life-cycle.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
 
 ### 1st-party
@@ -49,7 +49,7 @@
 - [디자인 패턴과 아키텍처 패턴](./Etc/design-architecture-pattern.md)
 ---
 ## Git
-- [기본 개념](./Git/git.md)
+- [Git 이란?](./Git/git.md)
 - [기본적인 사용법](./Git/%EA%B8%B0%EB%B3%B8%EC%A0%81%EC%9D%B8_%EC%82%AC%EC%9A%A9%EB%B2%95.md)
 - [커밋 메시지 변경](./Git/%EC%BB%A4%EB%B0%8B%20_%EB%A9%94%EC%8B%9C%EC%A7%80_%EB%B3%80%EA%B2%BD.md)
 - [커밋 순서 변경](./Git/%EC%BB%A4%EB%B0%8B_%EC%88%9C%EC%84%9C_%EB%B3%80%EA%B2%BD.md)

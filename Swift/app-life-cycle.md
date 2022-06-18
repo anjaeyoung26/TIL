@@ -1,30 +1,16 @@
-## 목차
-- [앱의 생명주기란](#앱의-생명주기란)
-- [App-Based Life-Cycle](#app-based-life-cycle)
-    - [앱의 다섯 가지 상태](#앱의-다섯-가지-상태)
-- [Scene-Based Life-Cycle](#scene-based-life-cycle)
-    - [Multiple Windows](#multiple-windows)
-    - [`UIScene`](#uiscene)
-    - [`UIWindowScene`](#uiwindowscene)
-    - [`UISceneSession`](#uiscenesession)
-    - [`UISceneDelegate`](#uiscenedelegate)
-    - [Scene의 다섯 가지 상태](#scene의-다섯-가지-상태)
-    - [Session Life-Cycle](#session-life-cycle)
-- [Call Stack 비교](#call-stack-비교)
----
 ## 앱의 생명주기란
 
-앱의 실행부터 종료까지의 주기를 뜻하며, 시스템 알림에 응답하고 기타 중요한 시스템과 관련된 이벤트를 처리하는 단계이다. 또한 `UIKit`과 관련된 `UIViewController`, `UITableViewCell` 등 여러가지 객체만의 생명주기가 존재한다. 
+앱의 실행부터 종료까지의 주기를 뜻하며, 시스템 알림에 응답하고 기타 중요한 시스템과 관련된 이벤트를 처리하는 단계이다. 또한 `UIViewController`, `UITableViewCell` 등 `UIKit`과 관련된 여러가지 객체만의 생명주기가 존재하며, 이는 앱의 생명주기와 같이 중요한 개념이다.
 
 **그렇다면 앱의 생명주기는 왜 중요할까?** iOS와 같은 모바일 환경에서는 하나의 CPU가 제한된 메모리와 시간을 여러 앱에 할당하게 된다. 이때 가장 우선순위가 높은 앱은 사용자에게 보여지는 앱이다. 따라서 나머지 앱은 가능한 적은 리소스를 사용해야 한다. 이를 위해 앱의 상태 변화를 아는 것이 중요하다. `UIKit` 프레임워크는 앱의 상태가 변경되면 적절한 Delegate 객체의 메소드를 호출한다.
 
 - iOS 13 이상 : `UISceneDelegate` 객체를 통해 Scene-Based life-cycle 이벤트에 응답한다.
 - iOS 12 이하 : `UIApplicationDelegate` 객체를 통해 App-Based life-cycle 이벤트에 응답한다.
 
-> 하지만 iOS 13 이상에서도 `UIApplicationDelegate` 객체를 통한 앱의 생명주기를 관리할 수 있다. Scene-Based의 용도는 iOS 13에서 추가된 iPad의 Multiple Windows를 사용하기 위함인데, Multiple Windows를 사용하지 않는다면 낯선 Scene-Based를 사용할 필요가 없다.
+하지만 iOS 13 이상에서도 `UIApplicationDelegate` 객체를 통한 앱의 생명주기를 관리할 수 있다. Scene-Based의 용도는 iOS 13에서 추가된 iPad의 Multiple Windows를 사용하기 위함인데, Multiple Windows를 사용하지 않는다면 낯선 Scene-Based를 사용할 필요가 없다.
 
 &nbsp;
-## App-Based Life-Cycle
+## 앱 기반의 생명주기
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/170403945-95e91465-5d46-4943-bca1-6da2b178ab44.jpeg" width="600">
@@ -73,7 +59,7 @@ iOS 12 이하 혹은 Scene-Based life-cycle을 채택하지 않는 iOS 13 이상
 4. **Suspended** : 앱이 백그라운드에 있지만 실행되는 코드가 없는 상태이다. 시스템은 메모리가 부족하다면 `Suspended` 상태의 앱을 메모리에서 제거한다.
 
 &nbsp;
-## Scene-Based Life-Cycle 
+## Scene 기반의 생명주기 
 
 ### Multiple Windows
 
@@ -90,7 +76,7 @@ iOS 12 이하 혹은 Scene-Based life-cycle을 채택하지 않는 iOS 13 이상
 </p>
 
 &nbsp;
-### UIScene
+### `UIScene`
 
 ```swift
 @MainActor class UIScene : UIResponder
@@ -104,7 +90,7 @@ sceneDidEnterBackground(_:)
 ```
 
 &nbsp;
-### UIWindowScene
+### `UIWindowScene`
 
 ```swift
 @MainActor class UIWindowScene : UIScene
@@ -113,7 +99,7 @@ sceneDidEnterBackground(_:)
 `UIScene`을 상속받은 클래스로 앱에서 하나 이상의 윈도우를 관리한다. 또한 `UISceneDelegate` 프로토콜을 채택하는 `UIWindowSceneDelegate`와 적절한 `NSNotification`을 통해 Scene의 상태 변화를 알린다. 위 Multiple Windows의 구조를 보다시피 `UIKit`은 `UIScene` 대신 `UIWindowScene` 객체를 생성한다. 하지만 `UIWindowScene`은 `UIScene`을 상속받은 클래스로 결국에는 `UIScene` 클래스의 메소드와 프로퍼티를 사용해서 Scene의 정보에 접근한다.
 
 &nbsp;
-### UISceneSession
+### `UISceneSession`
 
 ```swift
 @MainActor class UISceneSession : NSObject
@@ -122,7 +108,7 @@ sceneDidEnterBackground(_:)
 `UISceneSession` 객체는 Scene 인스턴스의 런타임을 관리한다. 사용자가 혹은 직접 programatically하게 새로운 Scene을 요청하면 시스템은 `UISceneSession` 개체를 생성한다. 세션에는 고유한 식별자와 Scene을 구성하기 위한 세부 정보가 포함된다.
 
 &nbsp;
-### UISceneDelegate
+### `UISceneDelegate`
 
 하나의 화면에 대한 UI life-cycle 이벤트를 응답하는 `UIApplication`의 역할이 분리되었다. Multiple Windows 환경에서 각 Scene과 매핑되는 `UISceneDelegate`가 맡는다.
 
@@ -150,7 +136,7 @@ sceneDidEnterBackground(_:)
 사용자 또는 시스템이 앱에 새로운 Scene을 요청하게 되면 `UIKit`은 `Unattached` 상태의 Scene을 생성한다. 사용자가 요청한 Scene은 화면에 보이는 Foreground로 옮겨지고, 시스템이 요청한 Scene은 Background로 옮겨져서 위치 감지와 같은 이벤트를 처리한다. 이후 사용자가 앱을 종료하거나 Scene의 리소스를 회수할 때 다시 `Unattached` 상태가 된다.
 
 &nbsp;
-### Session Life-Cycle
+### Session 생명주기
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/170405800-d84539b8-91fe-43fc-aca7-8fa990869523.jpeg" width="600">
@@ -171,7 +157,7 @@ sceneDidEnterBackground(_:)
     ```
 
 &nbsp;
-## Call Stack 비교
+## 콜 스택 비교
 
 앱의 상태가 변하는 네 가지 시나리오에서 App-Based와 Scene-Based에서 호출되는 메소드를 알아보자. Scene-Based의 콜 스택을 살펴보면 앱이 실행되거나 종료되는 Process life-cycle은 여전히 `AppDelegate`가 수행하는 것을 알 수 있다.
 
