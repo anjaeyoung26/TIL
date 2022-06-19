@@ -24,6 +24,7 @@
 - [Method Dispatch](Swift/method-dispatch.md)
 - [Mock Networking](Swift/Test/mock-networking.md)
 - [NSLocking](Swift/Concurrency/nslocking.md)
+- [Opaque Types](Swift/opaque-types.md)
 - [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
 - [@escaping](Swift/escaping-closure.md)
