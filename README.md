@@ -29,6 +29,7 @@
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
 - [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
+- [Self, self](Swift/self.md)
 - [Type method](Swift/type-method.md)
 - [UIModalPresentationStyle](Swift/uimodalpresentationstyle.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
