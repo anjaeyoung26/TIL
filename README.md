@@ -11,6 +11,7 @@
 - [async, await](Swift/Concurrency/concurrency.md)
 - [Call by value, reference](Swift/call-by-value.md)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
+- [CGFloat](Swift/cgfloat.md)
 - [contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
 - [contentHugging, compressionResistance](Swift/contentHugging%2C%20compressionResistance.md)
 - [clipsToBounds, masksToBounds](Swift/clips-to-bounds%2C%20masks-to-bounds.md)
