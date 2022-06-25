@@ -51,6 +51,7 @@
 ---
 ## Etc
 - [디자인 패턴과 아키텍처 패턴](./Etc/design-architecture-pattern.md)
+- [함수와 메서드](./Etc/function-method.md)
 ---
 ## Git
 - [Git 이란?](./Git/git.md)
