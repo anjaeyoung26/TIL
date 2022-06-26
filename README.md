@@ -21,6 +21,8 @@
 - [flatMap, compactMap](Swift/flat-map%2C%20compact-map.md)
 - [frame, bounds](Swift/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
+- [@escaping](Swift/escaping-closure.md)
+- [inout](Swift/inout.md)
 - [Interface Builder, .nib, .xib](Swift/interface-builder-nib-xib.md)
 - [Method Dispatch](Swift/method-dispatch.md)
 - [Mock Networking](Swift/Test/mock-networking.md)
@@ -28,7 +30,6 @@
 - [Opaque Types](Swift/opaque-types.md)
 - [Property Wrapper](https://fromdave.medium.com/property-wrapper-86a9eeb4c7) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
-- [@escaping](Swift/escaping-closure.md)
 - [rethrows](Swift/rethrows.md)
 - [Self, self](Swift/self.md)
 - [Type method](Swift/type-method.md)
