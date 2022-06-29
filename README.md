@@ -8,6 +8,7 @@
 - [전송 제어문](Swift/control-transfer-statements.md)
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [ARC](Swift/arc.md)
+- [assert](Swift/assert.md)
 - [async, await](Swift/Concurrency/concurrency.md)
 - [Call by value, reference](Swift/call-by-value.md)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
