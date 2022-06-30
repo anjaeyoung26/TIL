@@ -12,18 +12,18 @@
 
 ```swift
 func scrollViewDidScroll(_ scrollView: UIScrollView) {
-	if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
-		// Reach bottom
-	}
+  if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+	// Reach bottom
+  }
 
-	if scrollView.contentOffset.y < 0 {
-		// Reach top
-	}
+  if scrollView.contentOffset.y < 0 {
+	// Reach top
+  }
 
-	if (scrollView.contentOffset.y >= 0 && 
-		scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)) {
-		// Not top and not bottom
-	}
+  if (scrollView.contentOffset.y >= 0 && 
+    scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)) {
+	// Not top and not bottom
+  }
 }
 ```
 
