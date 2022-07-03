@@ -8,6 +8,7 @@
 - [전송 제어문](Swift/control-transfer-statements.md)
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [클래스와 구조체](./Swift/struct-class.md)
+- [클래스와 구조체 중에서 선택하기](./Swift/struct-class-choosing.md)
 - [ARC](Swift/arc.md)
 - [assert](Swift/assert.md)
 - [async, await](Swift/Concurrency/concurrency.md)
