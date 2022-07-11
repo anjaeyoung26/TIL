@@ -49,7 +49,7 @@ func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool 
 이제 시스템이 Post한 알림을 통해 어떤 장치가 새롭게 연결됐고, 어떤 장치가 연결이 해제됐는지 확인하는 방법을 알게 됐다. 그렇다면 오디오 루트가 변경될 때 어떻게 대응을 해야할까? 멜론, 유튜브 뮤직, 스포티파이와 같은 대부분의 앱은 [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios)의 *Audio Session Programming Guide*의 권장 사항에 따라 오디오 루트가 변경될 때 아래와 같이 처리한다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/178136973-cd87713d-e769-4f54-9dee-4857427144f2.png" height="400">
+<img src="https://user-images.githubusercontent.com/61190690/178384206-8df86bd6-1050-437e-bd9a-0d37e415adb3.png" height="400">
 <sub>https://developer.apple.com/library/archive/documentation/Audio/Conceptual/AudioSessionProgrammingGuide</sub>
 </p>
 

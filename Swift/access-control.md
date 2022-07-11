@@ -32,8 +32,8 @@ Swift에서는 다섯 개의 접근 레벨을 제공한다. 특정 코드에 접
 
     ```swift
     internal class MyPublicClass {
-    public var myPublicInt: Int = 0 // X
-    private var myPrivateInt: Int = 0 // O
+      public var myPublicInt: Int = 0 // X
+      private var myPrivateInt: Int = 0 // O
     }
     ```
 
@@ -47,12 +47,12 @@ Swift에서는 다섯 개의 접근 레벨을 제공한다. 특정 코드에 접
 
     ```swift
     struct TrackedString {
-    public private(set) var numberOfEdits = 0
-    var value: String = "" {
+      public private(set) var numberOfEdits = 0
+      var value: String = "" {
         didSet {
             numberOfEdits += 1
         }
-    }
+      }
     }
     ```
 
@@ -70,11 +70,11 @@ Swift에서는 다섯 개의 접근 레벨을 제공한다. 특정 코드에 접
 
     ```swift
     protocol Car {
-    // ?
+      // ?
     }
 
     struct CarModel: Car {
-    private(set) var engine: String
+      private(set) var engine: String
     }
     ```
 
@@ -82,11 +82,11 @@ Swift에서는 다섯 개의 접근 레벨을 제공한다. 특정 코드에 접
 
     ```swift
     protocol Car {
-    var engine: String { get }
+      var engine: String { get }
     }
 
     struct CarModel: Car {
-    private(set) var engine: String
+      private(set) var engine: String
     }
     ```
 
@@ -94,6 +94,6 @@ Swift에서는 다섯 개의 접근 레벨을 제공한다. 특정 코드에 접
 
     ```swift
     public class MyPublicClass {
-    var internalInt: Int = 0
+      var internalInt: Int = 0
     }
     ```
