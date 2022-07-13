@@ -2,22 +2,20 @@
 
 인앱 결제와 앱 스토어의 상호 작용을 지원한다.
 
-# 지원 항목
-
 1. **인 앱 결제**
 2. 사용자의 Apple Music 설정 확인, 구독 제안
 3. 사용자의 앱 평가
 4. Ad Network Attribution(?)
 
-# 인앱 결제
+## 인앱 결제
 앱을 대신하여 인앱 결제에 연결하고 결제를 처리한다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/166909905-f6b74f5c-6693-4659-ad4c-01696552859c.png">
 </p>
 
-<p style="color:gray">
-	출처: https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase
+<p align="center">
+<sub>https://developer.apple.com/documentation/storekit/original_api_for_in-app_purchase</sub>
 </p>
 
 - 앱 스토어 커넥트에서 추가한 제품을 판매할 수 있고, 샌드박스 테스터의 유저 계정을 생성하여 구매 테스트를 진행할 수 있다.
@@ -26,7 +24,7 @@
 - 서버에 영수증과 구매 내역을 저장하고, 사용자가 원할 때 제공할 수 있어야 한다.
 
 &nbsp;
-## 판매할 수 있는 상품의 종류
+### 판매할 수 있는 상품의 종류
 자동 • 비 갱신 제품은 모든 사용자의 기기에서 구독을 사용할 수 있고, 사용자가 과거의 구매를 복원할 수 있도록 해야한다.
 
 1. 소모성: 한 번 사용하면 고갈되며 여러 번 구매할 수 있다.

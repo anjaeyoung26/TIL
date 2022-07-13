@@ -14,7 +14,7 @@ NotificationCenter.default.addObserver(self,
                                        object: nil)
 ```
 
-알림의 `Notification` 개체의 `userInfo`는 경로 변경에 대한 세부 정보가 포함되어 있다. 사용자가 새 장치를 연결할 때 이유는 `AVAudioSession.RouteChangeReasonAVAudioSession.RouteChangeReason.newDevice`, 사용자가 장치를 제거할 때 이유는 `AvailableAVAudioSession.RouteChangeReason.oldDeviceUnavailable` 이다. 새 장치를 사용할 수 있게 되면 오디오 세션의 `currentRoute`는 현재 라우팅되는 위치를 나타낸다. 또한 사용자가 장치를 제거하면 `userInfo`에서 제거된 장치에 대한 경로가 포함되어 있다.
+알림의 `Notification` 개체의 `userInfo`는 경로 변경에 대한 세부 정보가 포함되어 있다. 
 
 ```swift
 @objc func handleRouteChange(notification: Notification) {
@@ -43,6 +43,10 @@ func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool 
 }
 ```
 
+- `AVAudioSession.RouteChangeReasonAVAudioSession.RouteChangeReason.newDevice` : 사용자가 새 장치를 연결할 때 트리거된다. 새롭게 연결된 장치는 오디오 세션의 `currentRoute`를 통해 알 수 있다.
+
+- `AvailableAVAudioSession.RouteChangeReason.oldDeviceUnavailable` : 사용자가 장치를 제거할 때 트리거된다. 제거된 장치는 `userInfo`의 `AVAudioSessionRouteChangePreviousRouteKey`를 통해 알 수 있다.
+
 &nbsp;
 ### Respond to Route Changes
 
@@ -54,7 +58,7 @@ func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool 
 </p>
 
 - **사용자가 한 쌍의 유선 또는 무선 헤드폰을 연결 :** 사용자는 현재 미디어를 일시 중지 없이 계속 재생되기를 기대하기 때문에 오디오 재생이 계속되어야 한다.
-- **사용자가 헤드폰의 연결 해제 :** 듣고 있는 내용을 다른 사람과 자동으로 공유하고 싶지 않는다. 앱은 이러한 암시적 개인 정보 보호 요청을 존중해야 하며 오디오 재생을 일시 중지해야 한다.
+- **사용자가 헤드폰의 연결 해제 :** 듣고 있는 내용을 다른 사람과 자동으로 공유하고 싶지 않는다. 앱은 이를 존중하여 오디오 재생을 일시 중지해야 한다.
 - 녹음 중이라면 연결된 장치와 상관없이 오디오 루트가 변경될 때 녹음을 중지한다.
 
 > `AVPlayer`는 자동으로 오디오 세션을 모니터링하고 경로 변경에 적절하게 응답한다. 사용자가 헤드폰을 연결하면 예상대로 재생이 계속된다. 헤드폰을 분리하면 재생이 자동으로 일시 중지된다.
