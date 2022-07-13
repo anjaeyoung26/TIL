@@ -1,4 +1,5 @@
 ##  Swift
+- [값 타입과 참조 타입](Swift/call-by-value-reference.md)
 - [접근 제어](Swift/access-control.md)
 - [나머지 연산](Swift/remainder.md)
 - [뷰 컨트롤러의 생명주기](Swift/uiviewcontroller-life-cycle.md)
@@ -12,7 +13,6 @@
 - [ARC](Swift/arc.md)
 - [assert](Swift/assert.md)
 - [async, await](Swift/Concurrency/concurrency.md)
-- [Call by value, reference](Swift/call-by-value.md)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
 - [CGFloat](Swift/cgfloat.md)
 - [contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
