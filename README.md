@@ -1,12 +1,12 @@
 ##  Swift
 - [값 타입과 참조 타입](Swift/call-by-value-reference.md)
-- [접근 제어](Swift/access-control.md)
 - [나머지 연산](Swift/remainder.md)
 - [뷰 컨트롤러의 생명주기](Swift/uiviewcontroller-life-cycle.md)
 - [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
 - [앱의 생명주기](Swift/app-life-cycle.md)
 - [연산 프로퍼티](Swift/computed-properties.md)
 - [전송 제어문](Swift/control-transfer-statements.md)
+- [접근 제어](Swift/access-control.md)
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [클래스와 구조체](./Swift/struct-class.md)
 - [클래스와 구조체 중에서 선택하기](./Swift/struct-class-choosing.md)

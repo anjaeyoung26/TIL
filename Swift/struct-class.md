@@ -85,4 +85,4 @@ let vga = Resolution(width: 640, height: 480)
 &nbsp;
 ### 값 타입, 참조 타입
 
-클래스와 구조체는 변수나 상수에 값을 할당하거나 함수에 인자로 전달될 때 동작이 다르다. 이는 [Call by value, reference](./call-by-value.md)에서 자세히 살펴볼 수 있다.
+클래스와 구조체는 변수나 상수에 값을 할당하거나 함수에 인자로 전달될 때 동작이 다르다. 이는 클래스와 구조체의 가장 중요한 차이점이며, [값 타입과 참조 타입](./call-by-value-reference.md)에서 자세히 살펴볼 수 있다.
