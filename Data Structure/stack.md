@@ -26,34 +26,34 @@
 
 ```swift
 public struct Stack<T> {
-	private var array: [T] = []
+  private var array: [T] = []
 
-	public var count: Int {
-		return array.count
-	}
+  public var count: Int {
+    return array.count
+  }
 
-	public var isEmpty: Bool {
-		return array.isEmpty
-	}
+  public var isEmpty: Bool {
+	return array.isEmpty
+  }
 
-	public var top: T? {
-		return array.last
-	}
+  public var top: T? {
+	return array.last
+  }
 
-	public var bottom: T? {
-		return array.first
-	}
+  public var bottom: T? {
+	return array.first
+  }
 
-	public mutating func push(value: T) {
-		array.append(value)
-	}
+  public mutating func push(value: T) {
+	array.append(value)
+  }
 
-	public mutating func pop() -> T? {
-		return array.popLast()
-	}
+  public mutating func pop() -> T? {
+	return array.popLast()
+  }
 
-	public func peek() -> T? {
-		return array.top
-	}
+  public func peek() -> T? {
+	return array.top
+  }
 }
 ```
