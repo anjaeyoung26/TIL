@@ -63,6 +63,7 @@
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
+- [프로그래밍 패러다임(1) - 명령형 프로그래밍과 선언형 프로그래밍](./Etc/imperative-and-declarative-programming.md)
 - [함수와 메서드](./Etc/function-method.md)
 ---
 ## Git
