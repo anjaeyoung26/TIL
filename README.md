@@ -65,6 +65,7 @@
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
 - [프로그래밍 패러다임(1) - 명령형 프로그래밍과 선언형 프로그래밍](./Etc/imperative-and-declarative-programming.md)
 - [프로그래밍 패러다임(2) - 객체 지향 프로그래밍](./Etc/object-oriented-programming.md)
+- [프로그래밍 패러다임(3) - 객체 지향 프로그래밍 SOLID](./Etc/solid.md)
 - [함수와 메서드](./Etc/function-method.md)
 ---
 ## Git
