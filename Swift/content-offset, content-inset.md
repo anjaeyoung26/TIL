@@ -8,24 +8,24 @@
 
 스크롤 뷰에서 스크롤은 `contentOffset`이 변하는 동작이다. 즉 `contentOffset`은 사용자가 현재 스크롤 뷰 내에서 스크롤한 위치이다. 스크롤은 스크롤 뷰의 `contentSize`는 유지되지만 `contentOffset`은 사용자의 상호 작용에 따라 변경된다. 
 
-`contentOffset`은 주로 페이징을 위해 테이블 뷰나 컬렉션 뷰가 최하단까지 스크롤 됐는지 확인할 때 사용된다.
+- `contentOffset`은 주로 페이징을 위해 테이블 뷰나 컬렉션 뷰가 최하단까지 스크롤 됐는지 확인할 때 사용된다.
 
-```swift
-func scrollViewDidScroll(_ scrollView: UIScrollView) {
-  if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
-	// Reach bottom
-  }
+  ```swift
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    if scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height) {
+    // Reach bottom
+    }
 
-  if scrollView.contentOffset.y < 0 {
-	// Reach top
-  }
+    if scrollView.contentOffset.y < 0 {
+    // Reach top
+    }
 
-  if (scrollView.contentOffset.y >= 0 && 
-    scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)) {
-	// Not top and not bottom
+    if (scrollView.contentOffset.y >= 0 && 
+      scrollView.contentOffset.y < (scrollView.contentSize.height - scrollView.frame.size.height)) {
+    // Not top and not bottom
+    }
   }
-}
-```
+  ```
 
 &nbsp;
 ## contentInset

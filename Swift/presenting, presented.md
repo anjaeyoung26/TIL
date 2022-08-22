@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/167772456-e3c5d25a-420f-4a82-a005-db806ebc07cc.png" width="700" height="500">
+<img src="https://user-images.githubusercontent.com/61190690/185857787-1139d4a7-65dd-42e6-b4b5-5654e4009416.png" width="500">
 </p>
 
 `UIViewController` 클래스가 갖고 있는 `UIViewController` 타입의 옵셔널 프로퍼티이다. 이름에 present가 붙어있듯이 `present(_:animated:completion:)` 함수와 관련있다.
@@ -9,7 +9,7 @@
 
 ```swift
 open class UIViewController {
-	open var presentingViewController: UIViewController? { get }
+  open var presentingViewController: UIViewController? { get }
 }
 ```
 
@@ -21,7 +21,7 @@ open class UIViewController {
 
 ```swift
 open class UIViewController {
-	open var presentedViewController: UIViewController? { get }
+  open var presentedViewController: UIViewController? { get }
 }
 ```
 

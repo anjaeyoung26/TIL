@@ -2,11 +2,11 @@
 
 Interface Builder는 현재 Mac OS의 조상인 NeXTSTEP OS에 처음으로 탑재되었던 툴이며, 사용자가 프로그램과 상호 작용하는 버튼, 메뉴, 이미지 및 텍스트와 같이 프로그램의 그래픽 인터페이스를 배치하는 부분이다. Interface Builder는 Xcode의 일부로 그래픽 도구를 사용하여 프로그램의 인터페이스를 레이아웃한 다음 Swift 코드와 쉽게 연결하여 작동하게 한다.
 
-<p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/170985785-b6643b50-e45d-46d8-9d7d-04935cefaa1e.png">
-</p>
-
 우리가 스토리보드나 .xib 파일을 편집할 때 사용하는 것이 Interface Builder이며, 여기에 내장되어 있는 시스템으로 편리하게 인터페이스를 디자인할 수 있다. Interface Builder의 기능에 대해 대략적으로 알려주는 [공식 문서](https://developer.apple.com/kr/xcode/interface-builder/)가 있으니 참고하자.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/170985785-b6643b50-e45d-46d8-9d7d-04935cefaa1e.png" height="350">
+</p>
 
 &nbsp;
 ## NIB

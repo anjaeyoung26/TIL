@@ -7,6 +7,7 @@
 3. 사용자의 앱 평가
 4. Ad Network Attribution(?)
 
+&nbsp;
 ## 인앱 결제
 앱을 대신하여 인앱 결제에 연결하고 결제를 처리한다.
 
@@ -35,7 +36,7 @@
 &nbsp;
 ## 클래스
 
-### `SKProductsRequest`
+### SKProductsRequest
 여러 제품의 ID를 사용하여 초기화하며, 지정된 제품 목록을 요청할 수 있다.
 
 ```swift
@@ -49,7 +50,7 @@ productsRequest.start()
 ```
 
 &nbsp;
-### `SKProductsRequestDelegate`
+### SKProductsRequestDelegate
 결제가 완료된 후 응답을 받는다.
 
 ```swift
@@ -65,7 +66,7 @@ func request(_ request: SKRequest, didFailWithError error: Error) { ... }
 ```
 
 &nbsp;
-### `SKPaymentQueue`
+### SKPaymentQueue
 앱 스토어와의 결제 과정을 처리, 관찰하고 트랜잭션을 관리한다.
 
 ```swift
@@ -94,7 +95,7 @@ SKPaymentQueue.default().restoreCompletedTransactions()
 ```
 
 &nbsp;
-### `SKPaymentTransactionObserver`
+### SKPaymentTransactionObserver
 현재 결제가 진행되고 있는 트랜잭션의 상태에 따른 처리를 할 수 있다. 트랜잭션의 상태를 관찰하기 위해 옵저버를 등록한다.
 
 ```swift
@@ -117,7 +118,7 @@ func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SK
 ```
 
 &nbsp;
-### `SKPaymentTransaction`
+### SKPaymentTransaction
 결제 중인 제품의 ID 혹은 수신된 에러를 가지고 있다.
 
 ```swift

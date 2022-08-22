@@ -46,7 +46,7 @@ present(viewController, animated: true)
 ## currentContext, overCurrentContext
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/173079908-29046c5b-3b51-46c8-9656-5c856c569041.png">
+<img src="https://user-images.githubusercontent.com/61190690/173079908-29046c5b-3b51-46c8-9656-5c856c569041.png" width="600">
 </p>
 
 다른 뷰 컨트롤러의 컨텐츠 위에 표시하는 방식이다. 여기서 '컨텐츠 위'는 뷰 컨트롤러의 `view`를 통해 표시된다는 의미이다. 위 그림에서 `currentContext`가 어떻게 표시되는지 살펴보자. 그림에서 `currentContext` 방식으로 A의 컨텐츠 위에 C를 표시했다. 이때 C의 크기를 살펴보면, A의 콘텐츠 크기에 맞춰서 표시된 것을 볼 수 있다. 만약 A의 콘텐츠 크기가 스크린과 동일하다면 `fullScreen`과 동일하게 표시한다. 또한 `currentContext`와 `overCurrentContext`의 차이는 `fullScreen`과 `overFullScreen`의 차이와 같다.

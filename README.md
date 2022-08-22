@@ -5,7 +5,7 @@
 - [소수점 다루기](Swift/%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)
 - [앱의 생명주기](Swift/app-life-cycle.md)
 - [연산 프로퍼티](Swift/computed-properties.md)
-- [전송 제어문](Swift/control-transfer-statements.md)
+- [제어 전송문](Swift/control-transfer-statements.md)
 - [접근 제어](Swift/access-control.md)
 - [클로저](https://fromdave.medium.com/closure-5884c4652479) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [클래스와 구조체](./Swift/struct-class.md)
@@ -63,7 +63,7 @@
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
 - [비동기 프로그래밍](./Etc/async-programming.md)
-- [반응형 프로그래밍](./Etc/reactive-programming.md)
+- [반응형 프로그래밍과 ReactiveX](./Etc/reactive-programming.md)
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
 - [프로그래밍 패러다임(1) - 명령형 프로그래밍과 선언형 프로그래밍](./Etc/imperative-and-declarative-programming.md)
 - [프로그래밍 패러다임(2) - 객체 지향 프로그래밍](./Etc/object-oriented-programming.md)

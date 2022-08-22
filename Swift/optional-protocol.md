@@ -15,7 +15,7 @@ public protocol UITableViewDataSource : NSObjectProtocol {
 &nbsp;
 ## 선택적 요구 사항을 정의하는 방법
 
-### `@objc`
+### 1. @objc
 
 선택적 요구 사항은 `optional` modifier를 접두사로 붙여서 나타내며, 선택적 요구 사항과 이를 정의한 프로토콜은 `@objc` attributes을 붙여야 한다. 이는 Objective-C와 상호 운용되어 Swift 코드는 물론 Objective-C에서도 사용할 수 있도록 알린다.
 
@@ -28,7 +28,7 @@ public protocol UITableViewDataSource : NSObjectProtocol {
 위 방법은 `@objc`와 `optional` 만으로 간편하게 선택적 요구 사항을 사용할 수 있지만, 선택적 요구 사항인 메서드와 프로퍼티의 타입이 모두 Objective-C와 상호 운용되야 한다. 이는 `NSObject`를 상속받은 클래스만 프로토콜을 채택할 수 있음을 의미하며, `NSObject`를 상속받지 않은 클래스나 모든 구조체, 열거형에 사용할 수 없다. 따라서 프로토콜의 기능이 매우 한정된 범위로 제한된다.
 
 &nbsp;
-### Default implementations
+### 2. Default implementations
 
 `@objc`를 사용하는 첫 번째 방법이 매우 제한적이므로 두 번째 방법이 많이 선호된다. 이는 프로토콜의 *Extension*을 활용하는 방법으로, 선택적 요구 사항을 만들기 위해 프로토콜의 *Extension*에 기본 구현을 작성한다.
 
