@@ -39,11 +39,9 @@ anotherImageView.kf.setImage(with: urls[1])
 &nbsp;
 ## With UICollectionView or UITableView
 
-이미지의 URL이 저장되어 있는 배열을 컬렉션 뷰의 데이터 소스로 사용한다고 했을 때, 컬렉션 뷰의 셀을 화면에 나타내면서 이미지를 다운로드 한다면 이미지가 나타나기까지 시간이 걸릴 수도 있다. 이를 개선하기 위해 WWDC 16에서 *Pre-fetching*이 등장했다. 기존에는 `cellForItemAtIndexPath`에서 무거운 데이터를 로딩하는 작업을 수행했다. 따라서 이미지를 다운로드하는 것과 같이 비동기 네트워크 요청을 하는 작업은 응답이 오기까지 빈 셀을 보여줘야 했다. 하지만 미리 셀을 초기화 시켜놓고 생명 주기에 따라 표시를 해주는 *Pre-fetching*을 통해 개선할 수 있게 됐다. 
+이미지의 URL이 저장되어 있는 배열을 컬렉션 뷰의 데이터 소스로 사용한다고 했을 때, 컬렉션 뷰의 셀을 화면에 나타내면서 이미지를 다운로드 한다면 이미지가 나타나기까지 시간이 걸릴 수도 있다. 이를 개선하기 위해 WWDC 16에서 *Pre-fetching*이 등장했다. 기존에는 `cellForItemAtIndexPath`에서 무거운 데이터를 로딩하는 작업을 수행했다. 따라서 이미지를 다운로드하는 것과 같이 비동기 네트워크 요청을 하는 작업은 응답이 오기까지 빈 셀을 보여줘야 했다. 
 
-> *Pre-fetching*에 대해서 따로 정리할 예정이며 [What's New in UICollectionView in iOS 10](https://developer.apple.com/videos/play/wwdc2016/219/?time=273) 에서 자세한 내용을 확인할 수 있다.
-
-Kingfisher의 `ImagePrefetcher`를 컬렉션 뷰 혹은 테이블 뷰의 *Pre-fetching*과 함께 사용할 수 있다.
+하지만 미리 셀을 초기화 시켜놓고 생명 주기에 따라 표시를 해주는 *Pre-fetching*을 통해 개선할 수 있게 됐다.([What's New in UICollectionView in iOS 10](https://developer.apple.com/videos/play/wwdc2016/219/?time=273) 에서 자세한 내용을 확인할 수 있다.) Kingfisher 에서는 `ImagePrefetcher`를 컬렉션 뷰 혹은 테이블 뷰의 *Pre-fetching*과 함께 사용할 수 있다.
 
 ```swift
 extension ViewController: UICollectionViewDataSourcePrefetching {
