@@ -10,7 +10,7 @@
 &nbsp;
 ## contentHugging
 
-뷰의 최대 크기에 대한 제한으로 우선순위가 높을수록 커지기를 거부한다. 또한 `axis`를 통해 `horizontal`, `vertical` 중 어떤 축에 대해 제한을 설정할지 결정한다. 기본적으로 뷰는 `contentHugging`에 대해 250의 우선순위를 가지고 있고, 각 뷰의 `contentHugging`에 대한 우선순위를 비교하여 레이아웃이 적용된다.
+뷰의 최대 크기에 대한 제한으로 우선순위가 높을수록 자신의 사이즈를 유지하고, 우선순위가 낮을수록 사이즈가 커진다. 또한 `axis`를 통해 `horizontal`, `vertical` 중 어떤 축에 대해 제한을 설정할지 결정한다. 기본적으로 뷰는 `contentHugging`에 대해 250의 우선순위를 가지고 있고, 각 뷰의 `contentHugging`에 대한 우선순위를 비교하여 레이아웃이 적용된다.
 
 <img src="https://user-images.githubusercontent.com/61190690/167232165-6a4fe9bf-fb7a-4478-935f-78978a78d2d5.png" width="400" height="100">
 
@@ -27,7 +27,7 @@
 &nbsp;
 ## compressionResistance
 
-뷰의 최소 크기에 대한 제한으로 우선순위가 높을수록 작아지기를 거부한다. `contentHugging`과 마찬가지로 `axis`를 통해 축을 결정하고 우선순위에 따라 레이아웃이 적용된다. 또한 기본적으로 뷰는 `compressionsResistance`에 대해 750의 우선순위를 가지고 있다.
+뷰의 최소 크기에 대한 제한으로 우선순위가 높을수록 자신의 사이즈를 유지하고, 우선순위가 낮을수록 사이즈가 작아진다. `contentHugging`과 마찬가지로 `axis`를 통해 축을 결정하고 우선순위에 따라 레이아웃이 적용된다. 또한 기본적으로 뷰는 `compressionsResistance`에 대해 750의 우선순위를 가지고 있다.
 
 <img src="https://user-images.githubusercontent.com/61190690/167232167-4b25c288-8594-495c-9c22-b42aa7cbe2b4.png" width="400" height="100">
 
