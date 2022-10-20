@@ -59,25 +59,40 @@ custom_rules:
 &nbsp;
 ## 적용
 
-1. CocoaPod을 이용해 프로젝트에 설치한다.
+1. CocoaPods 혹은 Homebrew를 통해 설치한다.
+
+    - CocoaPods : Podfile에서 SwiftLint를 추가하고 설치한다.
     
-    ```ruby
-    pod 'SwiftLint'
-    ```
+      ```ruby
+      pod 'SwiftLint'
+      ```
+
+    - Homebrew : 터미널에서 아래의 명령어를 실행해서 설치한다.
+
+      ```
+      brew install swiftlint
+      ```
     
 
 2. Target > [Build Phase] > + > 'New Run Script Phase'
 
-    ```ruby
-    ${PODS_ROOT}/SwiftLint/swiftlint
-    ```
+    - CocoaPods
 
-    ```ruby
-    ${PODS_ROOT}/SwiftLint/swiftlint autocorrect
-    ```
+      ```ruby
+      ${PODS_ROOT}/SwiftLint/swiftlint
+      ```
 
-3. 세부적인 규칙을 적용하고 싶은 경우 `.swiftlint.yml` 이름의 Empty 파일 추가 후 규칙 조정을 참고하여 적용한다.
+    - Homebrew
+
+      ```sh
+      export PATH="$PATH:/opt/homebrew/bin"
+      if which swiftlint > /dev/null; then
+        swiftlint
+      else
+        echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+      fi
+      ```
+
+3. 세부적인 규칙을 적용하고 싶은 경우 `.swiftlint.yml` 이름의 Empty 파일 추가 후 규칙 조정을 참고하여 적용한다. Empty 형식은 두 가지가 있으므로 주의한다.
 
     <img src="https://user-images.githubusercontent.com/61190690/167349151-b8276be1-b709-4c12-82b3-1ce76b518a9c.png" width="500">
-
-    Empty 형식은 두 가지가 있으므로 혼동 주의
