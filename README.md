@@ -46,7 +46,8 @@
 
 - [AVFAudio - Responding to Audio Session Interruptions](./Swift/1st-party/avfaudio-responding-to-audio-session-interruptions.md)
 - [AVFAudio - Responding to Audio Session Route Changes](./Swift/1st-party/avfaudio-responding-to-audio-session-route-changes.md)
-- [StoreKit](./Swift/1st-party/StoreKit/storekit.md)
+- [StoreKit - 인앱결제 구현](./Swift/1st-party/StoreKit/storekit.md)
+- [StoreKit - 인앱결제 테스트](./Swift/1st-party/StoreKit/iap-sandbox.md)
 - [Swift Package Manager](./Swift/1st-party/SPM/spm.md)
 
 ### 3rd-party
