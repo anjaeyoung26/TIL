@@ -47,7 +47,6 @@
 - [AVFAudio - Responding to Audio Session Interruptions](./Swift/1st-party/avfaudio-responding-to-audio-session-interruptions.md)
 - [AVFAudio - Responding to Audio Session Route Changes](./Swift/1st-party/avfaudio-responding-to-audio-session-route-changes.md)
 - [StoreKit - 인앱결제 구현](./Swift/1st-party/StoreKit/storekit.md)
-- [StoreKit - 인앱결제 테스트](./Swift/1st-party/StoreKit/iap-sandbox.md)
 - [Swift Package Manager](./Swift/1st-party/SPM/spm.md)
 
 ### 3rd-party
@@ -64,6 +63,7 @@
 - [아키텍처 패턴(1) - MVC](./Etc/mvc.md)
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
+- [인앱결제 샌드박스 테스트](./Etc/iap-sandbox.md)
 - [반응형 프로그래밍과 ReactiveX](./Etc/reactive-programming.md)
 - [비동기 프로그래밍](./Etc/async-programming.md)
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
@@ -95,41 +95,3 @@
 - [git checkout](./Git/git-checkout.md)
 - [git remote](./Git/git-remote.md)
 - [git commit](./Git/git-commit.md)
----
-## CS
-
-### 운영체제
-- [교착상태](OS/deadlock.md)
-- [메모리 관리 전략](OS/memory-management-strategy.md)
-- [시스템 콜](OS/system-call.md)
-- [스케줄러](OS/scheduler.md)
-- [인터럽트](OS/interrupt.md)
-- [프로세스, 스레드](OS/process-thread.md)
-- [프로세스 동기화](OS/process-synchronization.md)
-
-### 자료구조
-- [Array](./Data%20Structure/array.md)
-- [Linked List](./Data%20Structure/linked-list.md)
-- [Stack](./Data%20Structure/stack.md)
-- [Queue](./Data%20Structure/queue.md)
-- [Tree](./Data%20Structure/tree.md)
-- [Heap](./Data%20Structure/heap.md)
-- [Hash Table](./Data%20Structure/hash-table.md)
-- [Graph](./Data%20Structure/graph.md)
-
-### 네트워크
-- [OSI 7계층](./Network/osi-7-layer.md)
-- [TCP](./Network/tcp.md)
-- [TCP/IP](./Network/tcp-ip.md)
-- [UDP](./Network/udp.md)
-- [HTTP, HTTPS](./Network/http-https.md)
-- [대칭키, 공개키 암호화](./Network/key-cryptography.md)
----
-## 알고리즘
-- [시간 복잡도](Algorithm/time-complexity.md)
-- [선택 정렬](Algorithm/Sort/selection-sort.md)
-- [삽입 정렬](Algorithm/Sort/insertion-sort.md)
-- [버블 정렬](Algorithm/Sort/bubble-sort.md)
-- [힙 정렬](Algorithm/Sort/heap-sort.md)
-- [병합 정렬](Algorithm/Sort/merge-sort.md)
-- [퀵 정렬](Algorithm/Sort/quick-sort.md)

@@ -20,3 +20,7 @@ iPhone 기기의 설정으로 이동한다. 설정에서 App Store - 샌드 박�
 
 이제 테스트할 앱에서 인앱결제를 시도한다. 그러면 앱스토어 계정의 이메일과 비밀번호를 입력하는데, 위에서 생성한 SandBox 계정 정보를 입력한다. 결제를 진행하면 *Environment: SandBox*가 표시되서, 샌드박스 환경에서 인앱결제가 진행됨을 알 수 있다.
 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/198166895-5e3aacf5-922d-483b-b815-11345448e941.jpeg">
+</p>
+
