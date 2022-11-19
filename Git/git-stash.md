@@ -25,6 +25,11 @@ git stash
 git stash save Title
 ```
 
+특정 파일만 저장할 수 있다.
+```
+git stash -- Module/Component/SignupValidator.swift
+```
+
 &nbsp;
 ## 목록 확인
 
