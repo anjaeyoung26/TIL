@@ -41,7 +41,7 @@ class MockURLSessionDataTask: URLSessionDataTask {
 }
 ```
 
-이제 네트워킹 통신을 수행하는 `NetWorking` 클래스를 살펴보자.
+이제 네트워킹 통신을 수행하는 `Networking` 클래스를 살펴보자.
 
 ```swift
 final class Networking {
