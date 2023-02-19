@@ -18,7 +18,7 @@
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
 - [CGFloat](Swift/cgfloat.md)
 - [contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
-- [contentHugging, compressionResistance](Swift/contentHugging%2C%20compressionResistance.md)
+- [contentHugging, compressionResistance](Swift/content-hugging%2C%20compression-resistance.md)
 - [clipsToBounds, masksToBounds](Swift/clips-to-bounds%2C%20masks-to-bounds.md)
 - [defer](Swift/defer.md)
 - [@discardableResult](Swift/discardable-result.md)
