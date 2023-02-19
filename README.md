@@ -40,6 +40,7 @@
 - [Self, self](Swift/self.md)
 - [Type method](Swift/type-method.md)
 - [UIModalPresentationStyle](Swift/uimodalpresentationstyle.md)
+- [UIScrollView Layout Guide](Swift/uiscrollview-layout-guide.md)
 - [UISheetPresentationController](Swift/uisheetpresentationcontroller.md)
 - [Variadic Parameters](Swift/variadic-parameters.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
