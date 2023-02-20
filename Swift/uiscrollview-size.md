@@ -11,7 +11,7 @@ self.scrollView.contentSize = .init(width: 200, height: 200)
 &nbsp;
 ## 2. 내부 컨텐츠의 사이즈에 따라
 
-먼저 스크롤 뷰는 서브 뷰의 [`intrinsicContentSize`](./contentHugging%2C%20compressionResistance.md)로 크기를 가늠한다. `intrinsicContentSize`는 뷰의 컨텐츠에 대한 본질적인 사이즈를 나타내는 프로퍼티이며, 뷰의 컨텐츠에 따라 값이 정해진다. 예를들어, 라벨의 `intrinsicContentSize`는 폰트의 크기와 텍스트의 길이 등을 고려해서 사이즈가 정해진다. 따라서 화면에 라벨을 추가하고 사이즈를 정하지 않아도 적절하게 표시되는 것이다. 만약 Autolayout으로 사이즈를 명시하면 Constraint에 따라 사이즈가 정해진다.
+먼저 스크롤 뷰는 서브 뷰의 [`intrinsicContentSize`](./intrinsic-content-size.md)로 크기를 가늠한다. 하지만 아래와 같이 서브 뷰에 오토 레이아웃이 설정돼 있다면 제약사항에 따라 사이즈를 가늠한다.
 
 ```swift
 NSLayoutConstraint.activate([

@@ -29,6 +29,7 @@
 - [@escaping](Swift/escaping-closure.md)
 - [inout](Swift/inout.md)
 - [Interface Builder, .nib, .xib](Swift/interface-builder-nib-xib.md)
+- [intrinsicContentSize](Swift/intrinsic-content-size.md)
 - [Method Dispatch](Swift/method-dispatch.md)
 - [Mock Networking](Swift/Test/mock-networking.md)
 - [NSLocking](Swift/Concurrency/nslocking.md)
