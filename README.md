@@ -77,6 +77,7 @@
 - [프로그래밍 패러다임(2) - 객체 지향 프로그래밍](./Etc/object-oriented-programming.md)
 - [프로그래밍 패러다임(3) - 객체 지향 프로그래밍 SOLID](./Etc/solid.md)
 - [함수와 메서드](./Etc/function-method.md)
+- [Xcode 바이너리 파일](./Etc/xcode-binary-file.md)
 ---
 ## Git
 - [Git 이란?](./Git/git.md)
