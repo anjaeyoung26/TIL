@@ -60,6 +60,7 @@
 - [Kingfisher - Caching](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [Kingfisher - Prefetch](Swift/3rd-party/kingfisher-prefetch.md)
 - [SwiftLint](Swift/3rd-party/swiftlint.md)
+- [Swinject](Swift/3rd-party/swinject.md)
 ---
 ## Etc
 - [디자인 패턴과 아키텍처 패턴](./Etc/design-architecture-pattern.md)
