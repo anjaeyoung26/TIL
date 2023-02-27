@@ -79,6 +79,7 @@
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
 - [인앱결제 샌드박스 테스트](./Etc/iap-sandbox.md)
+- [정적•동적 라이브러리](./Etc/static-dynamic-library.md)
 - [코디네이터 패턴](./Etc/coordinator-pattern.md)
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
 - [프로그래밍 패러다임(1) - 명령형 프로그래밍과 선언형 프로그래밍](./Etc/imperative-and-declarative-programming.md)
