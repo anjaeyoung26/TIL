@@ -64,8 +64,8 @@
 
 ### Xcode
 
-- [모듈화(1) - XCFramework란?](./Swift/Xcode/xcframework(1).md)
-- [모듈화(2) - XCFramework를 통한 모듈화](./Swift/Xcode/xcframework(2).md)
+- [XCFramework란?](./Swift/Xcode/xcframework(1).md)
+- [XCFramework를 통한 모듈화](./Swift/Xcode/xcframework(2).md)
 - [Xcode 바이너리 파일](./Swift/Xcode/xcode-binary-file.md)
 - [Xcode Concepts](./Swift/Xcode/xcode-concepts.md)
 - [Xcode Target 관리](./Swift/Xcode/xcode-manage-target.md)
