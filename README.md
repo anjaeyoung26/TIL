@@ -67,8 +67,8 @@
 - [XCFramework란?](./Swift/Xcode/xcframework(1).md)
 - [XCFramework를 통한 모듈화](./Swift/Xcode/xcframework(2).md)
 - [Xcode 바이너리 파일](./Swift/Xcode/xcode-binary-file.md)
+- [Xcode 빌드 환경 분리](./Swift/Xcode/xcode-build-configuration.md)
 - [Xcode Concepts](./Swift/Xcode/xcode-concepts.md)
-- [Xcode Target 관리](./Swift/Xcode/xcode-manage-target.md)
 ---
 ## Etc
 - [디자인 패턴과 아키텍처 패턴](./Etc/design-architecture-pattern.md)
