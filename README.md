@@ -47,14 +47,12 @@
 - [weak, unowned](Swift/weak-unowned-reference.md)
 
 ### 1st-party
-
 - [AVFAudio - Responding to Audio Session Interruptions](./Swift/1st-party/avfaudio-responding-to-audio-session-interruptions.md)
 - [AVFAudio - Responding to Audio Session Route Changes](./Swift/1st-party/avfaudio-responding-to-audio-session-route-changes.md)
 - [StoreKit - 인앱결제 구현](./Swift/1st-party/StoreKit/storekit.md)
 - [Swift Package Manager](./Swift/1st-party/SPM/spm.md)
 
 ### 3rd-party
-
 - [Alamofire Advanced Usage - 네트워크 계층 리팩토링](https://fromdave.medium.com/alamofire-%ED%99%9C%EC%9A%A9%EA%B8%B0-8bf5274fbaf) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [CocoaPods Binary](./Swift/3rd-party/cocoapods-binary.md)
 - [Kingfisher - Caching](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
@@ -63,7 +61,6 @@
 - [Swinject](Swift/3rd-party/swinject.md)
 
 ### Xcode
-
 - [XCFramework란?](./Swift/Xcode/xcframework(1).md)
 - [XCFramework를 통한 모듈화](./Swift/Xcode/xcframework(2).md)
 - [Xcode 바이너리 파일](./Swift/Xcode/xcode-binary-file.md)
@@ -86,6 +83,7 @@
 - [프로그래밍 패러다임(2) - 객체 지향 프로그래밍](./Etc/object-oriented-programming.md)
 - [프로그래밍 패러다임(3) - 객체 지향 프로그래밍 SOLID](./Etc/solid.md)
 - [함수와 메서드](./Etc/function-method.md)
+- [Semantic Versioning](./Etc/semantic-versioning.md)
 ---
 ## Git
 - [Git 이란?](./Git/git.md)
