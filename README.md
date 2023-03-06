@@ -76,6 +76,7 @@
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
 - [iOS 앱 배포(1) - TestFlight](./Etc/testflight.md)
+- [iOS 앱 배포(2) - In-House](./Etc/inhouse-distribution.md)
 - [인앱결제 샌드박스 테스트](./Etc/iap-sandbox.md)
 - [정적•동적 라이브러리](./Etc/static-dynamic-library.md)
 - [코디네이터 패턴](./Etc/coordinator-pattern.md)
