@@ -77,6 +77,7 @@
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
 - [iOS 앱 배포(1) - TestFlight](./Etc/testflight.md)
 - [iOS 앱 배포(2) - In-House](./Etc/inhouse-distribution.md)
+- [iOS 앱 배포(3) - Ad-Hoc](./Etc/adhoc.md)
 - [인앱결제 샌드박스 테스트](./Etc/iap-sandbox.md)
 - [정적•동적 라이브러리](./Etc/static-dynamic-library.md)
 - [코디네이터 패턴](./Etc/coordinator-pattern.md)
@@ -86,6 +87,7 @@
 - [프로그래밍 패러다임(3) - 객체 지향 프로그래밍 SOLID](./Etc/solid.md)
 - [함수와 메서드](./Etc/function-method.md)
 - [Semantic Versioning](./Etc/semantic-versioning.md)
+- [UDID](./Etc/udid.md)
 ---
 ## Git
 - [Git 이란?](./Git/git.md)
