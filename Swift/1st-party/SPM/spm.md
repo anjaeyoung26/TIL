@@ -11,11 +11,11 @@ SPM이 관리하는 Swift Package란 무엇일까? Swift Package는 Swift 소스
 
 ### Package Manifest
 
+`Package.swift` 파일의 소스이다. 패키지의 이름과 콘텐츠를 정의하기 위해 `PackageDescription` 모듈을 import 한다. 패키지의 내부 구조를 살펴보자.
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/172773802-1ccb3c5b-3b84-4e8b-8764-7efdf5a92172.png">
 </p>
-
-`Package.swift` 파일의 소스이다. 패키지의 이름과 콘텐츠를 정의하기 위해 `PackageDescription` 모듈을 import 한다. 패키지의 내부 구조를 살펴보자.
 
 - `name` : 패키지의 이름이다.
 - `products` : 패키지에 포함되는 라이브러리 또는 실팽 파일이다. 라이브러리에는 다른 Swift 코드에서 가져올 수 있는 모듈이 포함되어 있으며, 실행 파일은 운영 체제에서 실행할 수 있는 프로그램이다. 패키지로부터 어떠한 타겟을 노출시키고, 다른 패키지에서 사용할 수 있도록 한다. [RxSwift](https://github.com/ReactiveX/RxSwift/blob/main/Package.swift)의 manifest 파일을 살펴보자.
@@ -35,7 +35,7 @@ SPM이 관리하는 Swift Package란 무엇일까? Swift Package는 Swift 소스
     <img src="https://user-images.githubusercontent.com/61190690/172792012-23e482bd-c570-426e-b11f-37fc3a15d994.png">
     </p>
 
-- `dependencies` : 패키지의 코드에 필요한 모듈이다. 패키지 소스에 대한 상대 또는 절대 URL과 사용할 수 있는 패키지 버전에 대한 요구 사항의 집합으로 구성된다. 예를 들어 [Moya](https://github.com/Moya/Moya/blob/master/Package.swift)의 manifest 파일을 살펴보자.
+- `dependencies` : 패키지의 코드에 필요한 모듈이다. 패키지 소스에 대한 상대 또는 절대 URL과 사용할 수 있는 패키지 버전에 대한 요구 사항의 집합으로 구성된다. 예를 들어 [Moya](https://github.com/Moya/Moya/blob/master/Package.swift)의 manifest 파일을 살펴보면 *Alamofire*를 의존성으로 추가하고 있고, *Alamofire* 5.0.0 버전 이상으로 최소 버전을 제한하고 있다.
 
     ```swift
     dependencies: [
@@ -43,8 +43,6 @@ SPM이 관리하는 Swift Package란 무엇일까? Swift Package는 Swift 소스
         ...
     ]
     ```
-
-    *Moya*는 *Alamofire*를 의존성으로 추가하고 있고, *Alamofire* 5.0.0 버전 이상으로 최소 버전을 제한하고 있다.
 
 - `targets` : 타겟은 모듈로서, 패키지의 내부적인 모듈을 구성하는 방법이다. 위 `Package.swift`과 같이 세 개의 타겟을 추가하면 패키지의 구조를 살펴보자. Sources 디렉터리에 타겟의 모든 파일이 위치하고, 각 타겟은 타겟 이름과 동일한 이름으로 하위 디렉터리에 위치한다. 또한 `testTarget`은 따로 Test 디렉터리의 하위 디렉터리에 위치한다.
 

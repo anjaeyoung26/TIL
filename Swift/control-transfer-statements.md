@@ -2,9 +2,9 @@
 
 제어 전송문은 코드의 진행이 계속 될지 결정하거나, 실행되는 코드의 흐름을 바꾸기 위해 사용한다. Swift에서는 아래의 다섯 가지 전송 제어문을 제공한다.
 
-- `continue`
-- `break`
-- `fallThrough`
+- [`continue`](#continue)
+- [`break`](#break)
+- [`fallThrough`](#fallthrough)
 - `return`
 - `throw`
 

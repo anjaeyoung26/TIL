@@ -16,7 +16,7 @@ present(viewController, animated: true)
 `UIViewController` 클래스에는 Modal 표시 형식을 지정하기 위한 프로퍼티가 있다. iOS 12 버전까지 `UIModalPresentationStyle.fullScreen`이 기본값이었지만, iOS 13부터 새로운 케이스가 추가되어 `UIModalPresentationStyle.automatic`으로 변경 되었다. 시스템은 `modalPresentationStyle`의 값을 통해 어떻게 뷰 컨트롤러를 표시할지 결정한다. 하나의 뷰 컨트롤러를 표시하기 전 `modalPresentationStyle`의 값을 설정하여 표시 형식을 지정할 수 있다.
 
 &nbsp;
-## .fullScreen
+## fullScreen
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/175427443-b894dfd3-f043-464b-8765-922084d69ef9.gif" height="400">
@@ -25,13 +25,16 @@ present(viewController, animated: true)
 현재 보고 있는 화면을 완전히 덮는 표시 방식이다. iOS 12 버전까지 `modalPresentationStyle`의 기본값이었지만, iOS 13부터는 새로운 케이스가 추가되서 더 이상 기본값이 아니다. `fullScreen`이 어떻게 표시되는지 그림으로 살펴보자. 사용자가 보고 있는 화면을 완전히 덮으면서 표시되는 것을 볼 수 있다.
 
 &nbsp;
-## .overFullScreen
+## overFullScreen
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/175427431-c773850f-475f-4415-bc83-49abdf6a845b.gif" height="400">
 </p>
 
 `overFullScreen`은 겉보기에 `fullScreen`과 동일한 방식으로 표시한다. 하지만 `fullScreen`은 뷰 컨트롤러를 `present`한 뒤, *View Hierachy*에서 `presentingViewController`의 뷰가 제거되지만 `overFullScreen`은 제거되지 않고 남아있다. 실제로 `fullScreen`과 `overFullScreen` 방식으로 표시했을 때 *View Hierachy*를 비교해보자. 
+
+&nbsp;
+### vs fullScreen
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/173089373-ad666551-0e3a-420d-9d24-8f8f29bf2bad.png" width="500">
@@ -40,7 +43,7 @@ present(viewController, animated: true)
 
 위 그림은 각각 `ViewController1`에서 `ViewController2`를 `fullScreen`과 `overFullScreen` 방식으로 `present`한 뒤 *View Hierachy*를 나타낸다. 첫 번째 그림은 `fullScreen`에 해당하며, `ViewController1`의 뷰가 *View Hierachy*에서 제거되어 보이지 않는다. 두 번째 그림은 `overFullScreen`에 해당하며, `ViewController2`의 뷰가 *View Hierachy*에서 제거되지 않고 남아있다.
 
-> 중요한 점은 `overFullScreen`으로 표시된 `ViewController2`를 `dismiss` 해도 `ViewController1`의 `viewWillAppear`, `viewDidAppear` 메서드가 호출되지 않는다. `overFullScreen`을 처음 사용한다면 `fullScreen`을 사용했을 때와 라이프 사이클이 다르기 때문에 혼동될 수 있다.
+중요한 점은 `overFullScreen`으로 표시된 `ViewController2`를 `dismiss` 해도 `ViewController1`의 `viewWillAppear`, `viewDidAppear` 메서드가 호출되지 않는다. `overFullScreen`을 처음 사용한다면 `fullScreen`을 사용했을 때와 라이프 사이클이 다르기 때문에 혼동될 수 있다.
 
 &nbsp;
 ## currentContext, overCurrentContext
@@ -51,11 +54,10 @@ present(viewController, animated: true)
 
 다른 뷰 컨트롤러의 컨텐츠 위에 표시하는 방식이다. 여기서 '컨텐츠 위'는 뷰 컨트롤러의 `view`를 통해 표시된다는 의미이다. 위 그림에서 `currentContext`가 어떻게 표시되는지 살펴보자. 그림에서 `currentContext` 방식으로 A의 컨텐츠 위에 C를 표시했다. 이때 C의 크기를 살펴보면, A의 콘텐츠 크기에 맞춰서 표시된 것을 볼 수 있다. 만약 A의 콘텐츠 크기가 스크린과 동일하다면 `fullScreen`과 동일하게 표시한다. 또한 `currentContext`와 `overCurrentContext`의 차이는 `fullScreen`과 `overFullScreen`의 차이와 같다.
 
-`UIKit`에서 `currentContext`, `overCurrentContext`와 같은 context 기반의 표시 방식이 어떻게 동작하는지 알아보자. `UIKit`은 context 기반의 프레젠테이션이 일어날 때, `presentingViewController`부터 시작하여 뷰 컨트롤러 계층을 거슬러 올라간다. 그리고 `definesPresentationContext`의 값이 `true`인 뷰 컨트롤러를 찾으면 해당 뷰 컨트롤러의 컨텐츠에 표시한다.
+&nbsp;
+### definesPresentationContext
 
-```swift
-var definesPresentationContext: Bool { get set }
-```
+`UIKit`에서 `currentContext`, `overCurrentContext`와 같은 context 기반의 표시 방식이 어떻게 동작하는지 알아보자. `UIKit`은 context 기반의 프레젠테이션이 일어날 때, `presentingViewController`부터 시작하여 뷰 컨트롤러 계층을 거슬러 올라간다. 그리고 `definesPresentationContext`의 값이 `true`인 뷰 컨트롤러를 찾으면 해당 뷰 컨트롤러의 컨텐츠에 표시한다.
 
 만약 뷰 컨트롤러 계층에 있는 모든 뷰 컨트롤러가 `definesPresentationContext` 값이 `false`라면, 뷰 컨트롤러 계층의 root에 있는 뷰 컨트롤러의 컨텐츠에 표시된다. `definesPresentationContext`의 기본값은 `false`이다.
 
@@ -77,9 +79,7 @@ var definesPresentationContext: Bool { get set }
 <img src="https://user-images.githubusercontent.com/61190690/173001901-e60cd472-e286-40f8-bf7c-dcdd1972cb30.png" width="500">
 </p>
 
-WWDC에서 발표된 내용에 의하면, 이러한 layering 디자인은 사용자가 어플리케이션을 사용하면서 어디에 있는지에 대한 컨텍스트를 제공하며, 상단에 둥근 모양은 ***Interactively dismissed*** 될 수 있음을 나타내는 역할을 한다. 
-
-> *Interactively dismissed*란, 스와이프 액션을 통해 아래로 끌어내려 뷰 컨트롤러를 `dismiss` 한다는 의미이다. 그렇다면 11인치의 iPad에서 어떻게 표시될까? 아래의 그림을 살펴보면, 시스템이 dimming(어둑한) layer를 추가하고, 그 위에 컨텐츠를 표시한다. 컨텐츠는 스크린의 중앙에 위치하며 화면 크기, 방향, 글꼴 크기와 같은 여러가지 요소에 의해 컨텐츠의 크기가 최적화된다.
+WWDC에서 발표된 내용에 의하면, 이러한 layering 디자인은 사용자가 어플리케이션을 사용하면서 어디에 있는지에 대한 컨텍스트를 제공하며, 상단에 둥근 모양은 ***Interactively dismissed*** 될 수 있음을 나타내는 역할을 한다. *Interactively dismissed*란, 스와이프 액션을 통해 아래로 끌어내려 뷰 컨트롤러를 `dismiss` 한다는 의미이다. 그렇다면 11인치의 iPad에서 어떻게 표시될까? 아래의 그림을 살펴보면, 시스템이 dimming(어둑한) layer를 추가하고, 그 위에 컨텐츠를 표시한다. 컨텐츠는 스크린의 중앙에 위치하며 화면 크기, 방향, 글꼴 크기와 같은 여러가지 요소에 의해 컨텐츠의 크기가 최적화된다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/173088425-9a243824-a6f3-4d0b-be8a-f005d2f748d0.png" height="500">

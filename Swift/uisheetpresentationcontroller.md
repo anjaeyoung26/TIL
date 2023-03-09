@@ -1,10 +1,12 @@
 # UISheetPresentationController
 
+[UISheetPresentationController](https://developer.apple.com/documentation/uikit/uisheetpresentationcontroller)는 iPhone의 지도 앱에서 볼 수 있는 시트 스타일의 컨트롤러이다. `UISheetPresentationController`를 통해 시트와 시트 뒤에 있는 콘텐츠와 동시에 상호 작용할 수 있는 *non-modal* 환경을 구축할 수 있다. 이는 iOS 15 버전 이상부터 사용할 수 있으며, 자세한 내용은 WWDC21의 [Customize and resize sheets in UIKit](https://developer.apple.com/videos/play/wwdc2021/10063/) 세션 9:45부터 살펴볼 수 있다.
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/175305578-a20f26e4-5fd1-4848-8459-859ea05915b2.gif" height="400">
 </p>
 
-[UISheetPresentationController](https://developer.apple.com/documentation/uikit/uisheetpresentationcontroller)는 iPhone의 지도 앱에서 볼 수 있는 시트 스타일의 컨트롤러이다. `UISheetPresentationController`를 통해 시트와 시트 뒤에 있는 콘텐츠와 동시에 상호 작용할 수 있는 *non-modal* 환경을 구축할 수 있다. 이는 iOS 15 버전 이상부터 사용할 수 있으며, 자세한 내용은 WWDC21의 [Customize and resize sheets in UIKit](https://developer.apple.com/videos/play/wwdc2021/10063/) 세션 9:45부터 살펴볼 수 있다. 사용 방법으로는 `UIViewController` 클래스의 `sheetPresentationController`를 통해서 뷰 컨트롤러를 표시하기 전에 시트의 동작과 모양을 설정할 수 있다.
+`UIViewController` 클래스의 `sheetPresentationController`를 통해서 뷰 컨트롤러를 표시하기 전에 시트의 동작과 모양을 설정할 수 있다.
 
 ```swift
 func showMyViewControllerInACustomizedSheet() {
@@ -61,7 +63,7 @@ var selectedDetentIdentifier: [UISheetPresentationController.Detent.Identifier] 
 <img src="https://user-images.githubusercontent.com/61190690/175473380-aabd4255-cb4d-409b-aa8a-6fd298d36be1.png" height="400">
 </p>
 
-`prefersGrabberVisible` 프로퍼티를 통해 시트의 *Grabber*를 표시할 지 결정할 수 있다. 기본 값은 `false`로 기본적으로 시트의 *Grabber*는 표시되지 않는다.
+`prefersGrabberVisible` 프로퍼티로 시트의 *Grabber*를 표시할 지 결정할 수 있다. 기본 값은 `false`로 기본적으로 시트의 *Grabber*는 표시되지 않는다.
 
 ```swift
 var prefersGrabberVisible: Bool { get set }

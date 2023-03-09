@@ -1,4 +1,18 @@
-# 인하우스 배포
+## Table of Contents
+
+1. [인하우스 배포란](#인하우스-배포란)
+2. [자격](#자격)
+3. [준비 사항](#준비-사항)
+    - [웹 사이트](#1-웹-사이트)
+    - [Apple ID](#2-apple-id)
+    - [D-U-N-S 번호](#3-d-u-n-s-번호)
+4. [멤버십 등록](#멤버십-등록)
+5. [배포](#배포)
+    - [웹 페이지에서 다운로드](#웹-페이지에서-다운로드)
+    - [신뢰하지 않는 기업용 개발자](#신뢰하지-않는-기업용-개발자)
+
+&nbsp;
+## 인하우스 배포란
 
 앱을 일반 사용자가 아닌 회사의 직원들에게만 배포해야 하는 경우가 있다. 하지만 [Developer Program](https://developer.apple.com/programs/)으로 사내용 앱을 배포하면 앱 심사에서 리젝될 수 있다.
 
@@ -21,58 +35,56 @@
 5. Apple의 확인 인터뷰 및 지속적인 평가 절차에 참여하고 통과해야 한다.
 
 &nbsp;
-## 멤버십 등록
+## 준비 사항
 
-### 준비 사항
+### 1. 웹 사이트
 
-1. **Apple ID**: Enterprise Program에 가입할 애플 계정이다. 계정과 관련해서 몇 가지 고려해야 할 사항이 있다.
+인하우스 배포를 하기 위한 웹 사이트이다. 웹 사이트는 반드시 공개적으로 이용이 가능해야 한다. 또한 도메인은 조직과 연관된 이름이어야 한다.
 
-    - 웹사이트 도메인의 이름을 사용하는 이메일이어야 한다. 예를 들어, 도메인이 myapp.co.kr 이라면 이메일은 myemail@myapp.co.kr의 형태여야 한다.
-    - 이미 Developer Program에 등록했거나, 다른 미디어 유형을 배포하기 위한 앱 스토어 커넥트 계정이 있는 경우, 다른 계정을 사용해야 한다.
-    - 이중 인증이 켜져있어야 한다.
+### 2. Apple ID
 
-2. **D-U-N-S 번호**: [Dun & Bradstreet](https://www.dnb.com/)라는 회사에서 사업자 구분을 하기 위해 기업에 부여하는 코드이다. 기존에 던스 번호가 발급됐는지 확인하기 위해 [D-U-N-S 번호 조회](https://developer.apple.com/enroll/duns-lookup/#!/search)에 접속한다. 고객사의 던스 번호를 대신 발급받거나 Dun & Bradstreet에서 이미 번호를 할당했을 수 있기 때문에 확인이 필요하다. 만약 던스번호를 발급받아야 한다면 Enterprise Program 등록 과정 중에서 가장 오랜 시간이 소요된다.
+Enterprise Program에 가입할 애플 계정이다. 계정과 관련해서 몇 가지 고려해야 할 사항이 있다.
 
-    2-1. [D-U-N-S 번호 조회](https://developer.apple.com/enroll/duns-lookup/#!/search) 페이지에서 법인에 대한 정보를 입력하고 Continue를 클릭한다. 정보는 홈텍스에서 발급받는 **영문 사업자등록증**을 참고한다.
+- 웹사이트 도메인의 이름을 사용하는 이메일이어야 한다. 예를 들어, 도메인이 myapp.co.kr 이라면 이메일은 myemail@myapp.co.kr의 형태여야 한다.
+- 이미 Developer Program에 등록했거나, 다른 미디어 유형을 배포하기 위한 앱 스토어 커넥트 계정이 있는 경우, 다른 계정을 사용해야 한다.
+- 이중 인증이 켜져있어야 한다.
 
-    <p align="center">
-    <img src="https://user-images.githubusercontent.com/61190690/223090240-1c2c7a8f-0fb6-4ed1-aa55-8b8b67892800.png">
-    </p>
+### 3. D-U-N-S 번호
 
-    2-2. 이미 할당된 던스번호가 있다면 애플 계정 이메일로 정보를 전달해준다.
+[Dun & Bradstreet](https://www.dnb.com/)라는 회사에서 사업자 구분을 하기 위해 기업에 부여하는 코드이다. 기존에 던스 번호가 발급됐는지 확인하기 위해 [D-U-N-S 번호 조회](https://developer.apple.com/enroll/duns-lookup/#!/search)에 접속한다. 고객사의 던스 번호를 대신 발급받거나 Dun & Bradstreet에서 이미 번호를 할당했을 수 있기 때문에 확인이 필요하다. 만약 던스번호를 발급받아야 한다면 Enterprise Program 등록 과정 중에서 가장 오랜 시간이 소요된다. 아래는 던스 번호를 발급받는 과정이다.
 
-    <p align="center">
-    <img src="https://user-images.githubusercontent.com/61190690/223010651-04f753eb-b43a-4830-9412-240a837dc61e.png" width="460">
-    </p>
+- [D-U-N-S 번호 조회](https://developer.apple.com/enroll/duns-lookup/#!/search) 페이지에서 법인에 대한 정보를 입력하고 Continue를 클릭한다. 정보는 홈텍스에서 발급받는 **영문 사업자등록증**을 참고한다.
 
-    2-3. 할당된 던스번호가 없다면 이전 페이지에서 입력한 정보를 토대로 던스번호 발급 요청을 할 수 있는 페이지가 표시된다. 주의할 점은 던스번호를 발급받은 뒤 법인에 대한 정보를 수정하려면 Dun & Bradstreet 회사의 승인이 필요하므로 주의깊게 살펴보자.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/223090240-1c2c7a8f-0fb6-4ed1-aa55-8b8b67892800.png">
+</p>
 
-    <p align="center">
-    <img src="https://user-images.githubusercontent.com/61190690/223011878-2559e446-d935-4be5-aed4-bd7d321c242a.png" width="460">
-    </p>
+- 이미 할당된 던스번호가 있다면 애플 계정 이메일로 정보를 전달해준다.
 
-    2-4. 던스번호 발급이 요청되면 아래와 같은 페이지가 표시된다.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/223010651-04f753eb-b43a-4830-9412-240a837dc61e.png" width="460">
+</p>
 
-    <p align="center">
-    <img src="https://user-images.githubusercontent.com/61190690/223010654-b259fc8e-9297-4b9e-940a-5852bb3dcaf7.png" width="460">
-    </p>
+- 할당된 던스번호가 없다면 이전 페이지에서 입력한 정보를 토대로 던스번호 발급 요청을 할 수 있는 페이지가 표시된다. 주의할 점은 던스번호를 발급받은 뒤 법인에 대한 정보를 수정하려면 Dun & Bradstreet 회사의 승인이 필요하므로 주의깊게 살펴보자.
 
-    2-5. 던스번호 발급을 요청한 당일에 발급 승인 요청 메일이 수신된다. 그리고 1~2일 내로 2-1에서 Your Contact Information에 입력한 전화번호로 070으로 시작하는 국제전화가 온다. 전화는 Dun & Bradstreet 회사의 담당자가 법인의 던스 번호 발급을 확인하기 위해 메일로 전달된 request id를 요청한다.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/223011878-2559e446-d935-4be5-aed4-bd7d321c242a.png" width="460">
+</p>
 
-    <p align="center">
-    <img src="https://user-images.githubusercontent.com/61190690/223013268-13fd8d86-c163-45bd-8d1f-862661e227dc.png" width="460">
-    </p>
+- 던스번호 발급이 요청되면 아래와 같은 페이지가 표시된다.
 
-    2-6. 약 일주일 후에 던스번호가 발급됐다는 메일이 수신된다.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/223010654-b259fc8e-9297-4b9e-940a-5852bb3dcaf7.png" width="460">
+</p>
 
-    <p align="center">
-    <img src="https://user-images.githubusercontent.com/61190690/223013270-9fcfcd75-0494-40ee-890a-f0a13eb3c06f.png" width="460">
-    </p>
+- 약 일주일 후에 던스번호가 발급됐다는 메일이 수신된다.
 
-3. **웹 사이트**: 인하우스 배포를 하기 위한 웹 사이트이다. 웹 사이트는 반드시 공개적으로 이용이 가능해야 한다. 또한 도메인은 조직과 연관된 이름이어야 한다.
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/223013270-9fcfcd75-0494-40ee-890a-f0a13eb3c06f.png" width="460">
+</p>
 
 &nbsp;
-### 등록 시작
+## 멤버십 등록
 
 [Enterprise Program 등록 페이지](https://developer.apple.com/kr/programs/enterprise/enroll/)에 접속한다. 그리고 하단의 등록 시작하기를 클릭한다.
 

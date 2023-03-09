@@ -4,8 +4,8 @@
 
 ```swift
 public protocol NSLocking {
-    public func lock()
-    public func unlock()
+  public func lock()
+  public func unlock()
 }
 ```
 
@@ -19,11 +19,11 @@ public protocol NSLocking {
 
 ```swift
 open class NSLock : NSObject, NSLocking {
-    open func `try`() -> Bool
-    open func lock(before limit: Date) -> Bool
+  open func `try`() -> Bool
+  open func lock(before limit: Date) -> Bool
 
-    @available(iOS 2.0, *)
-    open var name: String?
+  @available(iOS 2.0, *)
+  open var name: String?
 }
 ```
 
@@ -34,6 +34,7 @@ open class NSLock : NSObject, NSLocking {
 2. 재귀적인 lock을 구현하면 안된다. 동일한 스레드에서 lock을 두 번 건다면 교착상태가 발생해 스레드가 영구적으로 잠길 수 있다. 재귀 함수 등에서 여러번 lock을 걸어야 할 때는 `NSRecursiveLock` 클래스를 사용한다.
 
 &nbsp;
+### 문제
 
 이제 `NSLock`을 어떻게 사용하는지 알아보자. 먼저 아래의 코드는 [Race Condition](../../OS/process-synchronization.md/#race-condition)이 발생한 예시이다.
 
@@ -41,23 +42,23 @@ open class NSLock : NSObject, NSLocking {
 var number = 0
 
 Thread.detachNewThread {
-    print("1 start")
+  print("1 start")
+  
+  (0..<10000).forEach({ element in 
+      number += 1
+  })
 
-    (0..<10000).forEach({ element in 
-        number += 1
-    })
-
-    print("1 end - \(number)")
+  print("1 end - \(number)")
 }
 
 Thread.detachNewThread {
-    print("2 start")
+  print("2 start")
 
-    (0..<10000).forEach({ element in 
-        number += 1
-    })
+  (0..<10000).forEach({ element in 
+      number += 1
+  })
 
-    print("2 end - \(number)")
+  print("2 end - \(number)")
 }
 
 sleep(3)
@@ -73,6 +74,7 @@ print("Final - \(number)")
 두 개의 스레드에서 `number`를 10000번 1씩 증가시키는 작업을 수행한다. 출력을 보면 두 개의 스레드는 동시에 작업을 시작했고 최종적으로 `number`는 20000이 될 것을 기대하지만 실제로는 19993이다. 왜 Race Condition이 발생할까? 두 개의 스레드가 `number` 변수에 동시에 접근해서 값을 증가시킨다. 만약 `number`의 값이 1000일 때 두 개의 스레드가 동시에 값을 읽어서 1을 증가시켜 1001을 저장한다면 1002가 되어야 할 값이 실제로는 1001이 된다.
 
 &nbsp;
+### 해결
 
 이를 해결하기 위해 `NSLock`을 사용해보자.
 
@@ -81,27 +83,27 @@ let lock = NSLock()
 var number = 0
 
 Thread.detachNewThread {
-    lock.lock()
-    print("1 start")
+  lock.lock()
+  print("1 start")
 
-    (0..<10000).forEach({ element in 
-        number += 1
-    })
+  (0..<10000).forEach({ element in 
+      number += 1
+  })
 
-    print("1 end - \(number)")
-    lock.unlock()
+  print("1 end - \(number)")
+  lock.unlock()
 }
 
 Thread.detachNewThread {
-    lock.lock()
-    print("2 start")
+  lock.lock()
+  print("2 start")
 
-    (0..<10000).forEach({ element in 
-        number += 1
-    })
+  (0..<10000).forEach({ element in 
+      number += 1
+  })
 
-    print("2 end - \(number)")
-    lock.unlock()
+  print("2 end - \(number)")
+  lock.unlock()
 }
 
 sleep(3)
@@ -126,7 +128,7 @@ print("Final - \(number)")
 
     ```swift
     func lock(before limit: Date) -> Bool {
-        ...
+      ...
     }
     ```
 
@@ -134,7 +136,7 @@ print("Final - \(number)")
 
     ```swift
     func try() -> Bool {
-        ...
+      ...
     }
     ```
 
@@ -143,37 +145,38 @@ print("Final - \(number)")
 
 ```swift
 open class NSRecursiveLock : NSObject, NSLocking {
-    open func `try`() -> Bool
-    open func lock(before limit: Date) -> Bool
+  open func `try`() -> Bool
+  open func lock(before limit: Date) -> Bool
 
-    @available(iOS 2.0, *)
-    open var name: String?
+  @available(iOS 2.0, *)
+  open var name: String?
 }
 ```
 
 구현부는 `NSLock`과 차이가 없지만 앞에서 언급했듯이 재귀적인 lock을 구현할 때 사용하는 Lock 개체이다. 동일한 스레드에서 교착상태 없이 여러 번 lock을 획득할 수 있다. 하나의 스레드가 lock을 걸었다면 다른 스레드가 공유 자원에 접근할 수 없는 것은 동일하다.
 
 &nbsp;
+### 문제
 
-아래의 코드는 교착상태가 발생하는 예시이다.
+아래의 코드는 Race Condition이 발생하는 예시이다.
 
 ```swift
 let lock = NSLock()
 
 Thread.detachNewThread {
-    print("start")
+  print("start")
 
-    lock.lock()
-    print("lock - 1")
+  lock.lock()
+  print("lock - 1")
 
-    lock.lock() // 교착상태 발생
-    print("lock - 2")
+  lock.lock() // 교착상태 발생
+  print("lock - 2")
 
-    lock.unlock()
-    print("unlock - 1")
+  lock.unlock()
+  print("unlock - 1")
 
-    lock.unlock()
-    print("unlock - 2")
+  lock.unlock()
+  print("unlock - 2")
 }
 ```
 
@@ -183,6 +186,7 @@ Thread.detachNewThread {
 스레드에서 lock을 획득한 후 다시 한 번 lock을 획득하려고 하면 교착상태가 발생한다. 
 
 &nbsp;
+### 해결
 
 이제 `NSLock` 대신 `NSRecursiveLock`을 사용한 결과를 살펴보자.
 
@@ -190,7 +194,7 @@ Thread.detachNewThread {
 let lock = NSRecursiveLock()
 
 Thread.detachNewThread {
-    ...
+  ...
 }
 ```
 
@@ -207,23 +211,24 @@ Thread.detachNewThread {
 
 ```swift
 open class NSConditionLock : NSObject, NSLocking {
-    public init(condition: Int)
-    open var condition: Int { get }
-    open func lock(whenCondition condition: Int)
-    open func `try`() -> Bool
-    open func tryLock(whenCondition condition: Int) -> Bool
-    open func unlock(withCondition condition: Int)
-    open func lock(before limit: Date) -> Bool
-    open func lock(whenCondition condition: Int, before limit: Date) -> Bool
+  public init(condition: Int)
+  open var condition: Int { get }
+  open func lock(whenCondition condition: Int)
+  open func `try`() -> Bool
+  open func tryLock(whenCondition condition: Int) -> Bool
+  open func unlock(withCondition condition: Int)
+  open func lock(before limit: Date) -> Bool
+  open func lock(whenCondition condition: Int, before limit: Date) -> Bool
 
-    @available(iOS 2.0, *)
-    open var name: String?
+  @available(iOS 2.0, *)
+  open var name: String?
 }
 ```
 
 조건을 충족하면 lock을 획득하고 unlock 시 조건을 설정할 수 있다. `condition`은 `Int` 타입으로 기본 값은 0이다. 
 
 &nbsp; 
+### 예시
 
 아래의 예시를 살펴보자.
 
@@ -232,19 +237,19 @@ let lock = NSConditionLock(condition: 1)
 var number = 0
 
 Thread.detachNewThread {
-    lock.lock(whenCondition: 1) // 1
-    print("1 start")
+  lock.lock(whenCondition: 1) // 1
+  print("1 start")
 
-    lock.unlock(withCondition: 2) // 2
-    print("1 end")
+  lock.unlock(withCondition: 2) // 2
+  print("1 end")
 }
 
 Thread.detachNewThread {
-    lock.lock(whenCondition: 2) // 3
-    print("2 start")
-
-    lock.unlock(withCondition: 1) // 4
-    print("2 end")
+  lock.lock(whenCondition: 2) // 3
+  print("2 start")
+  
+  lock.unlock(withCondition: 1) // 4
+  print("2 end")
 }
 ```
 

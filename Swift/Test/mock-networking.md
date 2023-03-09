@@ -2,9 +2,7 @@
 
 좋은 테스트는 **'특정 환경에 종속되지 않아야 한다'** 라는 조건이 있다. 이는 서버의 부하, 기기의 인터넷 연결 상태 등 외부적인 요인에 따라 테스트의 결과가 바뀌지 않아야 하는 것을 의미한다. 만약 네트워킹 통신의 응답 데이터를 우리가 원하는 모델로 디코딩이 문제없이 되는지 테스트를 하려면 어떻게 해야될까?
 
-실제로 네트워킹 요청을 보낸다면 시스템 환경에 따라 응답이 느리게 올 수 있고, 심지어 네트워킹 통신이 실패할 수도 있다. 또한 서버의 데이터베이스가 변경되어서 우리가 원하는 데이터가 오지 않을 수 있다. 우리는 서버가 응답하는 데이터에 어떠한 값이 담아져 있는지 테스트하는 것이 아닌, A라는 응답이 올 때 클라이언트에서 의도한대로 잘 처리가 되는지 테스트를 해야한다.
-
-이때 우리가 원하는 응답을 하도록 가짜 세션을 구현하는 방법이 있다. 우선 네트워킹 통신을 할 때 `URLSession`을 사용한다고 가정하고, `URLSession`의 인스턴스 메소드인 `dataTask(with:completionHandler)`가 우리가 원하는 응답을 하도록 구성하기 위해 새로운 프로토콜을 정의한다.
+실제로 네트워킹 요청을 보낸다면 시스템 환경에 따라 응답이 느리게 올 수 있고, 심지어 네트워킹 통신이 실패할 수도 있다. 또한 서버의 데이터베이스가 변경되어서 우리가 원하는 데이터가 오지 않을 수 있다. 우리는 서버가 응답하는 데이터에 어떠한 값이 담아져 있는지 테스트하는 것이 아닌, A라는 응답이 올 때 클라이언트에서 의도한대로 잘 처리가 되는지 테스트를 해야한다. 이때 우리가 원하는 응답을 하도록 **가짜 세션을 구현하는 방법**이 있다. 우선 네트워킹 통신을 할 때 `URLSession`을 사용한다고 가정하고, `URLSession`의 인스턴스 메소드인 `dataTask(with:completionHandler)`가 우리가 원하는 응답을 하도록 구성하기 위해 새로운 프로토콜을 정의한다.
 
 &nbsp;
 
@@ -14,13 +12,11 @@
 protocol URLSessionProtocol {
   func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
+
+extension URLSession: URLSessionProtocol { }
 ```
 
 테스트 환경에서는 가짜 세션을 사용하고, 실제로 네트워킹 통신을 할 때 `URLSession`을 사용한다. 따라서 `URLSession`도 마찬가지로 프로토콜을 채택해야 한다. 이미 Foundation 프레임워크 내에서 `URLSession`의 `dataTask(with:completionHandler)`가 구현되어 있으니 프로토콜을 채택하기만 하면 된다.
-
-```swift
-extension URLSession: URLSessionProtocol { }
-```
 
 &nbsp;
 ### MockURLSessionDataTask

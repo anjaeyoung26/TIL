@@ -1,6 +1,6 @@
 ## AutoresizingMask
 
-`superview`의 `bounds`가 변경될 때, 현재 뷰의 크기를 조정하는 방법을 결정하는 정수형 *bit mask*이다.
+`superview`의 `bounds`가 변경될 때, 현재 뷰의 크기를 조정하는 방법을 결정하는 정수형 bit mask이다.
 
 ```swift
 public struct AutoresizingMask : OptionSet {
@@ -20,7 +20,7 @@ public struct AutoresizingMask : OptionSet {
 mySubview.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
 ```
 
-만약 `[.flexibleLeftMargin, .flexibleRightMargin]`과 같이 상충되는 옵션을 사용하면 아무것도 설정하지 않는 것과 같다.
+만약 `[.flexibleLeftMargin, .flexibleRightMargin]`과 같이 상충되는 옵션을 사용하면 아무것도 설정하지 않는 것과 같다. AutoresizingMask는 애플이 만든 여러 가지 레이아웃이 있는데, 이 중 원하는 레이아웃을 제공하지 않는다면 `layoutSubviews()`를 오버라이딩하여 하위 뷰를 더 정확하게 배치할 수 있다.
 
 &nbsp;
 ### flexibleWidth
@@ -71,7 +71,10 @@ mySubview.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
 <img src="https://user-images.githubusercontent.com/61190690/190975957-5ae6bdf4-3c60-4948-89ef-d23df4e3c51d.gif">
 </p>
 
-만약 `AutoresizingMask` 중에 원하는 레이아웃을 제공하지 않는다면, `layoutSubviews()`를 오버라이딩하여 하위 뷰를 더 정확하게 배치할 수 있다. 시스템은 `AutoresizingMask`를 Autolayout constraint로 변환하여, 하나의 constraints 세트를 뷰에 적용한다. 이는 뷰의 크기와 위치를 완전히 지정하기 때문에 constraint를 추가할 수 없다. 이와 관련된 하나의 프로퍼티가 있다.
+&nbsp;
+### translatesAutoresizingMaskIntoConstraint
+
+시스템은 `AutoresizingMask`를 Autolayout constraint로 변환하여, 하나의 constraints 세트를 뷰에 적용한다. 이는 뷰의 크기와 위치를 완전히 지정하기 때문에 constraint를 추가할 수 없다. 이와 관련된 하나의 프로퍼티가 있다.
 
 ```swift
 var translatesAutoresizingMaskIntoConstraints: Bool { get set }

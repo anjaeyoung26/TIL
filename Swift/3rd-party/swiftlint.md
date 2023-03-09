@@ -1,7 +1,5 @@
 # SwiftLint
 
-## 개념
-
 커뮤니티 혹은 팀에서 정한 스타일을 따르지 않는 코드를 식별하고 표시하는 것을 돕는 코드 컨벤션이다. 75개가 넘는 규칙이 있고 지속적인 Pull Request를 통해 수정•보안되고 있다. 코딩 스타일을 정해두면 여러 개발자가 작업을 할 때 일관성을 유지할 수 있고 새로운 개발자가 합류하면 예전에 작성된 코드를 읽을 때 도움이 된다. 기본적인 규칙은 Apple의 공식 가이드와 [raywenderlich의 스타일 가이드](https://github.com/raywenderlich/swift-style-guide)를 따른다.
 
 &nbsp;

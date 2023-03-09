@@ -73,7 +73,9 @@ while iterator.hasNext() {
 
 *ReactiveX*는 모든 시퀀스의 요소들을 반복자 패턴을 통해 순회한다. *ReactiveX*에서는 `Observable`의 이벤트를 방출할 때 반복자 패턴이 사용된다.
 
+&nbsp;
 ### Observable
+
 본 글에서는 *ReactiveX*의 전반적인 개념에 대해서만 다룬다. 따라서 `Observable`은 반복자 패턴이 어떻게 사용되는지 설명하기 위해 내용을 추가했다. `Disposable`, `Subject` 등 *ReactiveX*에 대한 자세한 내용은 따로 정리할 예정이다. `Observable`은 관측 가능한 모든 요소를 나타내며, 시퀀스의 일종이다. 또한 데이터가 변경돼도 구독하고 있는 대상이 없다면 어떠한 이벤트도 방출하지 않는다. `Observable`이 방출하는 이벤트는 세 가지 종류가 있다.
 
 - *Next* : 구독자에게 데이터를 전달한다. 이는 반복자 패턴의 `next()`와 같다.

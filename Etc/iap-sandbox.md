@@ -9,18 +9,18 @@
 테스터 정보는 가상의 이름, 성, 이메일 등으로 입력한다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/197767821-9ee6c51b-cc9e-4dd7-86a5-7bd5621c4b44.png" height=450>
+<img src="https://user-images.githubusercontent.com/61190690/197767821-9ee6c51b-cc9e-4dd7-86a5-7bd5621c4b44.png" width="400">
 </p>
 
 iPhone 기기의 설정으로 이동한다. 설정에서 App Store - 샌드 박스 계정을 클릭해서 로그아웃 한다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/197769341-02f2647b-c5d8-42fc-87cf-a0c80feed39e.jpg" height=450>
+<img src="https://user-images.githubusercontent.com/61190690/197769341-02f2647b-c5d8-42fc-87cf-a0c80feed39e.jpg" width="400">
 </p>
 
 이제 테스트할 앱에서 인앱결제를 시도한다. 그러면 앱스토어 계정의 이메일과 비밀번호를 입력하는데, 위에서 생성한 SandBox 계정 정보를 입력한다. 결제를 진행하면 *Environment: SandBox*가 표시되서, 샌드박스 환경에서 인앱결제가 진행됨을 알 수 있다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/198166895-5e3aacf5-922d-483b-b815-11345448e941.jpeg">
+<img src="https://user-images.githubusercontent.com/61190690/224272282-5c144474-5152-4af4-a60e-7ab65358d4ff.jpeg">
 </p>
 

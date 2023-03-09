@@ -6,6 +6,9 @@
 <img src="https://user-images.githubusercontent.com/61190690/176377518-a3403f87-8e9c-4402-ab4b-d31bc45fff15.png">
 </p>
 
+&nbsp;
+### 구현부
+
 `assert`의 구현부를 살펴보면 총 4가지 파라미터를 가지고 있다. 각 파라미터가 어떤 용도인지 알아보자.
 
 ```swift

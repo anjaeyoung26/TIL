@@ -5,6 +5,6 @@
 ```swift
 @discardableResult
 func log(_ msg: String) -> String {
-	return "\(msg) is entered."
+  return "\(msg) is entered."
 }
 ```
