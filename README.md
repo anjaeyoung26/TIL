@@ -55,16 +55,15 @@
 ### 3rd-party
 - [Alamofire Advanced Usage - 네트워크 계층 리팩토링](https://fromdave.medium.com/alamofire-%ED%99%9C%EC%9A%A9%EA%B8%B0-8bf5274fbaf) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [CocoaPods Binary](./Swift/3rd-party/cocoapods-binary.md)
-- [Kingfisher - Caching](https://fromdave.medium.com/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
+- [Kingfisher - Caching](https://medium.com/@jaeyoungan/kingfisher-1-%EC%BA%90%EC%8B%B1-c45a54505d22) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [Kingfisher - Prefetch](Swift/3rd-party/kingfisher-prefetch.md)
 - [SwiftLint](Swift/3rd-party/swiftlint.md)
 - [Swinject](Swift/3rd-party/swinject.md)
 
 ### Xcode
-- [XCFramework란?](./Swift/Xcode/xcframework(1).md)
-- [XCFramework를 통한 모듈화](./Swift/Xcode/xcframework(2).md)
+- [XCFramework를 통한 모듈화](https://jaeyoungan.medium.com/xcframework%EB%A5%BC-%ED%86%B5%ED%95%9C-%EB%AA%A8%EB%93%88%ED%99%94-7f5d36ccbcee) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [Xcode 바이너리 파일](./Swift/Xcode/xcode-binary-file.md)
-- [Xcode 빌드 환경 분리](./Swift/Xcode/xcode-build-configuration.md)
+- [Xcode 빌드 환경 분리](https://jaeyoungan.medium.com/xcode-%EB%B9%8C%EB%93%9C-%ED%99%98%EA%B2%BD-%EB%B6%84%EB%A6%AC%ED%95%98%EA%B8%B0-ad4cc497da7d) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center"> 
 - [Xcode Concepts](./Swift/Xcode/xcode-concepts.md)
 ---
 ## Etc
