@@ -38,7 +38,7 @@
 - [presentingViewController, presentedViewController](Swift/presenting%2C%20presented.md)
 - [rethrows](Swift/rethrows.md)
 - [Self, self](Swift/self.md)
-- [Type method](Swift/type-method.md)
+- [Instance method, Type method](Swift/instance-type-method.md)
 - [UIModalPresentationStyle](Swift/uimodalpresentationstyle.md)
 - [UIScrollView contentOffset, contentInset](Swift/content-offset%2C%20content-inset.md)
 - [UIScrollView Layout Guide](Swift/uiscrollview-layout-guide.md)
