@@ -55,18 +55,19 @@ let r2 = x.remainder(dividingBy: y)              // -0.375
 
 `r1`과 `r2`의 값을 살펴보면 서로 반대의 부호를 갖는다. 이는 `truncatingRemainder`와 `remainder`이 몫을 구하는 방법이 다르기 때문이다. 위 코드를 살펴보면 둘은 몫을 구할 때 다른 반올림 방식을 사용한다.
 
-- `truncatingRemainder` : `FloatingPointRoundingRule.towardZero`
-- `remainder` : `FloatingPointRoundingRule.toNearestOrEven`
+- `truncatingRemainder` : `FloatingPointRoundingRule.towardZero`, 정수부에 영향을 미치지 않으면서 소수점을 버린다.
 
-`x`와 `y`를 나눈 값에 다른 반올림 방식을 사용하고 있다. `FloatingPointRoundingRule.towardZero`는 정수부에 영향을 미치지 않으면서 소수점을 버린다. 그리고 `FloatingPointRoundingRule.toNearestOrEven`는 가장 가까운 정수로 반올림하며, 만약 0.5와 같은 경우에는 짝수 값이 선택된다.
+  ```swift
+  (5.2).rounded(.towardZero) // 5.0
+  (5.5).rounded(.towardZero) // 5.0
+  (-5.2).rounded(.towardZero) // -5.0
+  (-5.5).rounded(.towardZero) // -5.0
+  ```
 
-```swift
-(5.2).rounded(.towardZero) // 5.0
-(5.5).rounded(.towardZero) // 5.0
-(-5.2).rounded(.towardZero) // -5.0
-(-5.5).rounded(.towardZero) // -5.0
+- `remainder` : `FloatingPointRoundingRule.toNearestOrEven`, 가장 가까운 정수로 반올림하며, 만약 0.5와 같은 경우에는 짝수 값이 선택된다.
 
-(5.2).rounded(.toNearestOrEven) // 5.0
-(5.5).rounded(.toNearestOrEven) // 6.0
-(4.5).rounded(.toNearestOrEven) // 4.0
-```
+  ```swift
+  (5.2).rounded(.toNearestOrEven) // 5.0
+  (5.5).rounded(.toNearestOrEven) // 6.0
+  (4.5).rounded(.toNearestOrEven) // 4.0
+  ```
