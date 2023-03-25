@@ -1,4 +1,4 @@
-## Table of Contents
+## 목차
 
 1. [Ad-Hoc 이란](#ad-hoc-이란)
 2. [디바이스 등록](#디바이스-등록)
@@ -6,22 +6,18 @@
     - [개발자 계정에 직접 등록](#개발자-계정에-직접-등록)
 3. [배포](#배포)
 
-&nbsp;
 ## Ad-Hoc 이란
 
 Ad-Hoc은 TestFlight와 같이 특정 대상들에게 테스트를 목적으로 빌드를 배포하는 방식이다. TestFlight는 빌드를 업로드하고 심사를 거쳐야 앱 스토어 커넥트에 나타나서 딜레이가 발생한다. 하지만 Ad-Hoc은 빌드를 업로드하면 딜레이 없이 등록된 디바이스에서 빌드를 테스트할 수 있다.
 
-&nbsp;
 ## 디바이스 등록
 
 Ad-Hoc은 등록된 디바이스에만 앱을 배포할 수 있어서 개발자가 직접 각 디바이스의 UDID를 등록해야 한다. 이는 일부 사용자에게는 불편할 수 있지만, 최초로 디바이스를 등록하면 빠르게 테스트할 수 있는 환경이 만들어져서 그룹 내에서 앱을 배포하고 테스트하는데 효과적인 방법이다. 우선 디바이스를 등록하는 방법에 대해 알아보자. 개발자 계정에 디바이스를 등록하는 방법은 [여기](https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices#Register-devices-automatically-in-Xcode)에서 확인할 수 있다.
 
-&nbsp;
 ### Xcode에서 자동으로 다바이스 등록
 
 Automatic Signing을 사용하면 Xcode가 연결된 디바이스 또는 Mac을 자동으로 등록한다. Xcode에서 연결된 디바이스를 실행 대상으로 선택하고 앱을 실행(Run)시키면 디바이스가 등록된다.
 
-&nbsp;
 ### 개발자 계정에 직접 등록
 
 1. [개발자 페이지](https://developer.apple.com)에서 로그인 한다.
@@ -42,10 +38,9 @@ Automatic Signing을 사용하면 Xcode가 연결된 디바이스 또는 Mac을 
 
 5. Devices 탭으로 돌아오면 추가된 디바이스를 확인할 수 있다.
 
-&nbsp;
 ## 배포
 
-웹 페이지에서 배포하는 방식은 [In-house](./inhouse-distribution.md/#배포)와 동일하다. 본 글에서는 작성자가 현업에서 Firebase Distrubution을 통해 QA 버전을 수월하게 배포했던 경험이 있어서 [Firebase Distribution](https://firebase.google.com/docs/app-distribution?hl=ko)으로 Ad-Hoc 배포를 하는 방법에 대해 정리하려고 한다.
+본 글에서는 [Firebase Distribution](https://firebase.google.com/docs/app-distribution?hl=ko)으로 Ad-Hoc 배포를 하는 방법에 대해 정리하려고 한다.
 
 
 1. Firebase Console - [App Distribution] 선택
@@ -133,7 +128,6 @@ Automatic Signing을 사용하면 Xcode가 연결된 디바이스 또는 Mac을 
     </p>
 
 이제 테스터는 디바이스에 앱을 설치해서 테스트를 진행할 수 있다.
-
 
 
 
