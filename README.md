@@ -112,3 +112,4 @@
 - [git checkout](./Git/git-checkout.md)
 - [git remote](./Git/git-remote.md)
 - [git commit](./Git/git-commit.md)
+- [git blame](./Git/git-blame.md)
