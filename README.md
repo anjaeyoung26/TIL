@@ -46,6 +46,7 @@
 - [UISheetPresentationController](Swift/uisheetpresentationcontroller.md)
 - [Variadic Parameters](Swift/variadic-parameters.md)
 - [weak, unowned](Swift/weak-unowned-reference.md)
+- [==, === 연산자](Swift/%3D%3D%2C%20%3D%3D%3D.md)
 
 ### 1st-party
 - [AVFAudio - Responding to Audio Session Interruptions](./Swift/1st-party/avfaudio-responding-to-audio-session-interruptions.md)
