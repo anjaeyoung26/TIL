@@ -14,11 +14,13 @@ self.scrollView.contentSize = CGSize(width: 2000, height: 2000)
 &nbsp;
 ## UIScrollView.frameLayoutGuide
 
+`frameLayoutGuide`도 마찬가지로 iOS 11 버전부터 추가된 프로퍼티로, 스크롤 뷰가 화면에 표시되는 영역을 의미한다.
+
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/219948053-565ff2cf-e8bb-4167-a84c-b5a8d28d978f.png">
 </p>
 
-`frameLayoutGuide`도 마찬가지로 iOS 11 버전부터 추가된 프로퍼티로, 스크롤 뷰가 화면에 표시되는 영역을 의미한다. 주로 `frameLayoutGuide`는 두 가지 용도로 사용된다. 스크롤 뷰의 컨텐츠를 담기 위한 컨테이너 뷰를 사용한다고 가정하자.
+주로 `frameLayoutGuide`는 두 가지 용도로 사용된다. 스크롤 뷰의 컨텐츠를 담기 위한 컨테이너 뷰를 사용한다고 가정하자.
 
 1. 세로 스크롤이 필요할 때 컨테이너 뷰의 width를 `frameLayoutGuide`와 같게 한다.
 
