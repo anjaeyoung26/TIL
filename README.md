@@ -16,6 +16,7 @@
 - [async, await](https://jaeyoungan.medium.com/swift-async-await-f6e812fa2517) <img src="https://user-images.githubusercontent.com/61190690/167519208-27bbbfbe-700f-49d3-a517-579cca72817b.png" width="20" align="center">
 - [@autoclosure](Swift/autoclosure.md)
 - [AutoresizingMask, translatesAutoresizingMaskIntoConstraints](./Swift/autoresizingMask.md)
+- [@backDeployed](https://jaeyoungan.medium.com/swift-5-8-backdeployed-692658fbfaa5)
 - [CGSize, CGRect](Swift/cgsize-cgrect.md)
 - [CGFloat](Swift/cgfloat.md)
 - [contentHugging, compressionResistance](Swift/content-hugging%2C%20compression-resistance.md)
