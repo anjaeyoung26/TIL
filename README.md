@@ -75,6 +75,7 @@
 - [디자인 패턴(1) - 싱글톤 패턴](./Etc/design-pattern-singleton.md)
 - [반응형 프로그래밍과 ReactiveX](./Etc/reactive-programming.md)
 - [비동기 프로그래밍](./Etc/async-programming.md)
+- [신뢰하지 않은 기업용 개발자](./Etc/%EC%8B%A0%EB%A2%B0%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EA%B8%B0%EC%97%85%EC%9A%A9-%EA%B0%9C%EB%B0%9C%EC%9E%90.md)
 - [아키텍처 패턴(1) - MVC](./Etc/mvc.md)
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
