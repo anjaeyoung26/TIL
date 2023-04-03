@@ -89,6 +89,7 @@
 - [함수와 메서드](./Etc/function-method.md)
 - [Semantic Versioning](./Etc/semantic-versioning.md)
 - [UDID](./Etc/udid.md)
+- [Visual Studio Code에서 Git 사용하기](./Etc/git-in-vscode.md)
 ---
 ## Git
 - [Git 이란?](./Git/git.md)
