@@ -14,13 +14,7 @@ Ad-Hoc은 TestFlight와 같이 특정 대상들에게 테스트를 목적으로 
 &nbsp;
 ## 디바이스 등록
 
-Ad-Hoc은 등록된 디바이스에만 앱을 배포할 수 있어서 개발자가 직접 각 디바이스의 UDID를 등록해야 한다. 이는 일부 사용자에게는 불편할 수 있지만, 최초로 디바이스를 등록하면 빠르게 테스트할 수 있는 환경이 만들어져서 그룹 내에서 앱을 배포하고 테스트하는데 효과적인 방법이다. 우선 디바이스를 등록하는 방법에 대해 알아보자. 개발자 계정에 디바이스를 등록하는 방법은 [여기](https://developer.apple.com/documentation/xcode/distributing-your-app-to-registered-devices#Register-devices-automatically-in-Xcode)에서 확인할 수 있다.
-
-### Xcode에서 자동으로 다바이스 등록
-
-Automatic Signing을 사용하면 Xcode가 연결된 디바이스 또는 Mac을 자동으로 등록한다. Xcode에서 연결된 디바이스를 실행 대상으로 선택하고 앱을 실행(Run)시키면 디바이스가 등록된다.
-
-### 개발자 계정에 직접 등록
+Ad-Hoc은 등록된 디바이스에만 앱을 배포할 수 있어서 개발자가 직접 각 디바이스의 UDID를 등록해야 한다. 이는 일부 사용자에게는 불편할 수 있지만, 최초로 디바이스를 등록하면 빠르게 테스트할 수 있는 환경이 만들어져서 그룹 내에서 앱을 배포하고 테스트하는데 효과적인 방법이다. Automatic Signing을 사용하면 Xcode가 연결된 디바이스 또는 Mac을 자동으로 등록한다. Xcode에서 연결된 디바이스를 실행 대상으로 선택하고 앱을 실행(Run)시키면 디바이스가 등록된다. 혹은 개발자 계정에 디바이스를 직접 등록하는 방법이 있다.
 
 1. [개발자 페이지](https://developer.apple.com)에서 로그인 한다.
 
