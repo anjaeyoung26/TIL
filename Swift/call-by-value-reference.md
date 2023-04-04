@@ -22,7 +22,7 @@
 <img src="https://user-images.githubusercontent.com/61190690/178636857-cc7f9880-91e3-41d6-bbd5-405b5275af41.png">
 </p>
 
-이제 `point1`과 `point2`의 사용이 끝나면 Stack 포인터를 점차적으로 증가시켜서 두 인스턴스에 대한 메모리 할당을 쉽게 해제할 수 있다.
+이제 `point1`과 `point2`의 사용이 끝나면 Stack 포인터를 점차적으로 증가시켜서 두 인스턴스에 대한 메모리 할당을 쉽게 해제할 수 있다. 만약 값 타입의 데이터가 크다면 복사하는 비용이 부담될 것이다. Swift에서는 Copy-on-Write 매커니즘을 사용해서 값 타입의 복사 비용을 줄이고 있다. 궁금하다면 [여기](./copy-on-write.md)에서 확인해보자.
 
 &nbsp;
 ## Call by reference
