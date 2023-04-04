@@ -93,7 +93,6 @@
 - [D-U-N-S Number](/Etc/duns-number.md)
 - [Semantic Versioning](./Etc/semantic-versioning.md)
 - [UDID](./Etc/udid.md)
-- [Visual Studio Code에서 Git 사용하기](./Etc/git-in-vscode.md)
 ---
 ## Git
 - [Git 이란?](./Git/git.md)
@@ -106,6 +105,7 @@
 - [Remote 기준으로 로컬 덮어쓰기](./Git/Remote_%EA%B8%B0%EC%A4%80%EC%9C%BC%EB%A1%9C_%EB%8D%AE%EC%96%B4%EC%93%B0%EA%B8%B0.md)
 - [Remote에서 지워진 브랜치를 로컬에 반영](./Git/Remote%EC%97%90%EC%84%9C_%EC%A7%80%EC%9B%8C%EC%A7%84_%EB%B8%8C%EB%9E%9C%EC%B9%98_%EB%B0%98%EC%98%81.md)
 - [.gitignore](./Git/gitignore.md)
+- [Visual Studio Code에서 Git 사용](./Etc/git-in-vscode.md)
 
 ### 명령어
 - [git diff](./Git/git-diff.md)
