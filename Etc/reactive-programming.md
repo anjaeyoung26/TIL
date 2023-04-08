@@ -114,5 +114,10 @@ completed
 &nbsp;
 ### ReactiveX를 써야하는 이유
 
-*Swift*의 `NotificationCenter`, 프로퍼티 옵저버 등으로 반응형 프로그래밍을 구현할 수 있지만, *ReactiveX*는 스트림의 데이터를 변경시키는 수 많은 Operator를 제공한다. 또한 *ReactiveX*는 *Swift* 뿐만 아니라 *Java*, *Kotlin* 등 많은 프로그래밍 언어를 지원한다. 따라서 다른 플랫폼에서 *ReactiveX*를 사용하는 개발자와 대화할 수 있다.
+*Swift*의 `NotificationCenter`, 프로퍼티 옵저버 등으로 반응형 프로그래밍을 구현할 수 있지만, *ReactiveX*는 스트림의 데이터를 변경시키는 수 많은 Operator를 제공한다. 또한 *ReactiveX*는 *Swift* 뿐만 아니라 *Java*, *Kotlin* 등 많은 프로그래밍 언어를 지원한다. 따라서 다른 플랫폼에서 *ReactiveX*를 사용하는 개발자와 대화할 수 있다. 아래는 [*RxSwift*](https://github.com/ReactiveX/RxSwift)에서 얘기하는 ReactiveX의 장점이다.
+
+- 다양한 언어 지원
+- 다양한 오퍼레이터를 통해 데이터 스트림을 쉽게 조합
+- 복잡한 비동기 코드를 단순하고 직관적이게 작성
+- 스케쥴러를 통해 간편하게 스레드 처리
 
