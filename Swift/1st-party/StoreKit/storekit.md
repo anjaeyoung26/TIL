@@ -24,7 +24,6 @@
 - **광고를 표시하는 무료 앱에서 IAP 구매를 통해 광고를 지울 수 있는 옵션을 제공할 수 있다.**
 - 서버에 영수증과 구매 내역을 저장하고, 사용자가 원할 때 제공할 수 있어야 한다.
 
-&nbsp;
 ### 판매할 수 있는 상품의 종류
 자동 • 비 갱신 제품은 모든 사용자의 기기에서 구독을 사용할 수 있고, 사용자가 과거의 구매를 복원할 수 있도록 해야한다.
 
@@ -49,7 +48,6 @@ productsRequest.cancel()
 productsRequest.start()
 ```
 
-&nbsp;
 ### SKProductsRequestDelegate
 결제가 완료된 후 응답을 받는다.
 
@@ -65,7 +63,6 @@ func productsRequest(_ request: SKProductsRequest, didReceive response: SKProduc
 func request(_ request: SKRequest, didFailWithError error: Error) { ... }
 ```
 
-&nbsp;
 ### SKPaymentQueue
 앱 스토어와의 결제 과정을 처리, 관찰하고 트랜잭션을 관리한다.
 
@@ -94,7 +91,6 @@ if let product = products.first {
 SKPaymentQueue.default().restoreCompletedTransactions()
 ```
 
-&nbsp;
 ### SKPaymentTransactionObserver
 현재 결제가 진행되고 있는 트랜잭션의 상태에 따른 처리를 할 수 있다. 트랜잭션의 상태를 관찰하기 위해 옵저버를 등록한다.
 
@@ -117,7 +113,6 @@ func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SK
 }
 ```
 
-&nbsp;
 ### SKPaymentTransaction
 결제 중인 제품의 ID 혹은 수신된 에러를 가지고 있다.
 

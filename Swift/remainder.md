@@ -22,8 +22,6 @@ public protocol BinaryInteger {
 
 `%` 연산자는 `BinaryInteger` 프로토콜의 요구 사항으로 정의되어 있다. `BinaryInteger` 프로토콜은 모든 정수 유형의 기초가 되는 프로토콜로, `Int` 및 `UInt32`와 같은 표준 라이브러리의 모든 정수 유형은 `BinaryInteger`를 준수한다. 따라서 부동 소수점 유형인 `Double`, `Float`에서 `%` 연산자를 사용할 수 없는 것이다.
 
-&nbsp;
-
 ### truncatingRemainder
 
 하지만 컴파일러는 `truncatingRemainder`을 대신 사용하라고 친절하게 안내한다. 이는 [`FloatingPoint`](./%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md) 프로토콜의 요구 사항으로 정의되어 있는 메소드로, `%` 연산자와 동일한 기능을 한다.
@@ -34,9 +32,7 @@ var remainder2 = 10.0.truncatingRemainder(dividingBy: 3.0) // 1
 var remainder3 = 10.0.truncatingRemainder(dividingBy: 3.1) // 0.699999999999993
 ```
 
-&nbsp;
-
-### truncatingRemainder vs remainder
+### remainder
 
 나머지를 구하는 메서드는 `truncatingRemainder`만이 아니다. `FloatingPoint`에는 `remainder`라는 메소드도 존재하는데, 이는 `truncatingRemainder`와 마찬가지로 나머지를 구하는데 사용하지만 결과값이 다르다. 각각이 어떻게 동작하는지 알아보기 위해 공식 문서의 코드를 살펴보자.
 

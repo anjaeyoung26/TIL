@@ -31,7 +31,7 @@ file /bin/ls
 4. arm64 : arm은 [ARM Holdings](https://www.arm.com/)에서 개발한 CPU 아키텍처이며, arm64는 64비트 칩이 탑재된 arm이다. 위 바이너리 정보에서 arm64는 정확히 arm64 기반으로 애플에서 자체 설계한 Apple Silicon 칩을 의미한다.
 
 &nbsp;
-### 실제 라이브러리의 바이너리 정보를 확인해보자
+## 실제 라이브러리의 바이너리 정보를 확인해보자
 
 Kingfisher 라이브러리를 CocoaPods로 설치해서 사용한다고 가정한다.
 

@@ -6,15 +6,13 @@
 
 > `cocoapods-binary`의 마지막 릴리즈가 2019년 4월이고, 프로젝트의 관리가 원활하지 않는 것 같다. 또한 간혈적으로 pod이 깨져서 다시 pre-build를 해야하는 등 여러가지 문제점이 발생한다. `cocoapods-binary`의 대안으로 Grab의 iOS 개발팀에서 만든 [cocoapods-binary-cache](https://github.com/grab/cocoapods-binary-cache)가 있다. CLI를 통해 명령어를 제공해서 터미널에서 동작시킬 수 있고, `validate` 등의 유용한 옵션을 제공하여 `cocoapods-binary`에 비해 많이 개선되었다.
 
-&nbsp;
-## 설치
+### 설치
 
 ```
 gem install cocoapods-binary
 ```
 
-&nbsp;
-## 사용법
+### 사용법
 
 Podfile에 `cocoapods-binary` 플러그인을 추가하고, pre-build 하려는 pod에 대해 `:binary => true` 플래그를 사용한다.
 

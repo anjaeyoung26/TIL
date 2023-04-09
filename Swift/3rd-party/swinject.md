@@ -22,7 +22,7 @@ container.register(Person.self) { r in
 ```swift
 let animal = container.resolve(Animal.self) // Optional<Animal>
 ```
-&nbsp;
+
 ### [2. Named Registration](https://github.com/Swinject/Swinject/blob/master/Documentation/DIContainer.md#registration-in-a-di-container:~:text=Named%20Registration%20in%20a%20DI%20Container)
 
 이름을 지정해서 하나 이상의 Component를 등록할 수 있다.
@@ -31,7 +31,7 @@ let animal = container.resolve(Animal.self) // Optional<Animal>
 container.register(Animal.self, name: "cat") { _ in Cat(name: "Mimi") }
 container.register(Animal.self, name: "dog") { _ in Dog(name: "Hachi") }
 ```
-&nbsp;
+
 ### [3. Registration with Arguments](https://github.com/Swinject/Swinject/blob/master/Documentation/DIContainer.md#registration-in-a-di-container:~:text=Registration%20with%20Arguments%20in%20a%20DI%20Container)
 
 `register` 메서드는 인수를 전달해서 Component를 등록할 수 있다.
@@ -47,7 +47,7 @@ container.register(Animal.self) { _, name in
 ```swift
 let animal1 = container.resolve(Animal.self, argument: "Spirit")!
 ```
-&nbsp;
+
 ### [4. Circular Dependencies](https://github.com/Swinject/Swinject/blob/master/Documentation/CircularDependencies.md#:~:text=Blame-,Circular%20Dependencies,-Circular%20dependencies%20are)
 
 서로 의존하는 두 개의 Component를 컨테이너에 등록할 때 무한 재귀가 발생한다.
@@ -83,7 +83,6 @@ container.register(ChildProtocol.self) { _ in Child() }
   }
 ```
 
-&nbsp;
 ### [5. Object Scopes](https://github.com/Swinject/Swinject/blob/master/Documentation/ObjectScopes.md#:~:text=Blame-,Object%20Scopes,-Object%20scope%20is)
 
 Component를 컨테이너에 등록할 때 공유할 수 있는 범위를 결정할 수 있다. 만약 Component가 값 유형을 반환하는 경우 Object Scope는 무시된다.
@@ -124,7 +123,6 @@ Swinject는 서비스를 그룹화할 수 있는 Assembly 기능을 제공한다
 3. 다른 Assembly 구성을 등록할 수 있다. 이는 테스트 시 Mock Assembly로 대체하는데 편리하다.
 4. 컨테이너가 완전히 구성되면 알림을 받는다.
 
-&nbsp;
 ### [Assembly](https://github.com/Swinject/Swinject/blob/master/Documentation/Assembler.md#:~:text=to%20this%20feature.-,Assembly,-The%20Assembly%20is)
 
 Assembly는 서비스를 등록할 수 있는 공유 컨테이너를 제공하는 프로토콜이다. 공유 컨테이너는 Assembler에 등록된 모든 Assembly의 서비스가 포함된다.
@@ -166,7 +164,6 @@ class ServiceAssembly: Assembly {
 }
 ```
 
-&nbsp;
 ### [Assembler](https://github.com/Swinject/Swinject/blob/master/Documentation/Assembler.md)
 
 Assembler는 Assembly 인스턴스와 컨테이너 관리를 담당한다. Assembler를 사용하면 컨테이너는 Assembler에 등록된 Assembly에만 노출된다.

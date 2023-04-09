@@ -12,7 +12,6 @@ Visual Studio Code에서 Command + Shift + P 를 입력한다. 그리고 `Shell 
 git config --global core.editor "code --wait"
 ```
 
-&nbsp;
 ### 테스트
 
 버전 관리가 되고 있는 프로젝트에서 아래의 명령어를 입력한다.

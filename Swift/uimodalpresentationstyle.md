@@ -33,7 +33,6 @@ present(viewController, animated: true)
 
 `overFullScreen`은 겉보기에 `fullScreen`과 동일한 방식으로 표시한다. 하지만 `fullScreen`은 뷰 컨트롤러를 `present`한 뒤, *View Hierachy*에서 `presentingViewController`의 뷰가 제거되지만 `overFullScreen`은 제거되지 않고 남아있다. 실제로 `fullScreen`과 `overFullScreen` 방식으로 표시했을 때 *View Hierachy*를 비교해보자. 
 
-&nbsp;
 ### vs fullScreen
 
 <p align="center">
@@ -54,7 +53,6 @@ present(viewController, animated: true)
 
 다른 뷰 컨트롤러의 컨텐츠 위에 표시하는 방식이다. 여기서 '컨텐츠 위'는 뷰 컨트롤러의 `view`를 통해 표시된다는 의미이다. 위 그림에서 `currentContext`가 어떻게 표시되는지 살펴보자. 그림에서 `currentContext` 방식으로 A의 컨텐츠 위에 C를 표시했다. 이때 C의 크기를 살펴보면, A의 콘텐츠 크기에 맞춰서 표시된 것을 볼 수 있다. 만약 A의 콘텐츠 크기가 스크린과 동일하다면 `fullScreen`과 동일하게 표시한다. 또한 `currentContext`와 `overCurrentContext`의 차이는 `fullScreen`과 `overFullScreen`의 차이와 같다.
 
-&nbsp;
 ### definesPresentationContext
 
 `UIKit`에서 `currentContext`, `overCurrentContext`와 같은 context 기반의 표시 방식이 어떻게 동작하는지 알아보자. `UIKit`은 context 기반의 프레젠테이션이 일어날 때, `presentingViewController`부터 시작하여 뷰 컨트롤러 계층을 거슬러 올라간다. 그리고 `definesPresentationContext`의 값이 `true`인 뷰 컨트롤러를 찾으면 해당 뷰 컨트롤러의 컨텐츠에 표시한다.

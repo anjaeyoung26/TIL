@@ -90,15 +90,11 @@ SPM이 관리하는 Swift Package란 무엇일까? Swift Package는 Swift 소스
 <img src="https://user-images.githubusercontent.com/61190690/173229941-991755d8-bcee-45c9-a8e0-75804c6d4f1c.png" height="250">
 </p>
 
-&nbsp;
-
 2. `[General]` - `Frameworks, Libraries, and Embedded Content`에서 +를 클릭한다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/173229942-16abaeae-758a-4231-a948-9667babb8014.png">
 </p>
-
-&nbsp;
 
 3. 좌측 하단에 `Add Other...` -> `Add Package Dependency...`를 클릭한다.
 
@@ -106,15 +102,11 @@ SPM이 관리하는 Swift Package란 무엇일까? Swift Package는 Swift 소스
 <img src="https://user-images.githubusercontent.com/61190690/173229943-f67a29d2-6cf0-4579-a0a7-aeaf15b96c4d.png" height="400">
 </p>
 
-&nbsp;
-
 4. Package 저장소의 URL을 입력해서 원하는 Package를 찾는다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/173229946-acf06dce-1632-4af2-80a6-a68607744428.png">
 </p>
-
-&nbsp;
 
 5. `Dependency Rule`을 통해 원하는 종속성의 새 버전을 지정할 수 있다. Package 저장소의 특정 버전, 브랜치, 커밋을 기준으로 종속성을 추가할 수 있다. `Dependency Rule`은 Package를 사용하면서 언제든지 변경할 수 있다.
 
@@ -131,23 +123,17 @@ SPM이 관리하는 Swift Package란 무엇일까? Swift Package는 Swift 소스
 - *Branch* : 저장소의 특정 브랜치으로 설정한다. 만약 브랜치에서 새로운 커밋이 올라오면 Package 의존성이 자동으로 업데이트된다.
 - *Commit* : 저장소의 특정 커밋으로 설정한다.
 
-&nbsp;
-
 6. 원하는 Package Product를 선택한다. *Kingfisher* 같은 경우에는 패키지에 하나의 Product만을 포함하고 있지만, 여러 개의 Product 중에서 원하는 Product만을 선택할 수 있다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/173229947-badde624-d962-4db5-be8f-66361e2fa0a7.png">
 </p>
 
-&nbsp;
-
 7. 다시 `Frameworks, Libraries, and Embedded Content`를 보면 정상적으로 Embed된 것을 확인할 수 있다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/173229948-8c56595c-1bad-4e49-a756-e62e68fcb50f.png">
 </p>
-
-&nbsp;
 
 8. `Project Navigator`를 살펴보면 Package 의존성이 추가되었다.
 

@@ -2,7 +2,6 @@
 
 시스템이 오디오 입력 또는 출력을 추가하거나 제거할 때 오디오의 경로가 변경된다. 경로 변경은 사용자가 헤드폰을 연결하거나, Bluetooth LE 헤드셋을 연결하거나, USB 오디오 인터페이스를 뽑는 등 여러 가지 이유로 발생한다. 경로 변경이 발생하면 오디오 세션은 오디오 신호를 다시 라우팅하고 이에 대한 세부 정보가 포함된 알림을 Post한다.
 
-&nbsp;
 ### Observe Route Changes
 
 오디오 세션에서 Post한 경로 변경 알림을 관찰할 수 있다. 이는 사용자가 헤드폰을 연결할 때 시스템에서 알려주도록 하여 플레이어 인터페이스에 아이콘이나 메시지를 표시할 수 있도록 하려는 경우에 유용할 수 있다. 먼저 오디오 경로 변경 사항을 관찰하려면 `routeChangeNotification` 알림을 등록한다.
@@ -47,7 +46,6 @@ func hasHeadphones(in routeDescription: AVAudioSessionRouteDescription) -> Bool 
 
 - `AvailableAVAudioSession.RouteChangeReason.oldDeviceUnavailable` : 사용자가 장치를 제거할 때 트리거된다. 제거된 장치는 `userInfo`의 `AVAudioSessionRouteChangePreviousRouteKey`를 통해 알 수 있다.
 
-&nbsp;
 ### Respond to Route Changes
 
 이제 시스템이 Post한 알림을 통해 어떤 장치가 새롭게 연결됐고, 어떤 장치가 연결이 해제됐는지 확인하는 방법을 알게 됐다. 그렇다면 오디오 루트가 변경될 때 어떻게 대응을 해야할까? 멜론, 유튜브 뮤직, 스포티파이와 같은 대부분의 앱은 [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/platforms/designing-for-ios)의 *Audio Session Programming Guide*의 권장 사항에 따라 오디오 루트가 변경될 때 아래와 같이 처리한다.

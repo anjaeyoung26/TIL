@@ -69,7 +69,6 @@ Observable.of([1, 2, 3, 4, 5])
 <img src="https://user-images.githubusercontent.com/61190690/183816185-95ccc2d5-cc3a-414f-96b8-8fa7a6882e0f.png" width="500">
 </p>
 
-&nbsp;
 ### 반복자(Iterator) 패턴
 
 반복자 패턴은 비교적 간단하고 자주 사용되는 디자인 패턴이다. 모든 프로그래밍 언어에 있는 컬렉션은 해당 개체를 반복할 수 있는 반복자를 제공해야 한다. 그러나 개체를 반복하는 동안 구현이 노출되지 않도록 해야한다. 만약 애플리케이션에서 알림 목록을 유지 관리한다고 가정할 때, 결국 코드의 일부는 모든 알림을 순회해야 한다. 우리는 반복자 패턴을 통해 `Iterator`를 구현함으로써 유형에 관계없이 컬렉션을 순회할 수 있다.
@@ -84,7 +83,6 @@ while iterator.hasNext() {
 
 *ReactiveX*는 모든 시퀀스의 요소들을 반복자 패턴을 통해 순회한다. *ReactiveX*에서는 `Observable`의 이벤트를 방출할 때 반복자 패턴이 사용된다.
 
-&nbsp;
 ### Observable
 
 본 글에서는 *ReactiveX*의 전반적인 개념에 대해서만 다룬다. 따라서 `Observable`은 반복자 패턴이 어떻게 사용되는지 설명하기 위해 내용을 추가했다. `Disposable`, `Subject` 등 *ReactiveX*에 대한 자세한 내용은 따로 정리할 예정이다. `Observable`은 관측 가능한 모든 요소를 나타내며, 시퀀스의 일종이다. 또한 데이터가 변경돼도 구독하고 있는 대상이 없다면 어떠한 이벤트도 방출하지 않는다. `Observable`이 방출하는 이벤트는 세 가지 종류가 있다.
@@ -111,7 +109,6 @@ next(3)
 completed
 ```
 
-&nbsp;
 ### ReactiveX를 써야하는 이유
 
 *Swift*의 `NotificationCenter`, 프로퍼티 옵저버 등으로 반응형 프로그래밍을 구현할 수 있지만, *ReactiveX*는 스트림의 데이터를 변경시키는 수 많은 Operator를 제공한다. 또한 *ReactiveX*는 *Swift* 뿐만 아니라 *Java*, *Kotlin* 등 많은 프로그래밍 언어를 지원한다. 따라서 다른 플랫폼에서 *ReactiveX*를 사용하는 개발자와 대화할 수 있다. 아래는 [*RxSwift*](https://github.com/ReactiveX/RxSwift)에서 얘기하는 ReactiveX의 장점이다.

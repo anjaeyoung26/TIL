@@ -4,22 +4,17 @@ Coordinator 패턴은 [Soroush Khanlou](https://www.notion.so/Coordinator-05d787
 
 ```swift
 func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-  let object = self.dataSource[indexPath] // 1
-  let detailViewController = SKDetailViewController(with: object) // 2
-  self.navigationController?.present(detailViewController, animated: true, completion: nil) // 3
+  let object = self.dataSource[indexPath] // 선택한 셀의 데이터를 가져온다.
+  let detailViewController = SKDetailViewController(with: object) // 뷰 컨트롤러를 만든다.
+  self.navigationController?.present(detailViewController, animated: true, completion: nil) // 뷰 컨트롤러를 푸시한다.
 }
 ```
-
-1. 선택한 셀의 데이터를 가져온다.
-2. 뷰 컨트롤러를 만든다.
-3. 뷰 컨트롤러를 푸시한다.
 
 간단한 앱이나 뷰 컨트롤러에서는 문제 없이 동작한다. 하지만 앱이 복잡해지면서, 위 동작이 다른 곳에서도 필요할 수 있다. 1번은 뷰 컨트롤러가 데이터소스를 소유하고 있기 때문에 문제 없다. 하지만 2번에서 뷰 컨트롤러는 다음 단계의 Flow를 인식하게 된다. 또한 3번에서 뷰 컨트롤러는 부모(네비게이션 컨트롤러)에게 동작을 지시한다. Khanlou는 이러한 뷰 컨트롤러가 사용자 흐름을 처리하는 행위는 범위(Scope)를 벗어난다고 주장한다. 왜냐하면 뷰 컨트롤러의 기본 클래스는 UI로 시작되며 View 객체이기 때문이다. 대신 Coordinator 라는 높은 수준의 객체로 관리하기를 권장한다.
 
 ### Coordinator 패턴의 이점
 
 1. **뷰 컨트롤러의 고립** : 뷰 컨트롤러는 데이터를 표시하기만 한다. 어떤 동작이 발생할 때마다 Delegate에게 알리지만, Delegate가 누군지는 알 수 없다.
-
 2. **뷰 컨트롤러의 재사용** : 다른 흐름(Flow)에서 사용하려면 Coordinator만 교체하면 된다.
 
 &nbsp;
@@ -186,8 +181,3 @@ Khanlou는 Coordinator 패턴을 제대로 실행하기 위해서, **앱의 전�
       }
     }
     ```
-    
-&nbsp;
-# Reference
-
-[Coordinator Pattern](https://zeddios.medium.com/coordinator-pattern-bf4a1bc46930)

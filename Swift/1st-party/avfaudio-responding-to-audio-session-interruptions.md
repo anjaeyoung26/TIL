@@ -2,7 +2,6 @@
 
 오디오 세션의 Interruptions란, iPhone의 TV 앱에서 영화를 보는 동안 전화를 받아서 영화의 오디오가 페이드 아웃되고 재생이 일시 중지되며 통화 벨소리가 페이드 인되는 동작이다. 통화를 거부하면 제어가 다시 TV 앱으로 돌아가고 영화의 오디오가 페이드 인되면서 재생이 다시 시작된다. 오디오 세션은 Interruptions가 시작되면 앱에서 적절한 조치를 취할 수 있도록 알림을 Post한다.
 
-&nbsp;
 ### Customize the Interruption Behavior
 
 대부분의 앱은 시스템의 기본 Interruption 동작에 의존한다. 그러나 iOS 14.5부터 앱에서 기본 동작을 사용자 지정하는 방법을 제공한다.
@@ -15,7 +14,6 @@
     func setPrefersNoInterruptionsFromSystemAlerts(_ inValue: Bool) throws
     ```
 
-&nbsp;
 ### Observe Interruptions
 
 시스템이 전화 수신과 같은 이유로 앱의 오디오 세션을 중단할 때 알림을 관찰할 수 있다. 이는 Interruptions로 인해 재생을 일시 중지하는 시기를 알고자 할 때 유용하다. 먼저 오디오 중단을 관찰하려면 `AVAudioSession.interruptionNotification` 알림을 등록한다.
@@ -31,7 +29,6 @@ NotificationCenter.default.addObserver(self,
 }
 ```
 
-&nbsp;
 ### Respond to Interruptions
 
 알림의 `Notification` 개체의 `userInfo`는 Interruptions에 대한 세부 정보가 포함되어 있다. `userInfo` 딕셔너리에서 `AVAudioSession.InterruptionType` 값으로 Interruptions의 유형을 알 수 있다. 이는 Interruptions가 시작 또는 종료 중인지 여부를 나타낸다.

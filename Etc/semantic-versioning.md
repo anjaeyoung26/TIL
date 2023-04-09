@@ -13,7 +13,6 @@ Versioning이란 컴퓨터 소프트웨어의 특정 상태에 대한 버전을 
 
 Semantic Versioning의 스펙을 알아보기 전에, 어떠한 문제를 해결하기 위해 Semantic Versioning이 제안됐는지 알아보자. 이는 Semantic Versioning의 공식 홈페이지인 [semver.org](https://semver.org/)의 [Introduction](https://semver.org/#introduction:~:text=%EC%82%AC%EC%9A%A9%ED%95%A0%20%EC%88%98%20%EC%9E%88%EC%8A%B5%EB%8B%88%EB%8B%A4.-,%EC%86%8C%EA%B0%9C,-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%20%EA%B4%80%EB%A6%AC%EC%9D%98%20%EC%84%B8%EA%B3%84%EC%97%90%EB%8A%94)에 상세히 설명돼있다. 아래는 Introduction에 대한 내용이다.
 
-&nbsp;
 ### Introduction
 
 우리가 만든 시스템이 종속성이 많다면 새 패키지 버전을 릴리즈하는 것은 악몽이 될 수 있다. 왜냐하면 종속성 규격이 너무 엄격하면 버전 잠금의 위험이 있다. 반대로 종속성이 너무 느슨하면 불가피하게 버전 혼탁에 시달린다. 버전 잠금 또는 혼탁으로 인해 프로젝트를 쉽고 안전한게 개발할 수 없는 경우 종속성 지옥이 발생한다. 이 문제에 대한 해결책으로 Semantic Versioning이 제안된다.
@@ -21,7 +20,6 @@ Semantic Versioning의 스펙을 알아보기 전에, 어떠한 문제를 해결
 - 버전 잠금 : 모든 종속 패키지의 새 버전을 릴리즈하지 않으면 패키지를 업그레이드 할 수 없음
 - 버전 혼탁 : 현재 버전보다 미래 버전과의 호환성을 가정
 
-&nbsp;
 ### Form
 
 Semantic Versioning은 버전을 X.Y.Z 형태로 결정한다. X, Y, Z의 의미는 아래와 같다.
@@ -45,7 +43,6 @@ Semantic Versioning은 버전을 X.Y.Z 형태로 결정한다. X, Y, Z의 의미
 7.06.4 (X)
 ```
 
-&nbsp;
 ### 사전 릴리즈 버전
 
 사전 릴리즈 버전은 X.Y.Z 뒤에 -와 일련의 점으로 구분된 식별자를 추가하여 나타낼 수 있다. 식별자는 하이픈[0-9A-Za-z-], ASCII 영숫자로 구성되어야 한다.
@@ -68,7 +65,6 @@ Semantic Versioning은 버전을 X.Y.Z 형태로 결정한다. X, Y, Z의 의미
 
 사전 릴리즈 버전은 불안정하고 일반 버전에서 표시하는 대로 의도된 호환성을 충족하지 못할 수 있음을 나타낸다. 따라서 사전 릴리즈 버전은 일반 버전보다 우선 순위가 낮다.
 
-&nbsp;
 ### 빌드 메타데이터
 
 빌드 메타데이터는 X.Y.Z 뒤에 더하기 기호와 일련의 점으로 구분된 식별자를 추가하여 나타낼 수 있다. 식별자는 하이픈[0-9A-Za-z-]와 ASCII 영숫자로 구성되어야 한다.

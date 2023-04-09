@@ -13,6 +13,12 @@ struct CGSize {
 }
 ```
 
+너비와 높이의 값은 음수가 될 수 있다. 너비와 높이가 음수라는 것은 원점을 기준으로 아래와 같이 나타난다.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/61190690/166909990-52bdd589-d34c-417e-80d2-9a620554ba17.png" width="600" height="400">
+</p>
+
 &nbsp;
 ## CGRect
 
@@ -37,9 +43,3 @@ struct CGPoint {
     var y: CGFloat
 }
 ```
-
-너비와 높이의 값은 음수가 될 수 있다. 너비와 높이가 음수라는 것은 원점을 기준으로 아래와 같이 나타난다.
-
-<p align="center">
-<img src="https://user-images.githubusercontent.com/61190690/166909990-52bdd589-d34c-417e-80d2-9a620554ba17.png" width="600" height="400">
-</p>

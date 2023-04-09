@@ -7,8 +7,6 @@
 
 `ImagePrefetcher`는 이미지 리소스 목록을 가지고 있을 때 화면에 표시하기 전에 다운로드를 할 수 있게 해주는 클래스이다. 어떻게 동작하는지 살펴보자.
 
-[Cheet Sheet](https://github.com/onevcat/Kingfisher/wiki/Cheat-Sheet#prefetch) 예제 소스:
-
 ```swift
 let urls = ["https://example.com/image1.jpg", "https://example.com/image2.jpg"].map { URL(string: $0)! }
 let prefetcher = ImagePrefetcher(urls: urls) {
@@ -22,19 +20,21 @@ imageView.kf.setImage(with: urls[0])
 anotherImageView.kf.setImage(with: urls[1])
 ```
 
+### 파라미터
+
 `ImagePrefetcher`는 이미지 리소스 목록과 prefetch가 완료된 뒤 호출되는 클로저를 파라미터로 받아 초기화된다. 클로저의 세 가지 파라미터에 대해 알아보자.
 
 1. `skippedResources` : prefetch를 시작하기 전 이미 캐싱되어 있는 리소스의 목록
 2. `failedResources` : prefetch를 시도했지만 다운로드 혹은 캐싱에 실패한 리소스의 목록
 3. `completedResources` : prefetch를 성공한 리소스의 목록
 
-이제 `start()` 함수를 통해 prefetch를 시작할 수 있다. `start()` 함수는 아래의 세 가지 조건을 확인하고 조건이 모두 충족되면 prefetch를 시작한다. 이후 prefetch가 모두 완료되면 클로저를 실행하여 결과를 반환한다.
+### 조건
+
+`start()` 함수는 아래의 세 가지 조건을 확인하고 조건이 모두 충족되면 prefetch를 시작한다.
 
 1. `ImagePrefetcher`는 한 번 prefetch가 중지됐다면 다시 시작할 수 없기 때문에 중지 여부를 확인한다.
 2. `maxConcurrentDownloads`의 값이 0보다 큰지 확인한다. 이는 동시에 다운로드할 수 있는 갯수를 의미하며 기본 값은 5이다.
 3. prefetch할 이미지 리소스 목록이 비어있는지 확인한다.
-
-이미지를 다운로드하는 비동기 작업의 딜레이를 줄일 수 있는 게 가장 큰 장점으로 보인다. 하지만 어떻게 활용해야 할까? Kingfisher의 Prefetch 기능은 컬렉션 뷰 혹은 테이블 뷰와 함께 사용하면 진가를 발휘할 수 있다.
 
 &nbsp;
 ## With UICollectionView or UITableView

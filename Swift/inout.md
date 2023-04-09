@@ -34,7 +34,6 @@ let number = 4
 square(&number) // Error
 ```
 
-&nbsp;
 ### 동작 원리
 
 `inout`을 추가한 `square` 함수는 매개변수로 전달된 `number`의 값을 직접 수정한다. 그렇다면 `inout`의 동작 원리는 무엇일까? 먼저 `inout`은 *copy-in copy-out*의 줄임말로, 이는 함수의 매개변수로 전달된 변수가 값이 변경되고 다시 재할당되는 과정에서 두 번의 복사가 발생함을 의미한다. 아래는 `inout`이 동작하는 과정을 나타낸다.

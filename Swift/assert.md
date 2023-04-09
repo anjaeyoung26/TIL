@@ -6,7 +6,6 @@
 <img src="https://user-images.githubusercontent.com/61190690/176377518-a3403f87-8e9c-4402-ab4b-d31bc45fff15.png">
 </p>
 
-&nbsp;
 ### 구현부
 
 `assert`의 구현부를 살펴보면 총 4가지 파라미터를 가지고 있다. 각 파라미터가 어떤 용도인지 알아보자.
@@ -25,7 +24,6 @@ func assert(
 3. `file` : 조건을 만족하지 못할 때, `message`와 함께 출력되는 파일의 이름이다. `assert` 함수가 호출되는 파일의 이름을 기본값으로 가지고 있다.
 4. `line` : 조건을 만족하지 못할 때, `message`와 함께 출력되는 코드 라인이다. `assert` 함수가 위치한 라인을 기본값으로 가지고 있다.
 
-&nbsp;
 ### 예시
 
 ```swift

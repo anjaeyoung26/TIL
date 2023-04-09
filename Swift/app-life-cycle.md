@@ -16,7 +16,6 @@
 
 iOS 12 이하 혹은 iOS 13 이상에서 *Scene-Based life-cycle*을 채택하지 않는 앱의 *App Delegate*는 두 가지 역할이 있다. 앱이 실행되거나 종료되는 이벤트인 *Process life-cycle*과, 앱이 포그라운드나 백그라운드에 진입하면서 발생하는 이벤트인 *UI life-cycle*에 응답하는 역할을 수행한다. 이러한 이벤트는 `UIApplicationDelegate` 프로토콜을 통해 응답할 수 있다.
 
-&nbsp;
 ### UIApplicationDelegate
 
 새로운 프로젝트를 생성하면 Xcode가 만들어놓은 `AppDelegate.swift`를 볼 수 있는데, *App Delegate*는 `UIApplicationDelegate` 프로토콜을 confirm 하고 있다. `UIApplicationDelegate` 프로토콜의 구현사항은 모두 `Optional` 이므로, 우리는 *App Delegate*에서 필요한 이벤트에 대한 메서드를 추가해서 이벤트에 따른 동작을 정의할 수 있다.
@@ -40,7 +39,6 @@ public protocol UIApplicationDelegate : NSObjectProtocol {
 }
 ```
 
-&nbsp;
 ### 앱의 다섯 가지 상태
 
 <p align="center">
@@ -64,7 +62,6 @@ public protocol UIApplicationDelegate : NSObjectProtocol {
 
 위 그림에서 iPad의 메모장 앱을 사용 중이다. 언뜻보면 두 개의 메모장 앱이 실행되고 있는 것으로 보인다. 이는 iPad에서 Multiple Windows를 통해 메모장 앱에서 두 개의 Scene을 표시한 모습으로, *Scene-based life-cycle*은 Multiple Windows를 위해 탄생했다. 각 Scene에는 *Scene Delegate*가 1:1로 매핑되며, *Scene Delegate*에서 각 Scene의 *UI life-cycle* 이벤트를 응답한다. 
 
-&nbsp;
 ### Scene Delegate
 
 하나의 화면에 대한 *UI life-cycle* 이벤트를 응답하는 *App Delegate*의 역할이 분리되었다. Multiple Windows 환경에서 각 Scene과 매핑되는 *Scene Delegate*가 맡는다.
@@ -100,7 +97,6 @@ public protocol UIApplicationDelegate : NSObjectProtocol {
   )
 ```
 
-&nbsp;
 ### Scene-based의 구조
 
 아래의 그림에서 나타내는 Multiple Windows의 구조에서 `UIScreen`과 `UIWindow` 사이에 낯선 객체가 보인다. Scene 개념과 함께 새롭게 추가된 객체들에 대해서 알아보자.
@@ -115,16 +111,13 @@ public protocol UIApplicationDelegate : NSObjectProtocol {
 
 - **UISceneSession** : `UISceneSession` 객체는 Scene 인스턴스의 런타임을 관리한다. 사용자가 혹은 직접 programatically하게 새로운 Scene을 요청하면 시스템은 `UISceneSession` 개체를 생성한다. 세션에는 고유한 식별자와 Scene을 구성하기 위한 세부 정보가 포함된다.
 
-&nbsp; 
 ### Scene의 다섯 가지 상태
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/170423529-76e34a93-3bdd-4f84-b405-e3ded7a4247a.png" height="500">
 </p>
 
-*Unattached*를 제외한 나머지는 *App-Based life-cycle*과 동일하다. 그럼 *Unattached*를 같은 위치인 *App-Based life-cycle*의 *Not Running*과 비교해보자.
-
-*App-Based life-cycle*의 *Not Running* 상태는 *Background* 혹은 *Suspended* 상태로 전환될 수 있었지만, *Unattached*는 *Background* 상태와만 전환될 수 있다. 따라서 *Scene-Based life-cycle*의 *Suspended*에서 *Unattached*로 변하기 위해서는 *Background* 상태를 거쳐야 한다. 사용자 또는 시스템이 앱에 새로운 Scene을 요청하게 되면 `UIKit`은 *Unattached* 상태의 Scene을 생성한다. 사용자가 요청한 Scene은 화면에 보이는 *Foreground*로 옮겨지고, 시스템이 요청한 Scene은 *Background*로 옮겨져서 위치 감지와 같은 이벤트를 처리한다. 이후 사용자가 앱을 종료하거나 Scene의 리소스를 회수할 때 다시 *Unattached* 상태가 된다.
+*Unattached*를 제외한 나머지는 *App-Based life-cycle*과 동일하다. 그럼 *Unattached*를 같은 위치인 *App-Based life-cycle*의 *Not Running*과 비교해보자. *App-Based life-cycle*의 *Not Running* 상태는 *Background* 혹은 *Suspended* 상태로 전환될 수 있었지만, *Unattached*는 *Background* 상태와만 전환될 수 있다. 따라서 *Scene-Based life-cycle*의 *Suspended*에서 *Unattached*로 변하기 위해서는 *Background* 상태를 거쳐야 한다. 사용자 또는 시스템이 앱에 새로운 Scene을 요청하게 되면 `UIKit`은 *Unattached* 상태의 Scene을 생성한다. 사용자가 요청한 Scene은 화면에 보이는 *Foreground*로 옮겨지고, 시스템이 요청한 Scene은 *Background*로 옮겨져서 위치 감지와 같은 이벤트를 처리한다. 이후 사용자가 앱을 종료하거나 Scene의 리소스를 회수할 때 다시 *Unattached* 상태가 된다.
 
 &nbsp;
 ## 콜 스택 비교
