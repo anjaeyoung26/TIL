@@ -18,7 +18,9 @@ brew install jenkins
 Homebrew로 Jenkins를 제어할 수 있는 명령어는 세 가지가 있다. Jenkins 설치가 완료되면 시작하자.
 
 ```
-brew services start jenkins
+brew services start jenkins // Jenkins 시작
+brew services stop jenkins // Jenkins 중지
+brew services restart jenkins // Jenkins 재시작
 ```
 
 Jenkins가 정상적으로 시작되면 웹 브라우저에서 http://localhost:8080/ 으로 접속한다.
