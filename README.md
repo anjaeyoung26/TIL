@@ -84,6 +84,7 @@
 - [정적•동적 라이브러리](./Etc/static-dynamic-library.md)
 - [지속적 통합](./Etc/continuous-integration.md)
 - [지속적 통합(1) - Jenkins 설치](./Etc/jenkins(1).md)
+- [지속적 통합(2) - Jenkins, Github 레포지토리 연동](./Etc/jenkins(2).md)
 - [코디네이터 패턴](./Etc/coordinator-pattern.md)
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
 - [프로그래밍 패러다임(1) - 명령형 프로그래밍과 선언형 프로그래밍](./Etc/imperative-and-declarative-programming.md)
