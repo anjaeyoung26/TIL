@@ -131,7 +131,10 @@ Github 레포지토리와 정상적으로 연결됐는지 확인하기 위해 Je
 <img src="https://user-images.githubusercontent.com/61190690/231756362-6bc2dc3e-10db-4839-8cd6-6689ca22e426.png">
 </p>
 
-Github Webhook의 이벤트가 Jenkins로 전달되는지 확인해보자. Github 레포지토리에 커밋을 생성해서 푸시하자. 그러면 Jenkins에 이벤트가 전달되서 자동으로 빌드된다.
+&nbsp;
+## 연동 확인
+
+Github Webhook의 이벤트가 Jenkins로 전달되는지 확인해보자. Github 레포지토리에 커밋을 생성해서 푸시하면 Jenkins에 이벤트가 전달되서 자동으로 빌드된다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/61190690/231968089-860a65eb-91da-4e5d-b704-b4d7d6743cc9.gif">
