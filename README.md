@@ -83,8 +83,6 @@
 - [인앱결제 샌드박스 테스트](./Etc/iap-sandbox.md)
 - [정적•동적 라이브러리](./Etc/static-dynamic-library.md)
 - [지속적 통합](./Etc/continuous-integration.md)
-- [지속적 통합(1) - Jenkins 설치](./Etc/jenkins(1).md)
-- [지속적 통합(2) - Jenkins, Github 레포지토리 연동](./Etc/jenkins(2).md)
 - [지속적 제공/배포](./Etc/continuous-deployment-delivery.md)
 - [코디네이터 패턴](./Etc/coordinator-pattern.md)
 - [프로그래밍 패러다임](./Etc/programming-paradigm.md)
@@ -96,6 +94,8 @@
 - [D-U-N-S Number](/Etc/duns-number.md)
 - [iOS 앱 배포(1) - TestFlight](./Etc/testflight.md)
 - [iOS 앱 배포(2) - Ad-Hoc](./Etc/adhoc.md)
+- [Jenkins(1) - 설치](./Etc/jenkins(1).md)
+- [Jenkins(2) - Github 레포지토리 연동](./Etc/jenkins(2).md)
 - [Semantic Versioning](./Etc/semantic-versioning.md)
 - [UDID](./Etc/udid.md)
 ---
