@@ -17,6 +17,7 @@ Github Actions는 Github에서 제공하는 빌드, 테스트, 배포 파이프�
 
 - [Reusing workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) : 워크플로우 내부에서 다른 워크플로우를 참조할 수 있다.
 - [Using workflows](https://docs.github.com/en/actions/using-workflows) : 워크플로우에 대해 자세히 알아볼 수 있다.
+- [Workflow syntax for Github Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions) : 워크플로우 문법에 대해 자세히 알아볼 수 있다.
 
 ### Events
 
