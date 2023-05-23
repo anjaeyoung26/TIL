@@ -43,18 +43,23 @@ git checkout master
 &nbsp;
 ## 병합
 
-```
-git checkout master
-git merge dev
-```
+1. 현재 브랜치에 dev 브랜치를 병합한다.
 
-```
-git branch --merged
-```
+    ```
+    git merge dev
+    ```
 
-```
-git branch --no-merged
-```
+2. 현재 브랜치에 병합된 브랜치 복록을 나타낸다.
+
+    ```
+    git branch --merged
+    ```
+
+3. 현재 브랜치에 병합되지 않은 브랜치 목록을 나타낸다.
+
+    ```
+    git branch --no-merged
+    ```
 
 &nbsp;
 ## 삭제
