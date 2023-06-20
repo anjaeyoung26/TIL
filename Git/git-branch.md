@@ -87,6 +87,14 @@ git checkout master
 &nbsp;
 ## 이름 변경
 
+1. 로컬 저장소에서 브랜치의 이름을 변경한다.
+
 ```
 git branch -m old_branch new_branch
+```
+
+2. 변경된 브랜치의 이름을 원격 저장소로 푸시한다.
+
+```
+git push origin :old_branch new_branch
 ```
