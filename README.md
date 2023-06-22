@@ -54,6 +54,7 @@
 ### 1st-party
 - [AVFAudio - Responding to Audio Session Interruptions](./Swift/1st-party/avfaudio-responding-to-audio-session-interruptions.md)
 - [AVFAudio - Responding to Audio Session Route Changes](./Swift/1st-party/avfaudio-responding-to-audio-session-route-changes.md)
+- [os.log](./Swift/1st-party/os_log.md)
 - [StoreKit - 인앱결제 구현](./Swift/1st-party/StoreKit/storekit.md)
 - [Swift Package Manager](./Swift/1st-party/SPM/spm.md)
 
