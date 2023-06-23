@@ -82,6 +82,7 @@
 - [아키텍처 패턴(1) - MVC](./Etc/mvc.md)
 - [아키텍처 패턴(2) - MVP](./Etc/mvp.md)
 - [아키텍처 패턴(3) - MVVM](./Etc/mvvm.md)
+- [아키텍처 패턴(4) - VIPER](./Etc/viper.md)
 - [인앱결제 샌드박스 테스트](./Etc/iap-sandbox.md)
 - [정적•동적 라이브러리](./Etc/static-dynamic-library.md)
 - [지속적 통합](./Etc/continuous-integration.md)
