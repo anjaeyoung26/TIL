@@ -57,7 +57,13 @@ Stash한 변경사항을 현재 브랜치로 가져온다. 가져온 변경사�
    git stash apply Title
    ```
 
-3. 최근 Stash한 변경사항을 가져오고 목록에서 제거한다.
+   만약 별도로 이름을 설정하지 않았다면 번호로 가져올 수 있다.
+
+   ```
+   git stash apply stash@{0}
+   ```
+
+4. 최근 Stash한 변경사항을 가져오고 목록에서 제거한다.
 
    ```
    git stash pop
