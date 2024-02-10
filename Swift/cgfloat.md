@@ -1,22 +1,31 @@
+## Double, Float
+
+우선 부동소수점의 정밀도에 대해서 알아보자. 정밀도란 부동소수점으로 표현할 수 있는 소수의 유효 숫자 개수를 의미한다. 예를 들어, 32비트 부동소수점은 보통 6-9 자리의 정밀도를 가지며, 64비트 부동소수점은 15-17 자리의 정밀도를 가지므로, 정밀도가 높을수록 더 작은 차이를 표현할 수 있다. **`Double`과 `Float` 타입은 각각 32비트와 64비트 부동소수점을 표현**한다. 따라서 더 높은 정밀도가 요구되는 연산에는 `Double`을 사용하고, 메모리 사용량을 줄이거나 정밀도가 덜 중요한 연산에는 `Float`을 사용하는 것이 일반적이지만, Swift 가이드에서는 두 자료형 모두 사용할 수 있는 상황에서 **Double 자료형을 선호**한다고 되어있다.
+
+```
+Double has a precision of at least 15 decimal digits, whereas 
+the precision of Float can be as little as 6 decimal digits. 
+
+The appropriate floating-point type to use depends on the nature 
+and range of values you need to work with in your code. 
+
+In situations where either type would be appropriate, Double is preferred.
+```
+The Swift Programming Language [Floating-Point Numbers](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/thebasics/)
+
+&nbsp;
 ## CGFloat
 
-`CGFloat`은 Swift에서 부동 소수점 숫자를 나타낼 때 사용한다. 하지만 `CGFloat` 외에도 `Double`, `Float` 등 소수점을 표현할 수 있는 여러 가지 타입이 존재한다. 먼저 `Double`과 `Float`의 차이점은 [소수점 다루기](./%EC%86%8C%EC%88%98%EC%A0%90-%EB%8B%A4%EB%A3%A8%EA%B8%B0.md)에서 살펴볼 수 있듯이, '소수점 몇 번째 자리까지 나타낼 수 있는 정도'를 의미하는 정밀도가 다르다.
-
-```swift
-let randomFloat = Float.random(in: 0...10) // 2.959846
-let randomDouble = Double.random(in: 0...10) // 5.137981249907981
-```
-
-그렇다면 `CGFloat`은 어떤 타입일까? 우선 [여기](https://github.com/apple/swift-corelibs-foundation/blob/ee856f110177289af602c4040a996507f7d1b3ce/Sources/Foundation/CGFloat.swift)에서 `CGFloat`의 구현부를 살펴보자.
+`CGFloat`은 어떤 타입일까? 우선 [여기](https://github.com/apple/swift-corelibs-foundation/blob/ee856f110177289af602c4040a996507f7d1b3ce/Sources/Foundation/CGFloat.swift)에서 `CGFloat`의 구현부를 살펴보자.
 
 ```swift
 public struct CGFloat {
 #if arch(i386) || arch(arm) || arch(wasm32)
-    public typealias NativeType = Float
+  public typealias NativeType = Float
 #elseif arch(x86_64) || arch(arm64) || arch(s390x) || arch(powerpc64) || arch(powerpc64le)
-    public typealias NativeType = Double
+  public typealias NativeType = Double
 #else
-    #error("This architecture isn't known. Add it to the 32-bit or 64-bit line.")
+  #error("This architecture isn't known. Add it to the 32-bit or 64-bit line.")
 #endif
 ```
 
