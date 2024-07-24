@@ -29,6 +29,7 @@
 - [frame, bounds](Swift/frame%2C%20bounds.md)
 - [frame.size, frame.size.height](Swift/frame-size-height%2C%20frame-height.md)
 - [@escaping](Swift/escaping-closure.md)
+- [@inlinable](Swift/inlinable.md)
 - [inout](Swift/inout.md)
 - [Instance method, Type method](Swift/instance-type-method.md)
 - [Interface Builder, .nib, .xib](Swift/interface-builder-nib-xib.md)
